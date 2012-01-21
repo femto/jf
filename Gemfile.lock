@@ -192,6 +192,7 @@ DEPENDENCIES
   json
   mongrel
   nifty-generators
+  nokogiri
   pg
   rails (= 3.1.1)
   rails-dev-boost
