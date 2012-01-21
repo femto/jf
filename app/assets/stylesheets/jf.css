@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document */
+
+.header{height:59px; width:100% auto;
+background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(248,248,248,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(248,248,248,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(248,248,248,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(248,248,248,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(248,248,248,1) 100%); /* IE10+ */
+background: linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(248,248,248,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f8f8f8',GradientType=0 ); /* IE6-9 */
+}
+.logo{width:108px; height:59px; margin:0 auto;}
+.ss{vertical-align:middle; text-align:center; padding-top:15px;}
+.navz{ height:30px; width:100% auto; padding-bottom:0;
+background: rgb(147,167,190); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(147,167,190,1) 0%, rgba(122,147,175,1) 49%, rgba(98,127,160,1) 49%, rgba(118,144,172,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(147,167,190,1)), color-stop(49%,rgba(122,147,175,1)), color-stop(49%,rgba(98,127,160,1)), color-stop(100%,rgba(118,144,172,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(147,167,190,1) 0%,rgba(122,147,175,1) 49%,rgba(98,127,160,1) 49%,rgba(118,144,172,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(147,167,190,1) 0%,rgba(122,147,175,1) 49%,rgba(98,127,160,1) 49%,rgba(118,144,172,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(147,167,190,1) 0%,rgba(122,147,175,1) 49%,rgba(98,127,160,1) 49%,rgba(118,144,172,1) 100%); /* IE10+ */
+background: linear-gradient(top,  rgba(147,167,190,1) 0%,rgba(122,147,175,1) 49%,rgba(98,127,160,1) 49%,rgba(118,144,172,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93a7be', endColorstr='#7690ac',GradientType=0 ); /* IE6-9 */
+}
+.zuo{padding-left:80px; padding-top:5px;}
+
+ul.nav  {
+	margin:0px; padding:0px;
+	list-style: none;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	float:left;
+}
+ul.nav li {
+	float:left;
+	display:inline;
+}
+ul.nav a {
+	display:block;
+	padding: 0 1.5em;
+	text-decoration:none;
+	color: #FFFFFF;
+}
+.container a{font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:none; color:#666666;}
+.clear {
+	clear:both;
+}
+
+.banner{height:396px; padding:0; margin:0; background-color:#FFFFFF; }
+.line{height:1px;width:100% auto; background-color:#DCDCDC;}
+.line2{height:1px;width:100% auto; background-color: #FFF;}
+.news{height:34px;width:100% auto; 
+background: rgb(245,246,247); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(245,246,247,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(245,246,247,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(245,246,247,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(245,246,247,1) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(245,246,247,1) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+background: linear-gradient(top,  rgba(245,246,247,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f7', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+.ju{ height:34px; padding-top:8px;}
+.news-bt{ color:#00216A;font-weight:bold;}
+.news-nei{ color:#66666;}
+.kk{height:10px; background-color:#DCDCDC;}
+.center{height:328px;width:100% auto; background-color:#DCDCDC;}
+.neibianju{padding-left:1px; padding-top:1px;}
+.chanpin1bg{height:137px; width:310px;background-color:#D2D2D2;}
+.white{height:135px; width:308px;background-color:#FFFFFF; }
+.chanpin1{ height:133px; width:306px; background-color:#F5F5F5;}
+.chanpin-bt{color: #000;font-weight:bold; padding-left:15px; font-size:16px; font-family: Verdana, Geneva, sans-serif;}
+.list li{float:left;
+	     display:inline; 
+		 color:#646464;}
+.tu1{text-align:right;}	
+.neirong{color:#646464; padding-left:15px;}
+.more{text-align:right; font-size:9px;}
+.footer{height:177px;width:100% auto;
+background: gray url(jf_000514.jpg) repeat-x;
+width: auto !important;
+margin: 0px auto;
+}
+.tou{ background-image: url(tou.png); width:100%; height:108px;}
+.footer-bt{color:#162945; padding-left:15px; padding-top:15px;}
+.footer-neirong{ padding-left:15px; color:#DCDCDC; line-height:20px;}
+.footer-neirong a{ color:#DCDCDC;}
+.di{ background-color:#DCDCDC; height:52px; width:100%;}
+.beizhu{text-align:center; color:#868686;}
+
+/* form */
+.appleNav form input { width:105px; height:20px; margin-left:0px; margin-top:0px; border:none; padding-left:20px; padding-right:10px; color:#eee;
+
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+
+    /* We use the CSS3 multiple backgrounds for the input field: The magnifier image and the gradient background */    
+    background-image: url("magnifier.png"), -webkit-gradient(linear, left bottom, left top, color-stop(0, #758FAC), color-stop(0.5, #6380A1), color-stop(0.51, #7A93AF), color-stop(1, #91A5BD));
+    background-image: url("magnifier.png"), -moz-linear-gradient(center bottom, #758FAC 0%, #6380A1 50%, #7A93AF 51%, #91A5BD 100%);
+    background-repeat: no-repeat;
+    
+    background-color:#6380A1; /* Fallback */
+    
+    -moz-box-shadow: inset 0 2px 1px 1px #405774;
+    -webkit-box-shadow: inset 0 2px 1px 1px #405774;
+    box-shadow: inset 0 2px 1px 1px #405774;
+}

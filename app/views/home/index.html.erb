@@ -1,2 +1,231 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>无锡杰夫电声有限公司</title>
+    <%= stylesheet_link_tag    "jf" %>
+
+    <!-- Framework CSS -->
+    <%= stylesheet_link_tag    "screen" %>
+
+    <!--[if lt IE 8]><%= stylesheet_link_tag    "ie" %><![endif]-->
+    <%= stylesheet_link_tag    "themes/default/default","themes/pascal/pascal","themes/orman/orman" %>
+    <%= stylesheet_link_tag    "nivo-slider" %>
+
+    
+  </head>
+<body>
+	 <!--header  start  here-->
+    	<div class="header">
+        <!--logo  start   here-->
+          <div class="container ">
+            <div class="logo span-3"><a href="index.html" ><%=image_tag "logo.png"  %></a></div>
+            <div class="prepend-13 span-4 last ss">选择语言<a href="#" ><%=image_tag "cloose.png"%></a><a href="#" >注册</a>丨<a href="#" >登录</a></div><div class="span-4 last ss">
+            <div class="appleNav">
+            <form>
+              <input type="text" />
+            </form>
+            </div>
+            </div>
+            </div>
+            
+        </div>
+          <!--daohang  start   here-->
+          <div class="navz">
+      		<div class="container">
+                    <div class="zuo">
+                        <ul class="nav">
+                            <li><a href="#">首页</a></li>
+                            <li><a href="#">产品与服务</a></li>
+                            <li><a href="#">技术与支持</a></li>
+                            <li><a href="#">如何购买</a></li>
+                            <li><a href="#">研讨与活动</a></li>
+                            <li><a href="#">关于我们</a></li>
+                        </ul>
+                    </div>
+              </div>
+          </div>
+          <!--banner  start   here-->
+          <div class="banner">
+       	  	  <div class="container showgrid"> <div id="wrapper">
+        <div class="slider-wrapper theme-default">
+        <div class="ribbon"></div>
+            <div id="slider" class="nivoSlider">
+                  <%= image_tag "banner/images/banner.png" %>
+                  <%= image_tag "banner/images/banner2.png" %>
+                  <%= image_tag "banner/images/banner3.png" %>
+                  <%= image_tag "banner/images/banner4.png" %>
+
+            </div>
+        </div>
+
+    </div></div>
+          </div>
+           <div class="line"></div>
+           <div class="line2"></div>
+           <!--news  start   here-->
+           <div class="news">
+                <div class="container ju"><span class="news-bt">新闻：</span><span class="news-nei">杰夫发布业界首款Giga DSL样机</span></div>
+           </div> 
+        
+        
+   		<div class="center">
+        <div class="container ">
+        <hr class=" space"/>
+        <!--chanpin1  start  here-->
+        	<div class="span-8 chanpin1bg">
+            	<div class=" neibianju">
+                  <div class="white">
+                    <div class="neibianju">
+                        <div class="chanpin1">
+                          <div class="span-3 last"><p><span class="chanpin-bt">扬声器</span></p>
+                            <ul class="list">
+                                <li><a href="#">彩电扬声器</a></li>
+                                <li><a href="#">音响扬声器</a></li>
+                                <li><a href="#">汽车扬声器</a></li>
+                                <li><a href="#">通讯扬声器</a></li></ul>
+                          </div>
+                          <div class="tu1"><%=image_tag "chanpin1.png", :width=>"120",:height=>"132"%></div>
+                        </div>
+                    </div>
+                 </div>	
+               </div>
+            </div>    
+           <!--chanpin2  start  here-->
+        	<div class="span-8 chanpin1bg">
+            	<div class=" neibianju">
+                  <div class="white">
+                    <div class="neibianju">
+                        <div class="chanpin1">
+                          <div class="span-4 last"><p><span class="chanpin-bt">影响系统</span></p>
+                            <ul class="list">
+                                <li><a href="#">家庭影院音箱</a></li>
+                                <li><a href="#">高保真音箱</a></li>
+                                <li><a href="#">多媒体音箱</a></li>
+                                <li><a href="#">沙滩音箱</a></li></ul>
+                          </div>
+                          <div class="tu1"><%=image_tag "chanpin1.png", :width=>"120",:height=>"132"%></div>
+                        </div>
+                    </div>
+                 </div>	
+               </div>
+            </div>
+            <!--chanpin3  start  here-->
+        	<div class="span-8 chanpin1bg  last">
+            	<div class=" neibianju">
+                  <div class="white">
+                    <div class="neibianju">
+                        <div class="chanpin1">
+                          <div class="span-3 last"><p><span class="chanpin-bt">电器设备</span></p>
+                            <ul class="list">
+                                <li><a href="#">功率放大器</a></li>
+                                <li><a href="#">新产品</a></li></ul>
+                          </div>
+                          <div class="tu1"><%=image_tag "chanpin1.png", :width=>"120",:height=>"132"%></div>
+                        </div>
+                    </div>
+                 </div>	
+               </div>
+            </div>
+           <hr class=" space"/>
+           
+           <!--如何购买  start  here-->
+        	<div class="span-8 chanpin1bg">
+            	<div class=" neibianju">
+                  <div class="white">
+                    <div class="neibianju">
+                        <div class="chanpin1">
+                          <div class="span-4 last"><p><span class="chanpin-bt">如何购买</span></p>
+                            <p class="span-4 neirong">帮助客户实现商业成功，才是真正的成功。让你轻松购买，无后顾之忧。</p>
+                            <p class="more"><a href="#">more>></a></p>
+                          </div>
+                          <div class="tu1"><%=image_tag "chanpin1.png", :width=>"120",:height=>"132"%></div>
+                        </div>
+                    </div>
+                 </div>	
+               </div>
+            </div>    
+           <!--演讲与讨论  start  here-->
+        	<div class="span-8 chanpin1bg">
+            	<div class=" neibianju">
+                  <div class="white">
+                    <div class="neibianju">
+                        <div class="chanpin1">
+                          <div class="span-4 last"><p><span class="chanpin-bt">演讲与讨论</span></p>
+                            <p class="span-4 neirong">帮助客户实现商业成功，才是真正的成功。让你轻松购买，无后顾之忧。</p>
+                            <p class="more"><a href="#">more>></a></p>
+                          </div>
+                          <div class="tu1"><%=image_tag "chanpin1.png", :width=>"120",:height=>"132"%></div>
+                        </div>
+                    </div>
+                 </div>	
+               </div>
+            </div>
+            <!--公司活动  start  here-->
+        	<div class="span-8 chanpin1bg  last">
+            	<div class=" neibianju">
+                  <div class="white">
+                    <div class="neibianju">
+                        <div class="chanpin1">
+                          <div class="span-4 last"><p><span class="chanpin-bt">公司活动</span></p>
+                            <p class="span-4 neirong">帮助客户实现商业成功，才是真正的成功。让你轻松购买，无后顾之忧。</p>
+                            <p class="more"><a href="#">more>></a></p>
+                          </div>
+                          <div class="tu1"><%=image_tag "chanpin1.png", :width=>"120",:height=>"132"%></div>
+                        </div>
+                    </div>
+                 </div>	
+               </div>
+            </div>
+            
+            
+        </div>
+        </div>
+        
+        <div class="footer"><div class="tou">
+        	<div class="container">
+            
+            	<div class="span-8"><p class="footer-bt">技术支持</p>
+                <p class="footer-neirong"><a href="#">查找产品支持信息</a><br/>
+                    <a href="#">技术白皮书下载</a><br/>
+                    <a href="#">Online反馈</a><br/>
+                    <a href="#">常见问答/向专家提问</a></p>
+                </div>
+                
+                <div class="span-8"><p class="footer-bt">关于我们</p>
+                <p class="footer-neirong"><a href="#">杰夫简介</a><br/>
+                    <a href="#">营运信息</a><br/>
+                    <a href="#">成长历程</a><br/>
+                    <a href="#">总裁寄语</a><br/>
+                    <a href="#">人才战略</a><br/>
+                    <a href="#">工作机会</a>
+                    </p>
+                </div>
+                
+                <div class="span-8 last"><p class="footer-bt">如何购买</p>
+                <p class="footer-neirong"><a href="#">购买地址与信息</a><br/>
+                    <a href="#">代理商信息</a><br/>
+                    <a href="#">在线服务</a></p>
+                </div>
+
+            </div>            
+        </div>
+        </div>
+        
+        <div class="di">
+        	<div class="container">
+            	<div class="beizhu span-24 last">联系方式丨反馈丨帮助丨网站导航丨条款和条件丨隐私声明丨© 2011 无锡杰夫电声有限公司丨苏ICP备08016514号</div>
+            </div>
+        </div>
+    <%= javascript_include_tag "jquery.nivo.slider.pack.js" %>
+
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+
+</body>
+</html>
