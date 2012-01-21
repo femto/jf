@@ -40,3 +40,4 @@ gem "carrierwave_direct"
 gem "fog"
 gem "rails-dev-boost", :group => :development
 gem "mongrel", :group => :development
+gem "pg"

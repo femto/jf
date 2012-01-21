@@ -118,6 +118,7 @@ GEM
     nifty-generators (0.4.6)
     nokogiri (1.5.0-x86-mingw32)
     orm_adapter (0.0.6)
+    pg (0.12.2-x86-mingw32)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
@@ -191,6 +192,7 @@ DEPENDENCIES
   json
   mongrel
   nifty-generators
+  pg
   rails (= 3.1.1)
   rails-dev-boost
   sass-rails (~> 3.1.4)
