@@ -7,3 +7,7 @@
  *= require ./all/nivo-slider
  *= require ./all/themes/default/default
 */
+.locale {
+float: left;
+margin: -0.25em 0.1em;
+}

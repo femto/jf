@@ -26,9 +26,8 @@
 <%= select_tag 'set_locale',
 options_for_select(LANGUAGES, I18n.locale.to_s),
 :onchange => 'this.form.submit()' %>
-<%= submit_tag 'submit' %>
-<%= javascript_tag "$$('.locale input').each(Element.hide)" %>
-<% end %><a href="#" >注册</a>丨<a href="#" >登录</a></div><div class="span-4 last ss">
+<% end %>
+              <a href="#" >注册</a>丨<a href="#" >登录</a></div><div class="span-4 last ss">
             <div class="appleNav">
             <form>
               <input type="text" />
