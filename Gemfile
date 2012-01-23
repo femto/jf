@@ -39,6 +39,11 @@ gem "cancan"
 gem "carrierwave_direct"
 gem "fog"
 gem "rails-dev-boost", :group => :development
-gem "mongrel", :group => :development
+
+gem "mongrel", "~> 1.2.0.pre2"
+gem "foreman"
+
+
+
 gem "pg"
 gem "nokogiri"
