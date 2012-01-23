@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>En name:</b>
+  <%= @product.en_name %>
+</p>
+
+<p>
+  <b>En body:</b>
+  <%= @product.en_body %>
+</p>
+
+<p>
+  <b>Zh name:</b>
+  <%= @product.zh_name %>
+</p>
+
+<p>
+  <b>Zh body:</b>
+  <%= @product.zh_body %>
+</p>
+
+<p>
+  <b>Whitepaper:</b>
+  <%= @product.whitepaper %>
+</p>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

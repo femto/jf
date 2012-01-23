@@ -1,4 +1,12 @@
 Jf::Application.routes.draw do
+  resources :categories
+
+  resources :products
+
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   get "home/index"
 
   devise_for :users

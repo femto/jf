@@ -46,3 +46,11 @@ module Jf
     config.assets.version = '1.0'
   end
 end
+
+if !File.exists?("/dev/null")
+  Pathname::SAME_PATHS = if File::FNM_SYSCASE.nonzero?
+    proc {|a, b| true}
+  else
+    proc {|a, b| a == b}
+  end
+end
