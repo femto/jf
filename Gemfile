@@ -43,7 +43,16 @@ gem "carrierwave_direct"
 gem "fog"
 gem "rails-dev-boost", :group => :development
 
-gem "mongrel", "~> 1.2.0.pre2"
+group :production do
+  if File.exists?("/dev/null")
+    gem "thin"
+  else
+    gem "mongrel", "~> 1.2.0.pre2"
+  end
+end
+
+
+
 gem "foreman"
 
 
