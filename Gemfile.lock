@@ -193,6 +193,7 @@ DEPENDENCIES
   foreman
   jquery-rails
   json
+  meta_search (>= 1.1.0.pre)
   mongrel (~> 1.2.0.pre2)
   nifty-generators
   nokogiri

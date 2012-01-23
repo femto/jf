@@ -5,9 +5,9 @@ en:
   hello: "Hello world"
   layouts:
     application:
-      home: "Home"
       products: "Products"
       support: "Support"
       buy: "Buy"
       event: "Event"
       about_us: "About Us"
+  home: "Home me"
