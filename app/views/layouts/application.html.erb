@@ -37,16 +37,18 @@
       		<div class="container">
                     <div class="zuo">
                         <ul class="nav">
-                            <li><a href="#">首页</a></li>
-                            <li><a href="#">产品与服务</a></li>
-                            <li><a href="#">技术与支持</a></li>
-                            <li><a href="#">如何购买</a></li>
-                            <li><a href="#">研讨与活动</a></li>
-                            <li><a href="#">关于我们</a></li>
+                            <li><a href="#"><%= t(".home")%></a></li>
+                            <li><a href="#"><%= t(".products")%></a></li>
+                            <li><a href="#"><%= t(".support")%></a></li>
+                            <li><a href="#"><%= t(".buy")%></a></li>
+                            <li><a href="#"><%= t(".event")%></a></li>
+                            <li><a href="#"><%= t(".about_us")%></a></li>
                         </ul>
                     </div>
               </div>
           </div>
+     <% if notice %><p class="notice"><%= notice %></p> <% end %>
+     <% if alert %><p class="alert"><%= alert %></p><% end %>
               <%= yield %>
 
         <div class="footer"><div class="tou">

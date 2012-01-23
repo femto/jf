@@ -1,13 +1,15 @@
 Jf::Application.routes.draw do
-  resources :categories
 
-  resources :products
+  scope '(:locale)' do
+    resources :categories
 
-  ActiveAdmin.routes(self)
+    resources :products
+
+    ActiveAdmin.routes(self)
+    root :to => 'home#index'
+  end
 
   devise_for :admin_users, ActiveAdmin::Devise.config
-
-  get "home/index"
 
   devise_for :users
 
@@ -60,7 +62,7 @@ Jf::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#index'
+
 
   # See how all your routes lay out with "rake routes"
 

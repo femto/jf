@@ -1,13 +1,12 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
-en:
-  hello: "Hello world"
+zh_cn:
   layouts:
     application:
-      home: "Home"
-      products: "Products"
-      support: "Support"
-      buy: "Buy"
-      event: "Event"
-      about_us: "About Us"
+      home: "首页"
+      products: "产品与服务"
+      support: "技术与支持"
+      buy: "如何购买"
+      event: "研讨与活动"
+      about_us: "关于我们"
