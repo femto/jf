@@ -1,4 +1,4 @@
-File.open("clean.txt").each do |line|
+`git status`.split("\n").each do |line|
   if line=~ /deleted/
     file = line.gsub(/#\s+deleted\:/,"")
     puts `git rm #{file}`
