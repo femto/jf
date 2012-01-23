@@ -22,7 +22,13 @@
         <!--logo  start   here-->
           <div class="container ">
             <div class="logo span-3"><a href="index.html" ><%=image_tag "logo.png"  %></a></div>
-            <div class="prepend-13 span-4 last ss">选择语言<a href="#" ><%=image_tag "cloose.png"%></a><a href="#" >注册</a>丨<a href="#" >登录</a></div><div class="span-4 last ss">
+            <div class="prepend-13 span-4 last ss"><%= form_tag "/", :class => 'locale' do %>
+<%= select_tag 'set_locale',
+options_for_select(LANGUAGES, I18n.locale.to_s),
+:onchange => 'this.form.submit()' %>
+<%= submit_tag 'submit' %>
+<%= javascript_tag "$$('.locale input').each(Element.hide)" %>
+<% end %><a href="#" >注册</a>丨<a href="#" >登录</a></div><div class="span-4 last ss">
             <div class="appleNav">
             <form>
               <input type="text" />

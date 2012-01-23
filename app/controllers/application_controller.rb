@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
         logger.error flash.now[:notice]
       end
     end
+    return true
   end
 
   def default_url_options

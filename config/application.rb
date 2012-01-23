@@ -54,3 +54,4 @@ if !File.exists?("/dev/null")
     proc {|a, b| a == b}
   end
 end
+Time::DATE_FORMATS[:default]=Time::DATE_FORMATS[:db]
