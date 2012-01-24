@@ -3,7 +3,7 @@ class HomeController < ApplicationController
     if params[:set_locale]
       redirect_to :locale => params[:set_locale]
     else
-      @categories = Category.all
+      @categories = Category.where(:parent_id=>nil)
     end
   end
 
