@@ -6,6 +6,8 @@ class Category < ActiveRecord::Base
   belongs_to :parent, :class_name => "Category",
     :foreign_key => "parent_id"
 
+  has_many :products
+
   def name
     send(I18n.locale.to_s + "_name")
   end

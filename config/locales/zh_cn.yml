@@ -10,6 +10,9 @@ zh_cn:
       buy: "如何购买"
       event: "研讨与活动"
       about_us: "关于我们"
+  home:
+    index:
+      newest: "最新产品"
   date:
     abbr_day_names:
     - 日
