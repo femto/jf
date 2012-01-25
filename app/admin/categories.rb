@@ -14,6 +14,6 @@ ActiveAdmin.register Category do
   #
   #    f.buttons
   #  end
-  form :partial => "form"
+  #form :partial => "form"
   
 end

@@ -226,12 +226,12 @@ Category.create!(:en_name=>"sub 1-2",:zh_cn_name=>"音响扬声器",:parent=> ca
 Category.create!(:en_name=>"sub 1-3",:zh_cn_name=>"汽车扬声器",:parent=> category1)
 Category.create!(:en_name=>"sub 1-4",:zh_cn_name=>"通讯扬声器",:parent=> category1)
 
-category2 =Category.create!(:en_name=>"Cat 2", :zh_cn_name=>"音响系统")
-Category.create!(:en_name=>"sub 2-1",:zh_cn_name=>"家庭影院音箱",:parent=> category2)
-Category.create!(:en_name=>"sub 2-2",:zh_cn_name=>"高保真音箱",:parent=> category2)
-Category.create!(:en_name=>"sub 2-3",:zh_cn_name=>"多媒体音箱沙滩音箱",:parent=> category2)
+category2 =Category.create!(:en_name=>"Cat 2", :zh_cn_name=>"电器设备")
+Category.create!(:en_name=>"sub 2-1",:zh_cn_name=>"功率放大器",:parent=> category2)
+Category.create!(:en_name=>"sub 2-2",:zh_cn_name=>"新产品",:parent=> category2)
 
-category3 =Category.create!(:en_name=>"Cat 3", :zh_cn_name=>"电器设备")
-Category.create!(:en_name=>"sub 3-1",:zh_cn_name=>"功率放大器",:parent=> category3)
-Category.create!(:en_name=>"sub 3-2",:zh_cn_name=>"新产品",:parent=> category3)
 
+category3 =Category.create!(:en_name=>"Cat 3", :zh_cn_name=>"音响系统")
+Category.create!(:en_name=>"sub 3-1",:zh_cn_name=>"家庭影院音箱",:parent=> category3)
+Category.create!(:en_name=>"sub 3-3",:zh_cn_name=>"高保真音箱",:parent=> category3)
+Category.create!(:en_name=>"sub 3-3",:zh_cn_name=>"多媒体音箱沙滩音箱",:parent=> category3)
