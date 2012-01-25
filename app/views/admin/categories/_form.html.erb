@@ -1,0 +1,7 @@
+<%= semantic_form_for [:admin, @category] do |f| %>
+          <%= f.inputs %>
+          <%= f.inputs :name => 'Product #%i', :for => :products %>
+
+
+    <%= f.buttons %>
+  <% end %>

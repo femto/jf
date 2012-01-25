@@ -1,3 +1,28 @@
+if ActiveAdmin::VERSION == "0.3.4" && Rails.version == "3.2.0"
+  class ActiveSupport::FileUpdateChecker
+    def paths
+      @files
+    end
+  end
+else
+  warn = "!! double check the ActiveSupport::FileUpdateChecker duck punch in #{__FILE__} !!"
+  puts "!" * warn.size
+  puts warn
+  puts "!" * warn.size
+end
+
+if Rails.env == "development"
+  activeadmin_reloader = ActiveSupport::FileUpdateChecker.new(Dir["app/admin/**/*"]) do
+
+    ActiveAdmin.application.unload!
+    Rails.application.reload_routes!
+  end
+
+  ActionDispatch::Callbacks.to_prepare do
+    activeadmin_reloader.execute_if_updated
+  end
+end
+
 ActiveAdmin.setup do |config|
 
   # == Site Title
