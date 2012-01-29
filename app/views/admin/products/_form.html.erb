@@ -1,3 +1,4 @@
+<script type="text/javascript" src="/javascripts/kindeditor-min.js"></script>
 <%= semantic_form_for [:admin, @product] do |f| %>
 
      <%=f.inputs "Detail" do %>
@@ -6,7 +7,7 @@
         <li><%=f.label "Category"%><%=f.grouped_collection_select :category_id, Category.where(:parent_id=>nil), :children, :name, :id, :name, include_blank: true %>
           </li>
         <%=f.input :en_name%>
-        <%=f.input :en_body%>
+        <%=f.input :en_body, :id=>"ke_demo"%>
         <%=f.input :zh_cn_name%>
         <%=f.input :zh_cn_body %>
         <%=f.input :is_new %>
@@ -18,3 +19,16 @@
 
     <%= f.buttons %>
   <% end %>
+<script>
+KindEditor.ready(function(K) {
+	K.create('#product_en_body', {
+        uploadJson : '/upload/index',
+		allowFileManager : true
+	});
+    K.create('#product_zh_cn_body', {
+        uploadJson : '/upload/index',
+		allowFileManager : true
+	}
+    );
+});
+</script>

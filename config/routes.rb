@@ -1,5 +1,7 @@
 Jf::Application.routes.draw do
 
+  match "upload/index"
+
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   devise_for :users
