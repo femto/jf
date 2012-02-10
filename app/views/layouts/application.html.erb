@@ -42,8 +42,8 @@ options_for_select(LANGUAGES, I18n.locale.to_s),
       		<div class="container">
                     <div class="zuo">
                         <ul class="nav">
-                            <li><a href="#"><%= t(".home")%></a></li>
-                            <li><a href="#"><%= t(".products")%></a></li>
+                            <li><a href="/"><%= t(".home")%></a></li>
+                            <li><%= link_to t(".products"), products_path %></li>
                             <li><a href="#"><%= t(".support")%></a></li>
                             <li><a href="#"><%= t(".buy")%></a></li>
                             <li><a href="#"><%= t(".event")%></a></li>

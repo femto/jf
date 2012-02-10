@@ -1,31 +1,189 @@
-<h1>Listing products</h1>
+<!--banner  start   here-->
+          <div class="banner-product">
+       	  	  <div class="container "><%= image_tag "banner-product.png", width:"950", height:"233" %>
+            </div>
+            </div>
 
-<table>
-  <tr>
-    <th>En name</th>
-    <th>En body</th>
-    <th>Zh name</th>
-    <th>Zh body</th>
-    <th>Whitepaper</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @products.each do |product| %>
-  <tr>
-    <td><%= product.en_name %></td>
-    <td><%= product.en_body %></td>
-    <td><%= product.zh_name %></td>
-    <td><%= product.zh_body %></td>
-    <td><%= product.whitepaper %></td>
-    <td><%= link_to 'Show', product %></td>
-    <td><%= link_to 'Edit', edit_product_path(product) %></td>
-    <td><%= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Product', new_product_path %>
+           <div class="line"></div>
+           <div class="line2"></div>
+           <!--news  start   here-->
+           <div class="news">
+                <div class="container ju"><span class="news-bt">新闻：</span><span class="news-nei">杰夫发布业界首款Giga DSL样机</span></div>
+           </div> 
+           <div class="line"></div>
+        
+        
+   		<div class="center-product">
+        <div class="container ">
+        <!--产品目录开始-->
+        <hr class=" space"/>
+        <div class="productlist  span-18">
+        	<p class="p-bt">产品目录</p>
+        	<hr class="line-bt"/>
+                <div ><p class="product1">扬声器</p></div>
+                
+        		<div class="span-17 yangshengqi">
+                
+                	<div class="span-4">
+                    <div class=" caidian colborder ">
+           	        <img src="img/caidian.png" width="134" height="135">
+           	        <p class="lit">彩电扬声器</p>
+                    </div>
+                    </div>
+                    
+                    <div class="span-4">
+                    <div class=" caidian colborder ">
+           	        <div class="span-3"><img src="img/yinxiang.png" width="134" height="135"></div>
+           	        <p class="lit">音响电扬声器</p>
+                    </div>
+                    </div>
+                    
+                    <div class="span-4">
+                    <div class=" caidian colborder ">
+           	        <img src="img/qiche.png" width="134" height="135">
+           	        <p class="lit">汽车扬声器</p>
+                    </div>
+                    </div>
+                    
+                    <div class="span-4  last">
+                    <div class=" caidian  last">
+           	        <img src="img/tongxun.png" width="134" height="135">
+           	        <p class="lit">通迅扬声器</p>
+                    </div>
+                    </div>
+                    
+                     <hr class=" xian"/>
+                </div>
+                
+                <div ><p class="product1">音响系统</p></div>
+                
+        		<div class="span-17 yangshengqi">
+                	
+                    <div class="span-4">
+                	<div class="caidian colborder ">
+           	        <img src="img/y1.png" width="134" height="135">
+           	        <p class="lit">家庭影院音箱</p>
+                  </div>
+                  </div>
+                    
+                    <div class="span-4">
+                    <div class=" caidian colborder ">
+           	        <img src="img/y2.png" width="134" height="135">
+           	        <p class="lit">高保真音箱</p>
+                  </div>
+                  </div>
+                    
+                    <div class="span-4">
+                    <div class=" caidian colborder ">
+           	        <img src="img/y3.png" width="134" height="135">
+           	        <p class="lit">多媒体音箱</p>
+                  </div>
+                  </div>
+                    
+                    
+                    <div class="span-4 last">
+                    <div class=" caidian  last">
+           	        <img src="img/y4.png" width="134" height="135">
+           	        <p class="lit">沙滩音箱</p>
+                  </div>
+                  </div>
+                    
+                  <hr class="xian"/>
+                </div>
+                
+                <div ><p class="product1">电声设备</p></div>
+                
+        		<div class="span-17 yangshengqi">
+                	
+                    <div class="span-4">
+                	<div class=" caidian colborder ">
+           	        <img src="img/caidian.png" width="134" height="135">
+           	        <p class="lit">测音系统</p>
+                    </div>
+                    </div>
+                    
+                    <div class="span-4">
+                    <div class=" caidian colborder ">
+           	        <img src="img/yinxiang.png" width="134" height="135">
+           	        <p class="lit">功率放大器</p>
+                    </div>
+                    </div>
+                    
+                    <div class="span-4 last">
+                    <div class=" caidian  ">
+           	        <img src="img/qiche.png" width="134" height="135">
+           	        <p class="lit">实验系统</p>
+                    </div>
+                    </div>
+                    
+                     <hr class="span-12"/>
+                </div>
+                <!--产品目录结束-->
+                
+               <!--杰夫实验开始--> 
+               <p class="p-bt">杰夫实验室</p> 
+               <hr class="line-bt"/>
+               <div ><p class="product1">测试项目</p></div>
+               <div class="span-16">
+                		<ul>
+                                <li><a href="#">与南京大学声学研究所联合研发之国家专利产品</a></li>
+                                <li><a href="#">符合GB、IEC、EIA、DIN、JIS、IHF等多种标准规范</a></li>
+                                <li><a href="#">可进行最大噪声功率试验、长期最大功率试验、短期最大功率试验、额定最大正弦功率试验、最优功率标称试验，并可由用户自定义通断时间进</a></li>
+                                <li><a href="#">提供各种频段的白噪声信号、粉红噪声信号、模拟节目信号，各种频率的正弦波锯齿波、各种频率和占空比的方波、三角波，以及符合行业标准的信号源</a></li>
+                                </ul>
+                         <p  class="more-product"><a href="#">more>></a></p>
+               		
+               </div>
+               <!--杰夫实验结束-->
+            </div>
+        	
+        <!--右边框框 1 开始-->    
+            <div class=" span-6  last ">
+                <div class="online"><img src="img/tubiao1.png" width="47" height="34"><span id="right-bt">Online反馈</span>
+                    
+                <hr class="heng"/>
+                
+                 <div class="online-img"><center><a  href="#"><img src="img/ontu.png" width="194" height="77"></a></center></div>
+                 </div>
+            </div>
+        <!--右边框框 1 结束-->  
+        
+        <!--右边框框 2 开始-->    
+        	<div class=" span-6  last ">
+              <div class="second">
+                <div class="go"><img src="img/tubiao2.png" width="47" height="34"><span id="right-bt">搜索</span>
+                    
+                <hr class="heng"/>
+                
+                 <div class="online-img"><center>
+                 <span>产品型号：</span>
+			     <input type="text" class="ssk" id="name" name="dummy1" >
+                 </center>
+                 <span style="padding-left:170px;"><a  href="#"><img src="img/go.png" width="32" height="17"></a></span>
+                 </div>
+                 </div>
+                 </div>
+            </div>
+            
+        <!--右边框框 2 结束-->  
+        
+        <!--右边框框 3 开始-->    
+        	<div class=" span-6  last ">
+              <div class="second">
+                <div class="buy"><img src="img/tubiao3.png" width="47" height="34"><span id="right-bt">如何购买</span>
+                    
+                <hr class="heng"/>
+                
+                 <div class="buy-img">
+                   <center>
+                 <a  href="#"><img src="img/buy.png" width="196" height="88"></a>
+                   </center>
+                 </div>
+                </div>
+              </div>
+            </div>
+            
+        <!--右边框框 3 结束--> 
+        </div>
+        </div>
