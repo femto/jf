@@ -4,7 +4,7 @@ class HomeController < ApplicationController
       redirect_to :locale => params[:set_locale]
     else
       @products = Product.where(:is_new=>true).order("created_at desc").limit(4)
-      @categories = Category.where(:parent_id=>nil)
+      @categories = ProductCategory.where(:parent_id=>nil)
     end
   end
 

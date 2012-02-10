@@ -6,6 +6,7 @@ class Category < ActiveRecord::Base
   belongs_to :parent, :class_name => "Category",
     :foreign_key => "parent_id"
 
+  acts_as_restful_list # :scope => :parent
   #mount SomeUploader, :image
 
   def name

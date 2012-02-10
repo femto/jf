@@ -41,9 +41,10 @@ gem "devise"
 gem "jquery-rails"
 gem "activeadmin"
 gem "cancan"
-gem "carrierwave_direct"
+gem "carrierwave"
 gem "fog"
 gem "rails-dev-boost", :group => :development
+gem 'acts_as_restful_list'
 
 group :production do
   if File.exists?("/dev/null")

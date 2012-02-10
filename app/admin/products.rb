@@ -1,4 +1,5 @@
 ActiveAdmin.register Product do
+  menu :priority => 2
    #form do |f|
    #  f.inputs "Detail" do
    #
