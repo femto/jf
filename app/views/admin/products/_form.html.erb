@@ -4,7 +4,7 @@
      <%=f.inputs "Detail" do %>
 
 
-        <li><%=f.label "Category"%><%=f.grouped_collection_select :category_id, Category.where(:parent_id=>nil), :children, :name, :id, :name, include_blank: true %>
+        <li><%=f.label "Category"%><%=f.grouped_collection_select :category_id, ProductCategory.where(:parent_id=>nil), :children, :name, :id, :name, include_blank: true %>
           </li>
         <%=f.input :en_name%>
         <%=f.input :en_body, :id=>"ke_demo"%>
@@ -22,11 +22,11 @@
 <script>
 KindEditor.ready(function(K) {
 	K.create('#product_en_body', {
-        uploadJson : '/upload/index',
+        uploadJson : '/kind_editor/upload',
 		allowFileManager : true
 	});
     K.create('#product_zh_cn_body', {
-        uploadJson : '/upload/index',
+        uploadJson : '/kind_editor/upload',
 		allowFileManager : true
 	}
     );

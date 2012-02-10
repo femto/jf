@@ -1,6 +1,6 @@
 Jf::Application.routes.draw do
 
-  match "upload/index"
+  match "kind_editor/upload"
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
