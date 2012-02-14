@@ -7,7 +7,8 @@ class Category < ActiveRecord::Base
     :foreign_key => "parent_id"
 
   acts_as_restful_list # :scope => :parent
-  #mount SomeUploader, :image
+  acts_as_nested_set
+  mount_uploader :image,ImageUploader
 
   def name
     send(I18n.locale.to_s + "_name")

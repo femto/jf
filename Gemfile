@@ -62,3 +62,4 @@ gem "foreman"
 
 gem "pg"
 gem "nokogiri"
+gem 'awesome_nested_set'

@@ -1,3 +1,4 @@
+<%# encoding:utf-8 %>
 <!--banner  start   here-->
           <div class="banner-product">
        	  	  <div class="container "><%= image_tag "banner-product.png", width:"950", height:"233" %>
@@ -10,10 +11,10 @@
            <!--news  start   here-->
            <div class="news">
                 <div class="container ju"><span class="news-bt">新闻：</span><span class="news-nei">杰夫发布业界首款Giga DSL样机</span></div>
-           </div> 
+           </div>
            <div class="line"></div>
-        
-        
+
+
    		<div class="center-product">
         <div class="container ">
         <!--产品目录开始-->
@@ -23,26 +24,26 @@
         	<hr class="line-bt"/>
                <% @categories.each do |category| %>
                 <div ><p class="product1">扬声器</p></div>
-                
+
         		<div class="span-17 yangshengqi">
 
                     <% children = category.children; children.each_with_index do |sub_category, index| %>
                         <div class="span-4">
                         <div class=" caidian <%= index == children.size-1 ? 'last': 'colborder' %> ">
-                        <%= image_tag "caidian.png", width:"134", height:"135"%>
+                        <%= image_tag sub_category.image_url , width:"134", height:"135" if sub_category.image? %>
                         <p class="lit">彩电扬声器</p>
                         </div>
                         </div>
                     <% end %>
-                    
+
                     <hr class=" span-<%= 4 * children.size %>"/>
                 </div>
               <% end %>
-                
+
                 <!--产品目录结束-->
-                
-               <!--杰夫实验开始--> 
-               <p class="p-bt">杰夫实验室</p> 
+
+               <!--杰夫实验开始-->
+               <p class="p-bt">杰夫实验室</p>
                <hr class="line-bt"/>
                <div ><p class="product1">测试项目</p></div>
                <div class="span-16">
@@ -53,29 +54,29 @@
                                 <li><a href="#">提供各种频段的白噪声信号、粉红噪声信号、模拟节目信号，各种频率的正弦波锯齿波、各种频率和占空比的方波、三角波，以及符合行业标准的信号源</a></li>
                                 </ul>
                          <p  class="more-product"><a href="#">more>></a></p>
-               		
+
                </div>
                <!--杰夫实验结束-->
             </div>
-        	
-        <!--右边框框 1 开始-->    
+
+        <!--右边框框 1 开始-->
             <div class=" span-6  last ">
                 <div class="online"><%=image_tag "tubiao1.png", width:"47", height:"34" %><span id="right-bt">Online反馈</span>
-                    
+
                 <hr class="heng"/>
-                
+
                  <div class="online-img"><center><a  href="#"><%=image_tag "ontu.png", width:"194", height:"77"%></a></center></div>
                  </div>
             </div>
-        <!--右边框框 1 结束-->  
-        
-        <!--右边框框 2 开始-->    
+        <!--右边框框 1 结束-->
+
+        <!--右边框框 2 开始-->
         	<div class=" span-6  last ">
               <div class="second">
                 <div class="go"><%=image_tag "tubiao2.png", width:"47", height:"34" %><span id="right-bt">搜索</span>
-                    
+
                 <hr class="heng"/>
-                
+
                  <div class="online-img"><center>
                  <span>产品型号：</span>
 			     <input type="text" class="ssk" id="name" name="dummy1" >
@@ -85,16 +86,16 @@
                  </div>
                  </div>
             </div>
-            
-        <!--右边框框 2 结束-->  
-        
-        <!--右边框框 3 开始-->    
+
+        <!--右边框框 2 结束-->
+
+        <!--右边框框 3 开始-->
         	<div class=" span-6  last ">
               <div class="second">
                 <div class="buy"><%=image_tag "tubiao3.png", width:"47", height:"34" %><span id="right-bt">如何购买</span>
-                    
+
                 <hr class="heng"/>
-                
+
                  <div class="buy-img">
                    <center>
                  <a  href="#"><%=image_tag "buy.png", width:"196", height:88%></a>
@@ -103,7 +104,7 @@
                 </div>
               </div>
             </div>
-            
-        <!--右边框框 3 结束--> 
+
+        <!--右边框框 3 结束-->
         </div>
         </div>
