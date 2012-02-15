@@ -62,4 +62,5 @@ gem "foreman"
 
 gem "pg"
 gem "nokogiri"
+gem "htmlentities"
 gem 'awesome_nested_set'
