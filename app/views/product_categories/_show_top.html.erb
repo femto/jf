@@ -1,0 +1,114 @@
+<div class="jianbian">
+           <div class="container ">
+           <p class="y-bt size-16 b t-bold"><%= @product_category.name %></p>
+           </div>
+           </div>
+
+
+   		<div class="center-product">
+        <div class="container ">
+        <!--产品目录开始-->
+        <hr class=" space"/>
+        <div class="productlist  span-18">
+
+        	<div class="xia"><hr class="line-abt span-18 "/></div>
+
+
+        		<div class="span-18 yangshengqi">
+                    <% children = @product_category.children.limit(4);children.each_with_index do |sub_category,index| %>
+                        <div class="span-4 <%= 'last' if index == children.size - 1%>">
+                            <div class=" caidian ">
+                            <%= link_to (image_tag sub_category.image_url, :width=>"134",:height=>"135"), sub_category %>
+                            <p class="lit"><%=link_to sub_category.name, sub_category %></p>
+                            </div>
+                        </div>
+
+
+                   <% end %>
+
+
+                    <p class="span-17 quanbu"></p>
+                </div>
+                <div class="xia"><hr class="line-abt span-18 "/></div>
+
+                <hr class="space"/>
+    			<div class="span-15">
+                	<p class="y-bt size-16 b t-bold">特色产品</p>
+                </div>
+                <div class="span-3 last">
+                	<p class="y-bt-quan"></p>
+                </div>
+                <% @products.where(:featured=>true).each do |product| %>
+                    <div class="span-5 last">
+                        <%=image_tag product.image,  :width=>"150",:height=>"143" if product.image?%>
+                    </div>
+                    <div class="span-13 last">
+                        <p>
+                            <span class="t-bold">产品型号：</span><%= product.name %>
+                        </p>
+                        <p>
+                            <span class="t-bold">产品简介：</span><%= product.body.truncate(60).html_safe %>
+                        </p>
+                        <div class="span-10 all last">
+                            <%= link_to t(".know_more"), product %></div><div class="span-3 all last"><a href="#">产品手册下载</a>
+                        </div>
+                    </div>
+
+                    <hr class="space"/>
+                <% end %>
+
+                <hr/>
+                <div class="right"><%= paginate @products.where(:featured=>true) %>
+                </div>
+
+          </div>
+
+        <!--右边框框 1 开始-->
+            <div class="span-6 last">
+                <div class="online"><img src="img/tubiao1.png" width="47" height="34"><span id="right-bt">Online反馈</span>
+
+                <hr class="heng"/>
+
+                 <div class="online-img"><center><a  href="#"><img src="img/ontu.png" width="194" height="77"></a></center></div>
+                 </div>
+            </div>
+        <!--右边框框 1 结束-->
+
+        <!--右边框框 2 开始-->
+        	<div class=" span-6  last ">
+              <div class="second">
+                <div class="go"><img src="img/tubiao2.png" width="47" height="34"><span id="right-bt">搜索</span>
+
+                <hr class="heng"/>
+
+                 <div class="online-img"><center>
+                 <span>产品型号：</span>
+			     <input type="text" class="ssk" id="name" name="dummy1" >
+                 </center>
+                 <span style="padding-left:170px;"><a  href="#"><img src="img/go.png" width="32" height="17"></a></span>
+                 </div>
+                 </div>
+                 </div>
+            </div>
+
+        <!--右边框框 2 结束-->
+
+        <!--右边框框 3 开始-->
+        	<div class=" span-6  last ">
+              <div class="second">
+                <div class="buy"><img src="img/tubiao3.png" width="47" height="34"><span id="right-bt">如何购买</span>
+
+                <hr class="heng"/>
+
+                 <div class="buy-img">
+                   <center>
+                 <a  href="#"><img src="img/buy.png" width="196" height="88"></a>
+                   </center>
+                 </div>
+                </div>
+              </div>
+            </div>
+
+        <!--右边框框 3 结束-->
+        </div>
+        </div>

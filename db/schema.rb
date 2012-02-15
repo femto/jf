@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120214042914) do
+ActiveRecord::Schema.define(:version => 20120215073312) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -71,6 +71,8 @@ ActiveRecord::Schema.define(:version => 20120214042914) do
     t.boolean  "is_new"
     t.integer  "category_id"
     t.text     "zh_cn_whitepaper"
+    t.boolean  "featured"
+    t.string   "image"
   end
 
   create_table "users", :force => true do |t|

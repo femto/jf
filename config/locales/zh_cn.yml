@@ -13,6 +13,16 @@ zh_cn:
   home:
     index:
       newest: "最新产品"
+  product_categories:
+    show_top:
+      show_all_products: "查看全部产品"
+      know_more: "了解更多"
+  views:
+    pagination:
+      next: "下一页"
+      previous: "上一页"
+      first: "首页"
+      last: "末页"
   date:
     abbr_day_names:
     - 日

@@ -8,10 +8,6 @@
 
            <div class="line"></div>
            <div class="line2"></div>
-           <!--news  start   here-->
-           <div class="news">
-                <div class="container ju"><span class="news-bt">新闻：</span><span class="news-nei">杰夫发布业界首款Giga DSL样机</span></div>
-           </div>
            <div class="line"></div>
 
 
@@ -20,18 +16,18 @@
         <!--产品目录开始-->
         <hr class=" space"/>
         <div class="productlist  span-18">
-        	<p class="p-bt">产品目录</p>
+        	<p class="size-14 b">产品目录</p>
         	<hr class="line-bt"/>
                <% @categories.each do |category| %>
-                <div ><p class="product1">扬声器</p></div>
+                <div class="pro-link"><%= link_to category.name, category %></div>
 
-        		<div class="span-17 yangshengqi">
+        		<div class="span-17 speaker">
 
                     <% children = category.children; children.each_with_index do |sub_category, index| %>
-                        <div class="span-4">
-                        <div class=" caidian <%= index == children.size-1 ? 'last': 'colborder' %> ">
+                        <div class="span-4 <%= index == children.size-1 ? 'last': ''%>">
+                        <div class="tv <%= index == children.size-1 ? 'last': 'colborder' %>">
                         <%= image_tag sub_category.image_url , width:"134", height:"135" if sub_category.image? %>
-                        <p class="lit">彩电扬声器</p>
+                        <p class="lit"><%= link_to sub_category.name, sub_category%></p>
                         </div>
                         </div>
                     <% end %>

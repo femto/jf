@@ -8,6 +8,8 @@ class Category < ActiveRecord::Base
 
   acts_as_restful_list # :scope => :parent
   acts_as_nested_set
+  #todo : Protecting attributes from mass assignment attr_accessible :name, :parent_id
+  #or attr_protected :lft, :rgt
   mount_uploader :image,ImageUploader
 
   def name

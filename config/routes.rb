@@ -1,5 +1,7 @@
 Jf::Application.routes.draw do
 
+
+
   match "kind_editor/upload"
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -10,6 +12,12 @@ Jf::Application.routes.draw do
 
   scope '(:locale)' do
     resources :categories
+
+    resources :product_categories
+
+    #get "product_categories/index"
+    #
+    #get "product_categories/show"
 
     resources :products
 

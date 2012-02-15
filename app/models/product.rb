@@ -6,6 +6,8 @@ class Product < ActiveRecord::Base
   validates_presence_of :category
   validates_presence_of :category_id
 
+  mount_uploader :image,ImageUploader
+
   def name
     send(I18n.locale.to_s + "_name")
   end
