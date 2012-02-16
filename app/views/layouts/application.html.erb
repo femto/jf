@@ -27,7 +27,16 @@
 options_for_select(LANGUAGES, I18n.locale.to_s),
 :onchange => 'this.form.submit()' %>
 <% end %>
-              <a href="#" >注册</a>丨<a href="#" >登录</a></div><div class="span-4 last ss">
+
+    <% if user_signed_in? %>
+      <a href="#"><%= current_user.email %></a>
+      <%= link_to "Sign Out", destroy_user_session_path, :method=>:delete%>
+    <% else %>
+      <%= link_to t(".sign_up"), new_user_registration_path %>
+      <%= link_to t(".sign_in"), new_user_session_path %>
+    <% end %>
+
+  </div><div class="span-4 last ss">
             <div class="appleNav">
             <form>
               <input type="text" />

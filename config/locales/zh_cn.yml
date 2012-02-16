@@ -10,6 +10,41 @@ zh_cn:
       buy: "如何购买"
       event: "研讨与活动"
       about_us: "关于我们"
+      sign_up: "注册"
+      sign_in: "登陆"
+  activerecord:
+      attributes:
+        user:
+          email: "电子邮件"
+          password: "登录密码"
+          password_confirmation: "确认密码"
+  formtastic:
+      titles:
+        post_details: "Post details"
+      users:
+        email: "hi"
+      labels:
+        post:
+          title: "Your Title"
+          body: "Write something..."
+          edit:
+            title: "Edit title"
+      hints:
+        post:
+          title: "Choose a good title for your post."
+          body: "Write something inspiring here."
+      placeholders:
+        post:
+          title: "Title your post"
+          slug: "Leave blank for an automatically generated slug"
+        user:
+          email: "you@yours.com"
+      actions:
+        create: "Create my %{model}"
+        update: "Save changes"
+        reset: "Reset form"
+        cancel: "Cancel and go back"
+        dummie: "Launch!"
   home:
     index:
       newest: "最新产品"
