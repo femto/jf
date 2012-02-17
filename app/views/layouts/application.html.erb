@@ -30,7 +30,7 @@ options_for_select(LANGUAGES, I18n.locale.to_s),
 
     <% if user_signed_in? %>
       <a href="#"><%= current_user.email %></a>
-      <%= link_to "Sign Out", destroy_user_session_path, :method=>:delete%>
+      <%= link_to t(".sign_out"), destroy_user_session_path, :method=>:delete%>
     <% else %>
       <%= link_to t(".sign_up"), new_user_registration_path %>
       <%= link_to t(".sign_in"), new_user_session_path %>

@@ -13,6 +13,7 @@ en:
       home: "Home"
       sign_up: "Sign Up"
       sign_in: "Sign In"
+      sign_out: "Sign Out"
   formtastic:
       titles:
         post_details: "Post details"

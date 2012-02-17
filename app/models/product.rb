@@ -7,6 +7,8 @@ class Product < ActiveRecord::Base
   validates_presence_of :category_id
 
   mount_uploader :image,ImageUploader
+  mount_uploader :en_whitepaper,ImageUploader
+  mount_uploader :zh_cn_whitepaper,ImageUploader
 
   def name
     send(I18n.locale.to_s + "_name")
@@ -18,6 +20,10 @@ class Product < ActiveRecord::Base
 
   def whitepaper
     send(I18n.locale.to_s + "_whitepaper")
+  end
+
+  def whitepaper?
+    send(I18n.locale.to_s + "_whitepaper?")
   end
 
 

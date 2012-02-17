@@ -6,7 +6,7 @@ Jf::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "registrations" }
   
   ActiveAdmin.routes(self)
 
@@ -19,7 +19,11 @@ Jf::Application.routes.draw do
     #
     #get "product_categories/show"
 
-    resources :products
+    resources :products do
+      member do
+        get "download",:as=>:download
+      end
+    end
 
     ActiveAdmin.routes(self)
     root :to => 'home#index'

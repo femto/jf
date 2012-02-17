@@ -12,6 +12,7 @@ zh_cn:
       about_us: "关于我们"
       sign_up: "注册"
       sign_in: "登陆"
+      sign_out: "注销"
   activerecord:
       attributes:
         user:

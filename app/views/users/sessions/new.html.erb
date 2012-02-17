@@ -1,68 +1,42 @@
 <div class="container">
                 <hr class="juli space"/>
-                <span class="size-24 b t-bold">注册</span><span class="kong">注册新的帐号</span>
+                <span class="size-24 b t-bold">登录</span>
                 <hr class="space" />
-                <%= semantic_form_for @user do |f|  %>
-                <div class="regsiter-bg">
-                	<div class="span-22 prepend-1">
-                        <div class="t-bold b log-b">登录信息</div>
-                        <hr/>
-                        <div class="span-22">
-                             <div class="span-2 r log-bb b">*电子邮件：</div>
-                             <div class="span-20 last"><input type="text" class="kuang" id="name" name="dummy1" ><span class="kong">我们将使用此电子邮件地址来验证您的注册</span></div><hr class="space" />
-                             <div class="span-2 r log-bb b">*登录密码：</div>
-                             <div class="span-20 last"><input type="text" class="kuang" id="name" name="dummy1" ><span class="kong">必须大于或等于8个字符，并包含一个大写和小写的字母组合（A-Z或a-z）和至少1个数字（0-9）。</span></div>
-                             <hr class="space" />
-                             <div class="span-2 r log-bb b">*确认密码：</div>
-                             <div class="span-20 last"><input type="text" class="kuang" id="name" name="dummy1" ></div>
-                             <hr class="space" />
 
-                                
-                       <hr class="space" />
-                       <div class="t-bold b log-b">联系信息</div>
-                             <hr/>
-                             	<div class="span-2 r log-bb b">*名字：</div>
-                                    <div class="span-20 last"><input type="text" class="kuang" id="name" name="dummy1" ></div>
-                                <hr class="space" />
-                                    <div class="span-2 r log-bb b">*姓氏：</div>
-                                    <div class="span-20 last"><input type="text" class="kuang" id="name" name="dummy1" ></div>
-                                <hr class="space" />
-                                    <div class="span-2 r log-bb b">*电话号码：</div>
-                                    <div class="span-20 last"><input type="text" class="kuang" id="name" name="dummy1" ></div>
-                                 <hr class="space" />
-                                    <div class="span-2 r log-bb b">*国家/地区：</div>
-                                    <div class="span-20 last"><input type="text" class="kuang" id="name" name="dummy1" ></div>
-                                <hr class="space" />
-                                    <div class="span-2 r log-bb b">*地址：</div>
-                                    <div class="span-20 last"><input type="text" class="kuang" id="name" name="dummy1" ></div>
-                                <hr class="space" />
-                                    <div class="span-2 r log-bb b">*城市：</div>
-                                    <div class="span-20 last"><input type="text" class="kuang" id="name" name="dummy1" ></div>
-                                <hr class="space" />
-                                    <div class="span-2 r log-bb b">省/州/地区：</div>
-                                    <div class="span-20 last"><input type="text" class="kuang" id="name" name="dummy1" ></div>
-                                 <hr class="space" />
-                                    <div class="span-2 r log-bb b">*邮政编码：</div>
-                                    <div class="span-20 last"><input type="text" class="kuang" id="name" name="dummy1" ></div>
-                                                
-                                
-                          <hr class="space" />
-                          <div class="t-bold b log-b">联系信息</div>
-                                    <div class="prepend-1">
-                                    	<input type="checkbox" name="cb_agree"><span class="agree">我已阅读并同意杰夫公司用户注册协议</span>
-                                    </div>
-                                    <hr class="space" />
-                                    <div class="span-2  prepend-5 last">
-                                    	<button><%=image_tag "register-img1.png", :width=>"55",:height=>"24"%></button>
-                                    </div>
+                <div class="login-bg">
+                    <%= semantic_form_for @user,:url=>session_path(resource) do |f| %>
+                        <div class="span-7 prepend-3 log-top">
+                            <div class="b t-bold">
+                              <%= f.input :email %>
+                              <%= f.input :password %>
+
+                            </div>
+                            <div class="span-2 prepend-5"><span class="b"><a href=".html">忘记密码</a></span></div>
+
+                            <hr class="space" />
+                            <div class="span-2  prepend-5 last"><%=image_submit_tag "log-img1.png",:width=>"55",:height=>"24"%></div>
                         </div>
-                    </div>
-                </div>
-                <% end %>
+                    <%end%>
 
-			<hr class="space" />
-            <hr class="space" />
-            <hr class="space" />
-            <hr class="space" />
-            
+                  	<div class="span-7 prepend-3 log-top2 ">
+                        <div class="size-16 b t-bold">
+                        	<span>欢迎注册杰夫网站</span></span></div>
+                        	<hr class="space" />
+                            <div>您可以免费注册一个账号，以获取更多的便利，例如下载或浏览
+        更有价值的信息，获取针对您的内容推送等。</div>
+                        	<hr class="space" />
+                        	<hr class="space" />
+                        	<div class="span-2  last"><%=link_to (image_tag  "register-img1.png", :width=>"55",:height=>"24"), new_user_registration_path%></div>
+                      	</div>                   
+                    </div>
+
+
+                                        <hr class="space" />
+                                        <hr class="space" />
+                                        <hr class="space" />
+                                        <hr class="space" />
+                                        <hr class="space" />
+                                        <hr class="space" />
+                                        <hr class="space" />
+                                        <hr class="space" />
 			</div>
