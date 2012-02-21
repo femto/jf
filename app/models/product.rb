@@ -26,5 +26,9 @@ class Product < ActiveRecord::Base
     send(I18n.locale.to_s + "_whitepaper?")
   end
 
+  #def default_image
+  #  image? ? image : "product_none.jpg"
+  #end
+
 
 end
