@@ -1,0 +1,31 @@
+<h1>Listing faqs</h1>
+
+<table>
+  <tr>
+    <th>En name</th>
+    <th>Zh cn name</th>
+    <th>En body</th>
+    <th>Zh cn body</th>
+    <th>Position</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @faqs.each do |faq| %>
+  <tr>
+    <td><%= faq.en_name %></td>
+    <td><%= faq.zh_cn_name %></td>
+    <td><%= faq.en_body %></td>
+    <td><%= faq.zh_cn_body %></td>
+    <td><%= faq.position %></td>
+    <td><%= link_to 'Show', faq %></td>
+    <td><%= link_to 'Edit', edit_faq_path(faq) %></td>
+    <td><%= link_to 'Destroy', faq, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Faq', new_faq_path %>

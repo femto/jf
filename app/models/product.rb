@@ -1,5 +1,7 @@
 class Product < ActiveRecord::Base
 
+
+
   validates_presence_of :en_name
   validates_presence_of :zh_cn_name
   belongs_to :category, :class_name => "ProductCategory"
@@ -9,6 +11,8 @@ class Product < ActiveRecord::Base
   mount_uploader :image,ImageUploader
   mount_uploader :en_whitepaper,ImageUploader
   mount_uploader :zh_cn_whitepaper,ImageUploader
+
+  default_scope order(:position)
 
   def name
     send(I18n.locale.to_s + "_name")
@@ -26,9 +30,9 @@ class Product < ActiveRecord::Base
     send(I18n.locale.to_s + "_whitepaper?")
   end
 
-  #def default_image
-  #  image? ? image : "product_none.jpg"
-  #end
+  def default_image
+    image? ? image : "product_none.jpg"
+  end
 
 
 end

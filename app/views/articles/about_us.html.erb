@@ -1,0 +1,85 @@
+<!--banner  start   here-->
+<div class="banner-background" xmlns="http://www.w3.org/1999/html">
+       	  	  	<div class="container">
+              		<img src="img/banner-product.png" width="950" height="233">
+             	</div>
+		   </div>
+           <div class="line"></div>
+           <div class="line2"></div>
+           <div class="banner-bottom-background"></div>
+           <div class="line"></div>
+<!--banner  end   here-->
+<!--center  start   here-->
+   			<div class="center-about-background">
+                <div class="container">
+                  
+                    <hr class="space"/>
+                    <div class="span-18">
+                        
+                        <% @articles.each do |article| %>
+                            <span class="green-caption"><%= link_to article.name, article %></span>
+                            <div style="padding-top:5px;">
+                                <div class="span-18 caption-line"></div>
+                            </div>
+                            <div class="span-7 about-img">
+                                <%= link_to (image_tag article.default_image, :width=>"271",:height=>"160"), article%>
+                            </div>
+                            <div class="span-10 last about-content">
+                              <p><%=raw truncate_html article.body, :length=>60 %></p>
+                            </div>
+                            <p class="span-18 about-more"><%=link_to t(".more"), article %></p>
+                        <% end %>
+                      
+                    
+                	</div>
+
+                <!--右边框框 1 开始-->
+                    <div class="span-6  last">
+                        <div class="online"><img src="img/tubiao1.png" width="47" height="34"><span class="size-14 t-bold right-bt">Online反馈</span>
+                            <hr class="none"/>
+                            <div class="online-img"><center><a  href="#"><img src="img/ontu.png" width="194" height="77"></a></center></div>
+                        </div>
+                    </div>
+                <!--右边框框 1 结束-->
+
+                <!--右边框框 2 开始-->
+                    <div class="span-6  last">
+                      <div class="second">
+                        <div class="go"><img src="img/tubiao2.png" width="47" height="34"><span class="size-14 t-bold right-bt">搜索</span>
+                            <hr class="none"/>
+                            <div class="online-img">
+                              <center>
+                                <span>产品型号：</span>
+                                <input type="text" class="ssk" id="name" name="dummy1" >
+                              </center>
+                              <span style="padding-left:170px;"><a  href="#"><img src="img/go.png" width="32" height="17"></a></span>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                <!--右边框框 2 结束-->
+
+                <!--右边框框 3 开始-->
+                    <div class="span-6  last">
+                      <div class="second">
+                        <div class="QA"><img src="img/QA.png" width="46" height="37"><span class="size-14 t-bold right-bt">常见问答/向专家提问</span>
+                                <hr class="none"/>
+                                 <div class="buy-img">
+                                     <p>
+                                         <span class="Q gray">我想了解.......</span><br>
+                                         <span class="A b">专家回答：根据您的需求</span><br>
+                                         <span class="Q gray">我想了解.......</span><br>
+                                         <span class="A b">专家回答：根据您的需求</span><br>
+                                         <span class="Q gray">我想了解.......</span><br>
+                                         <span class="A b">专家回答：根据您的需求</span><br>
+                                         <span class="Q gray">我想了解.......</span><br>
+                                         <span class="A b">专家回答：根据您的需求</span>
+                                     </p>
+                                 <p class="more-QA r "><a  href="#">more>></a></p>
+                                 </div>
+                        </div>
+                      </div>
+                    </div>
+                <!--右边框框 3 结束-->
+            	</div>
+			</div>

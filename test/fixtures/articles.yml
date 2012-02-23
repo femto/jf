@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  en_name: MyString
+  zh_cn_name: MyString
+  en_body: MyText
+  zh_cn_body: MyText
+  position: 1
+
+two:
+  en_name: MyString
+  zh_cn_name: MyString
+  en_body: MyText
+  zh_cn_body: MyText
+  position: 1

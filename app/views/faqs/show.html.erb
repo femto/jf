@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>En name:</b>
+  <%= @faq.en_name %>
+</p>
+
+<p>
+  <b>Zh cn name:</b>
+  <%= @faq.zh_cn_name %>
+</p>
+
+<p>
+  <b>En body:</b>
+  <%= @faq.en_body %>
+</p>
+
+<p>
+  <b>Zh cn body:</b>
+  <%= @faq.zh_cn_body %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @faq.position %>
+</p>
+
+
+<%= link_to 'Edit', edit_faq_path(@faq) %> |
+<%= link_to 'Back', faqs_path %>

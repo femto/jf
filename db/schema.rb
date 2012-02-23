@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120215073312) do
+ActiveRecord::Schema.define(:version => 20120223050819) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -46,6 +46,18 @@ ActiveRecord::Schema.define(:version => 20120215073312) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
+  create_table "articles", :force => true do |t|
+    t.string   "en_name"
+    t.string   "zh_cn_name"
+    t.text     "en_body"
+    t.text     "zh_cn_body"
+    t.integer  "position",    :default => 300
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.string   "image"
+    t.integer  "category_id"
+  end
+
   create_table "categories", :force => true do |t|
     t.string   "en_name"
     t.string   "zh_cn_name"
@@ -58,6 +70,16 @@ ActiveRecord::Schema.define(:version => 20120215073312) do
     t.integer  "lft"
     t.integer  "rgt"
     t.integer  "depth"
+  end
+
+  create_table "faqs", :force => true do |t|
+    t.string   "en_name"
+    t.string   "zh_cn_name"
+    t.text     "en_body"
+    t.text     "zh_cn_body"
+    t.integer  "position",   :default => 300
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   create_table "products", :force => true do |t|
@@ -73,6 +95,7 @@ ActiveRecord::Schema.define(:version => 20120215073312) do
     t.text     "zh_cn_whitepaper"
     t.boolean  "featured"
     t.string   "image"
+    t.integer  "position"
   end
 
   create_table "users", :force => true do |t|

@@ -53,10 +53,10 @@ options_for_select(LANGUAGES, I18n.locale.to_s),
                         <ul class="nav">
                             <li><a href="/"><%= t(".home")%></a></li>
                             <li><%= link_to t(".products"), products_path %></li>
-                            <li><a href="#"><%= t(".support")%></a></li>
-                            <li><a href="#"><%= t(".buy")%></a></li>
-                            <li><a href="#"><%= t(".event")%></a></li>
-                            <li><a href="#"><%= t(".about_us")%></a></li>
+                            <li><%= link_to t(".support"), support_articles_path %></li>
+                            <li><%= link_to t(".buy"), buy_articles_path %></li>
+                            <li><%= link_to t(".event"),event_articles_path %></a></li>
+                            <li><%= link_to t(".about_us"), about_us_articles_path%></li>
                         </ul>
                     </div>
               </div>

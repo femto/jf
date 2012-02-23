@@ -2,6 +2,8 @@ Jf::Application.routes.draw do
 
 
 
+  resources :faqs
+
   match "kind_editor/upload"
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -18,6 +20,15 @@ Jf::Application.routes.draw do
     #get "product_categories/index"
     #
     #get "product_categories/show"
+
+    resources :articles do
+      collection do
+        get "support",:as=>:support
+        get "buy",:as=>:buy
+        get "event",:as=>:event
+        get "about_us",:as=>:about_us
+      end
+    end
 
     resources :products do
       member do

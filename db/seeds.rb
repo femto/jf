@@ -235,3 +235,13 @@ category3 =ProductCategory.create!(:en_name=>"Cat 3", :zh_cn_name=>"音响系统
 ProductCategory.create!(:en_name=>"sub 3-1",:zh_cn_name=>"家庭影院音箱",:parent=> category3)
 ProductCategory.create!(:en_name=>"sub 3-3",:zh_cn_name=>"高保真音箱",:parent=> category3)
 ProductCategory.create!(:en_name=>"sub 3-3",:zh_cn_name=>"多媒体音箱沙滩音箱",:parent=> category3)
+
+ac1 = ArticleCategory.create!(:en_name=>"about us", :zh_cn_name=>"关于我们")
+article = Article.create!(:en_name=>"about us", :zh_cn_name=>"关于我们",:en_body=>"here", :zh_cn_body => "here", :category=>ac1)
+article = Article.create!(:en_name=>"operation info", :zh_cn_name=>"营运信息",:en_body=>"here", :zh_cn_body => "here", :category=>ac1)
+article = Article.create!(:en_name=>"growup path", :zh_cn_name=>"成长历程",:en_body=>"here", :zh_cn_body => "here", :category=>ac1)
+article = Article.create!(:en_name=>"director words", :zh_cn_name=>"总裁寄语",:en_body=>"here", :zh_cn_body => "here", :category=>ac1)
+article = Article.create!(:en_name=>"hr stragety", :zh_cn_name=>"人才战略",:en_body=>"here", :zh_cn_body => "here", :category=>ac1)
+article = Article.create!(:en_name=>"working opportunities", :zh_cn_name=>"工作机会",:en_body=>"here", :zh_cn_body => "here", :category=>ac1)
+
+
