@@ -1,0 +1,130 @@
+<!--center  start   here-->
+    <div class="buy-gradient-background"><!--渐变背景-->
+			<div class="container">
+
+                <hr class="space caption-padding-top"/>
+            	<span class="big-caption"><%=  @category.name %></span>
+            	<hr class="space"/>
+<!--contact   start   here-->
+           		<div class="span-18">
+
+                    <div class="buy-box">
+                        <div class="span-6 last">
+                            <div class="contact-box-size colborder">
+                                <hr class="space"/>
+                                    <div class="contact-padding-left small-blue-caption">
+                                        在线联系我们
+                                        <hr class="space"/>
+                                        <%=image_tag "buy1.png", width:"194", height:"77"%>
+                                        <hr class="space"/>
+                                    </div>
+                                <p class="contact-padding-left">
+                                	<span class="blue-color-caption"><a href="mailto:admin@jiefu.com">点击联系我们》</a></span><br>获得邮件帮助
+                                </p>
+                                <hr class="space"/>
+                                <hr class="space"/>
+                                <hr class="space"/>
+                                <hr class="space"/>
+                            </div>
+                        </div>
+
+                        <div class="span-6 last">
+                            <div class="contact-box-size colborder">
+                                <hr class="space"/>
+                                    <div class="contact-padding-left small-blue-caption">
+                                        <%= @local_article.name %>
+                                        <hr class="space"/>
+                                        <%=image_tag "buy2.png", width:"194", height:"77"%>
+                                        <hr class="space"/>
+                                    </div>
+                                <p class="contact-padding-left">
+                                	<span class="blue-color-caption"><%=link_to @local_article.name, @local_article %></span><br>
+                                    适用于签署直接购买协议的公司<br><br>
+                                    <span class="blue-color-caption">客户支持信息</span><br>
+                                    获得邮件帮助<br>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="span-6 last">
+                            <div class="contact-box-size">
+                                <hr class="space"/>
+                                    <div class="contact-padding-left small-blue-caption">
+                                        <%= @overseas_article.name %>
+                                        <hr class="space"/>
+                                        <%=image_tag "buy3.png", width:"194", height:"77"%>
+                                        <hr class="space"/>
+                                    </div>
+                                <p class="contact-padding-left">
+                                	<span class="blue-color-caption"><%=link_to @overseas_article.name, @overseas_article %></span><br>
+                                    适用于签署海外购买协议的公司<br><br>
+                                    <span class="blue-color-caption">客户支持信息</span><br>
+                                    获得邮件帮助<br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+<!--contact   end   here-->
+<!--文字框   start   here-->
+           			<hr class="space"/>
+            		<div class="knowmore">
+                    	<hr class="space"/>
+                        <div class="span-7 colborder last contact-padding-left">
+                        	<span class="middle-green-caption">无锡杰夫电声有限公司</span>
+                            <p>杰夫电声紧临上海，位于美丽的太湖之滨--无锡,于1998年1月18日重组为股份制有限公司... ...</p>
+                        	<p class="more-link"><a href="#">了解更多信息</a></p>
+                        </div>
+                        <div class="span-7 last contact-padding-left">
+                            <span class="middle-green-caption">无锡杰夫海外办事处</span>
+                            <p>杰夫电声紧临上海，位于美丽的太湖之滨--无锡,于1998年1月18日重组为股份制有限公司... ...</p>
+                            <p class="more-link"><a href="#">了解更多信息</a></p>
+                        </div>
+                    </div>
+<!--文字框   end   here-->
+<!--中国地图   start   here-->
+            		<hr class="space"/>
+            		<span class="blue-caption">杰夫中国</span>
+                    <hr class="map-line"/>
+                        <p>地址：中国江苏省无锡市锡山区八士经济开发区 邮编：214192</p>
+                 		<img src="img/china-map.png" width="718" height="229">
+                 	<hr class="space"/>
+<!--海外地图   start   here-->
+  					<span class="blue-caption">杰夫海外</span>
+					<hr class="map-line"/>
+    					<p>地址：韩国庆尚北道龟尾市工团洞196番地</p>
+						<img src="img/hanguo-map.png" width="718" height="229">
+					<hr class="space"/>
+            			<div class="more-link">
+                        	<a href="contactus.html">点击查阅</a>
+                        </div>
+            			<hr class="space"/>
+            	</div>
+
+            <!--框框右侧   start   here-->
+            <!--右边框框 5 开始-->
+            	<div class="span-5 last right-box-padding">
+                    <div class="span-6 last right-box-padding-bottom">
+                        <div class="box5">
+                         	 <div class="box5-caption">登录</div>
+                             <hr class="none"/>
+                             <div class="box-padding-top">
+                                <center>
+                                  <%= semantic_form_for @user,:url=>session_path(@user) do |f| %>
+                                         <span>用户名：</span>
+                                         <%= f.input "email",:input_html=>{:class=>"search-width"} %>
+                                         <span class="password-right">密</span>码：
+                                         <%= f.input "password",:input_html=>{:class=>"search-width"} %>
+                                         <input type="submit" class="search" value="注册">
+                                         <input type="submit" class="search" value="忘记密码">
+                                         <input type="submit" class="search" value="登录">
+                                  <% end %>
+                                </center>
+                             </div>
+                    	</div>
+            		</div>
+        	<!--右边框框 5 结束-->
+
+            <%= render "shared/feedback_and_search" %>
+				</div>
+          </div>
+   </div>

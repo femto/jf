@@ -245,3 +245,31 @@ article = Article.create!(:en_name=>"hr stragety", :zh_cn_name=>"人才战略",:
 article = Article.create!(:en_name=>"working opportunities", :zh_cn_name=>"工作机会",:en_body=>"here", :zh_cn_body => "here", :category=>ac1)
 
 
+ac2 = ArticleCategory.create!(:en_name=>"company event", :zh_cn_name=>"公司活动")
+article = Article.create!(:en_name=>"about us1", :zh_cn_name=>"关于我们",:en_body=>"here", :zh_cn_body => "here", :category=>ac2)
+article = Article.create!(:en_name=>"operation info1", :zh_cn_name=>"营运信息",:en_body=>"here", :zh_cn_body => "here", :category=>ac2)
+article = Article.create!(:en_name=>"growup path1", :zh_cn_name=>"成长历程",:en_body=>"here", :zh_cn_body => "here", :category=>ac2)
+article = Article.create!(:en_name=>"director words1", :zh_cn_name=>"总裁寄语",:en_body=>"here", :zh_cn_body => "here", :category=>ac2)
+article = Article.create!(:en_name=>"hr stragety1", :zh_cn_name=>"人才战略",:en_body=>"here", :zh_cn_body => "here", :category=>ac2)
+article = Article.create!(:en_name=>"working opportunities1", :zh_cn_name=>"工作机会",:en_body=>"here", :zh_cn_body => "here", :category=>ac2)
+
+ac3 = ArticleCategory.create!(:en_name=>"technical event", :zh_cn_name=>"技术研讨活动")
+article = Article.create!(:en_name=>"about us2", :zh_cn_name=>"关于我们",:en_body=>"here", :zh_cn_body => "here", :category=>ac3)
+article = Article.create!(:en_name=>"operation info2", :zh_cn_name=>"营运信息",:en_body=>"here", :zh_cn_body => "here", :category=>ac3)
+article = Article.create!(:en_name=>"growup path2", :zh_cn_name=>"成长历程",:en_body=>"here", :zh_cn_body => "here", :category=>ac3)
+article = Article.create!(:en_name=>"director words2", :zh_cn_name=>"总裁寄语",:en_body=>"here", :zh_cn_body => "here", :category=>ac3)
+article = Article.create!(:en_name=>"hr stragety2", :zh_cn_name=>"人才战略",:en_body=>"here", :zh_cn_body => "here", :category=>ac3)
+article = Article.create!(:en_name=>"working opportunities2", :zh_cn_name=>"工作机会",:en_body=>"here", :zh_cn_body => "here", :category=>ac3)
+
+ac4 = ArticleCategory.create!(:en_name=>"jiefu announcement", :zh_cn_name=>"杰夫公告")
+article = Article.create!(:en_name=>"about us3", :zh_cn_name=>"关于我们",:en_body=>"here", :zh_cn_body => "here", :category=>ac4)
+article = Article.create!(:en_name=>"operation info3", :zh_cn_name=>"营运信息",:en_body=>"here", :zh_cn_body => "here", :category=>ac4)
+article = Article.create!(:en_name=>"growup path3", :zh_cn_name=>"成长历程",:en_body=>"here", :zh_cn_body => "here", :category=>ac4)
+article = Article.create!(:en_name=>"director words3", :zh_cn_name=>"总裁寄语",:en_body=>"here", :zh_cn_body => "here", :category=>ac4)
+article = Article.create!(:en_name=>"hr stragety3", :zh_cn_name=>"人才战略",:en_body=>"here", :zh_cn_body => "here", :category=>ac4)
+article = Article.create!(:en_name=>"working opportunities3", :zh_cn_name=>"工作机会",:en_body=>"here", :zh_cn_body => "here", :category=>ac4)
+
+ac5 = ArticleCategory.create!(:en_name=>"how to buy", :zh_cn_name=>"如何购买")
+article = Article.create!(:en_name=>"buy locally", :zh_cn_name=>"本地购买",:en_body=>"here", :zh_cn_body => "here", :category=>ac5)
+article = Article.create!(:en_name=>"buy overseas", :zh_cn_name=>"海外购买",:en_body=>"here", :zh_cn_body => "here", :category=>ac5)
+

@@ -1,0 +1,20 @@
+<div class="span-6 last">
+    <div class="second">
+      <div class="QA">
+        <%=image_tag "QA.png", :width=>"46", :height=>"37"%>
+        <span class="size-14 t-bold right-bt">常见问答/向专家提问</span>
+        <hr class="none"/>
+        <div class="buy-img">
+          <p>
+            <% faqs = Faq.page(params[:page] || 1).per(5); faqs.each do |faq| %>
+            <span class="Q gray"><%= faq.name %></span><br>
+            <span class="A blue-color-caption"><%=  faq.body %></span><br>
+            
+            <%end%>
+          </p>
+
+          <p class="right-box-padding right"><%=  link_to "more>", support_articles_path %></a></p>
+        </div>
+      </div>
+    </div>
+  </div>

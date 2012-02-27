@@ -1,0 +1,45 @@
+<!--banner  start   here-->
+<div class="banner-background">
+  <div class="container">
+    <img src="img/banner-product.png" width="950" height="233">
+  </div>
+</div>
+<div class="line"></div>
+<div class="line2"></div>
+<div class="banner-bottom-background"></div>
+<div class="line"></div>
+<!--banner  end   here-->
+<!--center  start   here-->
+<div class="container">
+
+  <hr class="space"/>
+  <div class="span-18">
+    
+    <!--news1目录开始-->
+    <% @categories.each do |category| %>
+    <hr class="space space-height"/>
+    <span class="green-caption"><%=  category.name %></span>
+
+    <div style="padding-top:5px;">
+      <div class="span-18 caption-line"></div>
+    </div>
+    <div class="span-17 content-top">
+      <% Article.where(:category_id=>category).order("created_at desc").limit(5).each do |article| %>
+      <p><%= link_to article.name, article %></p>
+      <% end %>
+
+      
+    </div>
+    <p class="span-18 news-more"><%= link_to "更多", category %></p>
+    <% end %>
+    <!--news1目录结束-->
+
+    
+    <hr class="space space-height"/>
+  </div>
+
+  <%= render "shared/feedback_and_search" %>
+
+  <%= render "shared/faq" %>
+</div>
+<!--center  end   here-->

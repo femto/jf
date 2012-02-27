@@ -16,6 +16,7 @@ Jf::Application.routes.draw do
     resources :categories
 
     resources :product_categories
+    resources :article_categories
 
     #get "product_categories/index"
     #

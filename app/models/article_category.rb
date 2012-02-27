@@ -1,3 +1,3 @@
 class ArticleCategory < Category
-  #has_many :articles
+  has_many :articles
 end
