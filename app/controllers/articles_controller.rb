@@ -8,6 +8,9 @@ class ArticlesController < InheritedResources::Base
     @articles = Article.where(:category_id => @category).all
     @local_article, @overseas_article = @articles.first, @articles.last
 
+    @jiefu_category =  ArticleCategory.where(:en_name=>"jiefu introduction").first
+    @jiefu_articles =  Article.where(:category_id => @jiefu_category).all
+
     @user = User.new #for siebar user login
 
   end

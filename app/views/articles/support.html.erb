@@ -6,12 +6,14 @@
             	<span class="big-caption">技术支持</span>
             	<hr class="space"/>
 			<!--search-box  start   here-->
+              <%= form_tag "/products/search", :method=>:get do |f|%>
                 <div class="span-24 last search-box">
                     <div class="span-18 box-padding-left">
-                       <input type="text" class="search-box-size" id="name" name="dummy1">
+                       <%= text_field_tag "q", "", :class=>"search-box-size"%>
                        <input type="submit" class="search-button" value="搜索">
                     </div>
                 </div>
+              <% end %>
 			<!--search-box  start   here-->
 
 			<!--Online   start   here-->

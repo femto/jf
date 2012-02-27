@@ -273,3 +273,7 @@ ac5 = ArticleCategory.create!(:en_name=>"how to buy", :zh_cn_name=>"如何购买
 article = Article.create!(:en_name=>"buy locally", :zh_cn_name=>"本地购买",:en_body=>"here", :zh_cn_body => "here", :category=>ac5)
 article = Article.create!(:en_name=>"buy overseas", :zh_cn_name=>"海外购买",:en_body=>"here", :zh_cn_body => "here", :category=>ac5)
 
+ac6 = ArticleCategory.create!(:en_name=>"jiefu introduction", :zh_cn_name=>"jiefu introduction zh")
+article = Article.create!(:en_name=>"local department", :zh_cn_name=>"local department",:en_body=>"here", :zh_cn_body => "here", :category=>ac6)
+article = Article.create!(:en_name=>"overseas department", :zh_cn_name=>"overseas department",:en_body=>"here", :zh_cn_body => "here", :category=>ac6)
+

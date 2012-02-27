@@ -69,16 +69,13 @@
            			<hr class="space"/>
             		<div class="knowmore">
                     	<hr class="space"/>
-                        <div class="span-7 colborder last contact-padding-left">
-                        	<span class="middle-green-caption">无锡杰夫电声有限公司</span>
-                            <p>杰夫电声紧临上海，位于美丽的太湖之滨--无锡,于1998年1月18日重组为股份制有限公司... ...</p>
-                        	<p class="more-link"><a href="#">了解更多信息</a></p>
+                        <% @jiefu_articles.each_with_index do |article, index| %>
+                        <div class="span-7 last contact-padding-left <%='colborder' unless index == @jiefu_articles.size - 1%>">
+                        	<span class="middle-green-caption"><%=  article.name %></span>
+                            <p><%=raw truncate_html article.body, :length=>60 %></p>
+                        	<p class="more-link"><%= link_to "了解更多信息", article %></p>
                         </div>
-                        <div class="span-7 last contact-padding-left">
-                            <span class="middle-green-caption">无锡杰夫海外办事处</span>
-                            <p>杰夫电声紧临上海，位于美丽的太湖之滨--无锡,于1998年1月18日重组为股份制有限公司... ...</p>
-                            <p class="more-link"><a href="#">了解更多信息</a></p>
-                        </div>
+                        <% end %>
                     </div>
 <!--文字框   end   here-->
 <!--中国地图   start   here-->
