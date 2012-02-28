@@ -1,6 +1,7 @@
 class ArticlesController < InheritedResources::Base
   def support
-
+    @feedback = Feedback.new
+    @faqs = Faq.page(params[:page] || 1).per(5)
   end
 
   def buy

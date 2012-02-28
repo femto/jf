@@ -1,0 +1,45 @@
+<h1>Listing feedbacks</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Comany</th>
+    <th>Department</th>
+    <th>Phone</th>
+    <th>Fax</th>
+    <th>Email</th>
+    <th>Jiefu xinghao</th>
+    <th>Jiefu pihao</th>
+    <th>Company xinghao</th>
+    <th>Company orderno</th>
+    <th>Description</th>
+    <th>Feedback type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @feedbacks.each do |feedback| %>
+  <tr>
+    <td><%= feedback.name %></td>
+    <td><%= feedback.comany %></td>
+    <td><%= feedback.department %></td>
+    <td><%= feedback.phone %></td>
+    <td><%= feedback.fax %></td>
+    <td><%= feedback.email %></td>
+    <td><%= feedback.jiefu_xinghao %></td>
+    <td><%= feedback.jiefu_pihao %></td>
+    <td><%= feedback.company_xinghao %></td>
+    <td><%= feedback.company_orderno %></td>
+    <td><%= feedback.description %></td>
+    <td><%= feedback.feedback_type %></td>
+    <td><%= link_to 'Show', feedback %></td>
+    <td><%= link_to 'Edit', edit_feedback_path(feedback) %></td>
+    <td><%= link_to 'Destroy', feedback, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Feedback', new_feedback_path %>

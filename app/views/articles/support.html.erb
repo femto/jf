@@ -19,7 +19,7 @@
 			<!--Online   start   here-->
                 <hr class="space"/>
                 <div>
-                	<span class="blue-caption">Online反馈</span><img src="img/jichu.png" width="42" height="27">
+                	<span class="blue-caption">Online反馈</span><%=image_tag "jichu.png", width:"42", height:"27"%>
                 </div>
                 <hr class="space"/>
                 <div class="span-24 online-box">
@@ -88,33 +88,21 @@
              <!--问答  start   here-->
                 <hr class="space"/>
                 <div>
-                	<span class="blue-caption">常见问答/向专家提问</span><img src="img/wenda.png" width="42" height="27">
+                	<span class="blue-caption">常见问答/向专家提问</span><%=image_tag "wenda.png", width:"42", height:"27"%>
                 </div>
 				<hr class="space"/>
                 <hr/>
 
                 <div class="span-24">
-                    <span class="small-blue-caption">1.Q：杰夫产品的优势？</span>
+                    <% @faqs.each do |faq| %>
+                    <span class="small-blue-caption">Q：<%=faq.name%></span>
                         <p class="answer-padding-left">
-                        	<span class="small-green-caption">A：</span>杰夫产品主要针对于进入新世纪，新千年，杰夫人又以“勤奋敬业，至诚至美”为企业宗旨，不断提高产品和服务的竞争力，此时，中国加入WTO，全球经济一体化，杰夫同世界企业站到了同一个竞技舞台上。敏锐的杰夫人意识到，在新一轮竞争中，行业将按全球竞争力标准重。
+                        	<span class="small-green-caption">A：</span><%=  faq.body.html_safe %>
                         </p>
+                    <% end %>
 
-                    <span class="small-blue-caption">2.Q：杰夫产品的优势？</span>
-                        <p class="answer-padding-left">
-                        	<span class="small-green-caption">A：</span>杰夫产品主要针对于进入新世纪，新千年，杰夫人又以“勤奋敬业，至诚至美”为企业宗旨，不断提高产品和服务的竞争力，此时，中国加入WTO，全球经济一体化，杰夫同世界企业站到了同一个竞技舞台上。敏锐的杰夫人意识到，在新一轮竞争中，行业将按全球竞争力标准重。
-           				</p>
-
-                    <span class="small-blue-caption">3.Q：杰夫产品的优势？</span>
-                        <p class="answer-padding-left">
-                        	<span class="small-green-caption">A：</span>杰夫产品主要针对于进入新世纪，新千年，杰夫人又以“勤奋敬业，至诚至美”为企业宗旨，不断提高产品和服务的竞争力，此时，中国加入WTO，全球经济一体化，杰夫同世界企业站到了同一个竞技舞台上。敏锐的杰夫人意识到，在新一轮竞争中，行业将按全球竞争力标准重。
-                        </p>
-
-                    <span class="small-blue-caption">4.Q：杰夫产品的优势？</span>
-                        <p class="answer-padding-left">
-                        	<span class="small-green-caption">A：</span>杰夫产品主要针对于进入新世纪，新千年，杰夫人又以“勤奋敬业，至诚至美”为企业宗旨，不断提高产品和服务的竞争力，此时，中国加入WTO，全球经济一体化，杰夫同世界企业站到了同一个竞技舞台上。敏锐的杰夫人意识到，在新一轮竞争中，行业将按全球竞争力标准重。
-           				</p>
-<!--翻页   start   here-->
-    				<p class="nav-ye"> <a href="#">首页</a><a href="#">第一页</a> <a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a> ... <a href="#">最后一页</a></p>
+               <!--翻页   start   here-->
+    				<p class="nav-ye"> <%= paginate @faqs %></p>
 
     				<div class="span-2 small-blue-caption">我要提问:</div>
                    	 	<div>

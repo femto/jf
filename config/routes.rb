@@ -2,6 +2,8 @@ Jf::Application.routes.draw do
 
 
 
+  resources :feedbacks
+
   resources :faqs
 
   match "kind_editor/upload"

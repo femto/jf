@@ -1,5 +1,7 @@
 class Faq < ActiveRecord::Base
 
+  #default_scope order(:position)
+
   validates_presence_of :en_name
   validates_presence_of :zh_cn_name
 
