@@ -23,25 +23,26 @@
                 </div>
                 <hr class="space"/>
                 <div class="span-24 online-box">
+                  <%= form_for @feedback do |f| %>
                 	<div class="online-padding-left">
                         <div class="span-10">
                             <span class="small-blue-caption">基本资料:</span>
                             <hr class="space"/>
                             <hr/>
-                            <form class="span-8 content-align" action="" method="post">
+
                                     <span>姓名：</span>
-                                    <input type="text" class="base" id="name" name="dummy1" ><br>
+                                    <%=f.text_field :name %><br>
                                     <span>单位名称：</span>
-                                    <input type="text" class="base" id="name" name="dummy1" ><br>
+                                    <%=f.text_field :comany %><br>
                                     <span>部门：</span>
-                                    <input type="text" class="base" id="name" name="dummy1" ><br>
+                                    <%=f.text_field :department %><br>
                                     <span>电话：</span>
-                                    <input type="text" class="base" id="name" name="dummy1" ><br>
+                                    <%=f.text_field :phone %><br>
                                     <span>传真：</span>
-                                    <input type="text" class="base" id="name" name="dummy1" ><br>
+                                    <%=f.text_field :fax %><br>
                                     <span>E-mail：</span>
-                                    <input type="text" class="base" id="name" name="dummy1" ><br>
-                            </form>
+                                    <%=f.text_field :email %><br>
+
 
                             <hr class="space"/>
                             <p class="small-blue-caption">反馈内容:</p>
@@ -60,22 +61,22 @@
                     	<span class="small-blue-caption">产品信息:</span>
                         <hr class="space"/>
                         <hr/>
-                        <form class="span-8 content-align" action="" method="post">
+
                                 <span>杰夫型号：</span>
-                                <input type="text" class="base" id="name" name="dummy1"><br>
+                                <%=f.text_field :jiefu_xinghao %><br>
                                 <span>杰夫生产批号：</span>
-                                <input type="text" class="base" id="name" name="dummy1"><br>
+                                <%=f.text_field :jiefu_pihao %><br>
                                 <span>贵公司型号：</span>
-                                <input type="text" class="base" id="name" name="dummy1"><br>
+                                <%=f.text_field :company_xinghao %><br>
                                 <span>贵公司订单号：</span>
-                                <input type="text" class="base" id="name" name="dummy1"><br>
-                        </form>
+                                <%=f.text_field :company_orderno %><br>
+
                         <hr class="space"/>
 
                     	<span class="small-blue-caption">具体描述:</span>
                     	<hr class="space"/>
                   		<hr/>
-                 		<textarea name="dummy2" id="textarea-size" rows="5" cols="20"></textarea>
+                 		<%=f.text_area :description,rows:1, cols:20 %>
 
                         <div class="span-2 prepend-5">
                         	<a href="#"><img src="img/submit.png" width="55" height="24"></a><img src="img/submit2.png" width="55" height="12">
@@ -84,6 +85,7 @@
                         	<a href="#"><img src="img/reset.png" width="55" height="24"></a><img src="img/reset2.png" width="55" height="12">
                         </div>
                 	</div>
+                    <% end%>
                 </div>
              <!--问答  start   here-->
                 <hr class="space"/>
@@ -101,23 +103,8 @@
                         </p>
                     <% end %>
 
-               <!--翻页   start   here-->
     				<p class="nav-ye"> <%= paginate @faqs %></p>
-
-    				<div class="span-2 small-blue-caption">我要提问:</div>
-                   	 	<div>
-                        	<textarea name="dummy2" id="textarea-size" rows="5" cols="20"></textarea>
-                        </div>
-                        <div class="span-2 prepend-8">
-                        	<a href="#"><img src="img/submit.png" width="55" height="24"></a><img src="img/submit2.png" width="55" height="12">
-                        </div>
-                        <div class="span-2">
-                        	<a href="#"><img src="img/reset.png" width="55" height="24"></a><img src="img/reset2.png" width="55" height="12">
-                        </div>
-                    <hr/>
                 </div>
-
-
 
             </div>
     </div>
