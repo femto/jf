@@ -23,7 +23,7 @@
                 </div>
                 <hr class="space"/>
                 <div class="span-24 online-box">
-                  <%= form_for @feedback do |f| %>
+                  <%= semantic_form_for @feedback,:html=>{:onreset=>"return confirm('Really reset all form fields?')"} do |f| %>
                 	<div class="online-padding-left">
                         <div class="span-10">
                             <span class="small-blue-caption">基本资料:</span>
@@ -48,9 +48,7 @@
                             <p class="small-blue-caption">反馈内容:</p>
                             <hr/>
                                 <p>
-                                    <input type="checkbox"> 品质
-                                    <input type="checkbox"> 服务
-                                    <input type="checkbox"> 其他
+                                    <%=  f.input :feedback_type,:collection=>%w(品质 服务 其他), :include_blank=>false,:as=>:radio%>
                                 </p>
                             <hr class="space"/>
                             <span class="blue-color-caption">*我们将在2个工作日之内给您答复。为确保您能收到我们的回复，请务必正确及有效的填写上述内容。</span>
@@ -72,6 +70,7 @@
                                 <%=f.text_field :company_orderno %><br>
 
                         <hr class="space"/>
+                      <button type="submit">very long text<br>in submit button</button>
 
                     	<span class="small-blue-caption">具体描述:</span>
                     	<hr class="space"/>
@@ -81,6 +80,9 @@
                         <div class="span-2 prepend-5">
                         	<%=image_submit_tag "submit.png", width:"55",height:"24"%><img src="img/submit2.png" width="55" height="12">
                         </div>
+                      <button type="reset"><%=image_tag "reset.png", alt:"Clear"%></button>]
+                      <input type="reset" value="reset" style=
+                       "background : url(/assets/reset.png) no-repeat; width:95px; height:35px;">
 
                 	</div>
                     <% end%>
