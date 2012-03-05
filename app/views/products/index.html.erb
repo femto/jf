@@ -1,22 +1,23 @@
 <%# encoding:utf-8 %>
 <!--banner  start   here-->
           <div class="banner-product">
-       	  	  <div class="container "><%= image_tag "banner-product.png", width:"950", height:"233" %>
-            </div>
-            </div>
+       	  	  <div class="container"><%= image_tag "banner-product.png", width:"950", height:"233" %>
+              </div>
+          </div>
 
 
            <div class="line"></div>
            <div class="line2"></div>
+           <div class="news-bg"></div>
            <div class="line"></div>
 
 
-   		<div class="center-product">
-        <div class="container ">
+   		<div class="center-product-bg">
+        <div class="container">
         <!--产品目录开始-->
-        <hr class=" space"/>
-        <div class="productlist  span-18">
-        	<p class="size-14 b">产品目录</p>
+        <hr class="space"/>
+        <div class="span-18">
+        	<p class="blue-caption">产品目录</p>
         	<hr class="line-bt"/>
                <% @categories.each do |category| %>
                 <div class="pro-link"><%= link_to category.name, category %></div>
@@ -32,14 +33,15 @@
                         </div>
                     <% end %>
 
-                    <hr class=" span-<%= 4 * children.size %>"/>
+                    <hr class="span-<%= 4 * children.size %>"/>
                 </div>
               <% end %>
 
                 <!--产品目录结束-->
 
                <!--杰夫实验开始-->
-               <p class="p-bt">杰夫实验室</p>
+               <hr class="space"/>
+               <p class="blue-caption">其他产品</p>
                <hr class="line-bt"/>
                <div ><p class="product1">测试项目</p></div>
                <div class="span-16">

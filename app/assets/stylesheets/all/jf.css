@@ -74,6 +74,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f7', end
 .white{height:135px;width:308px;background-color:#FFFFFF; }
 .chanpin1{height:133px;width:306px; background-color:#F5F5F5;}
 .neirong{color:#646464; padding-left:15px;}
+.more-index{text-align:right; font-size:9px;}
 .title-index{color:#000;font-weight:bold;padding-left:15px;font-size:16px;font-family:Verdana, Geneva, sans-serif;}
 .list li{float:left;
 	     display:inline; 
@@ -128,7 +129,7 @@ margin: 0px auto;
 .ssk{width:128px;}
 .buy{width:210px; height:154px; background-color:#F7F7F7;}
 .buy-img{padding-top:12px;}
-.pro-link a{font-size:16px;color:#00206A;font-weight:bold;}
+.pro-link a{font-size:14px;color:#00206A;font-weight:bold;}
 
 /* about*/
 .center-about-background{width:100% auto;background-color: #FFF;height:1603px;}
