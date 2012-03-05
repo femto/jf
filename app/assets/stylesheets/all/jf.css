@@ -73,6 +73,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f7', end
 .chanpin1bg{height:137px;width:310px;background-color:#D2D2D2;}
 .white{height:135px;width:308px;background-color:#FFFFFF; }
 .chanpin1{height:133px;width:306px; background-color:#F5F5F5;}
+.neirong{color:#646464; padding-left:15px;}
 .title-index{color:#000;font-weight:bold;padding-left:15px;font-size:16px;font-family:Verdana, Geneva, sans-serif;}
 .list li{float:left;
 	     display:inline; 
