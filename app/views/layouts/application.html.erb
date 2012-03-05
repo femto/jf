@@ -20,9 +20,9 @@
 	 <!--header  start  here-->
     	<div class="header">
         <!--logo  start   here-->
-          <div class="container ">
-            <div class="logo span-3"><a href="index.html" ><%=image_tag "logo.png"  %></a></div>
-            <div class="prepend-13 span-4 last ss"><%= form_tag "/", :class => 'locale' do %>
+          <div class="container">
+            <div class="span-3 logo"><a href="index.html" ><%=image_tag "logo.png"  %></a></div>
+            <div class="prepend-12 span-5 last select-l"><%= form_tag "/", :class => 'locale' do %>
 <%= select_tag 'set_locale',
 options_for_select(LANGUAGES, I18n.locale.to_s),
 :onchange => 'this.form.submit()' %>
@@ -36,10 +36,10 @@ options_for_select(LANGUAGES, I18n.locale.to_s),
       <%= link_to t(".sign_in"), new_user_session_path %>
     <% end %>
 
-  </div><div class="span-4 last ss">
+  </div><div class="span-4 last select-l">
             <div class="appleNav">
             <form>
-              <input type="text" />
+              <input type="text"/>
             </form>
             </div>
             </div>
@@ -49,7 +49,7 @@ options_for_select(LANGUAGES, I18n.locale.to_s),
           <!--daohang  start   here-->
           <div class="navz">
       		<div class="container">
-                    <div class="zuo">
+                    <div class="dis">
                         <ul class="nav">
                             <li><a href="/"><%= t(".home")%></a></li>
                             <li><%= link_to t(".products"), products_path %></li>
@@ -65,18 +65,19 @@ options_for_select(LANGUAGES, I18n.locale.to_s),
      <% if alert %><p class="alert"><%= alert %></p><% end %>
               <%= yield %>
 
-        <div class="footer"><div class="tou">
-        	<div class="container">
+        <div class="footer">
+          <div class="foot-bg">
+        	  <div class="container">
 
-            	<div class="span-8"><p class="footer-bt">技术支持</p>
-                <p class="footer-neirong"><a href="#">查找产品支持信息</a><br/>
+            	<div class="span-8"><p class="footer-t">技术支持</p>
+                <p class="footer-c"><a href="#">查找产品支持信息</a><br/>
                     <a href="#">技术白皮书下载</a><br/>
                     <a href="#">Online反馈</a><br/>
                     <a href="#">常见问答/向专家提问</a></p>
                 </div>
 
-                <div class="span-8"><p class="footer-bt">关于我们</p>
-                <p class="footer-neirong"><a href="#">杰夫简介</a><br/>
+                <div class="span-8"><p class="footer-t">关于我们</p>
+                <p class="footer-c"><a href="#">杰夫简介</a><br/>
                     <a href="#">营运信息</a><br/>
                     <a href="#">成长历程</a><br/>
                     <a href="#">总裁寄语</a><br/>
@@ -85,19 +86,19 @@ options_for_select(LANGUAGES, I18n.locale.to_s),
                     </p>
                 </div>
 
-                <div class="span-8 last"><p class="footer-bt">如何购买</p>
-                <p class="footer-neirong"><a href="#">购买地址与信息</a><br/>
+                <div class="span-8 last"><p class="footer-t">如何购买</p>
+                <p class="footer-c"><a href="#">购买地址与信息</a><br/>
                     <a href="#">代理商信息</a><br/>
                     <a href="#">在线服务</a></p>
                 </div>
 
-            </div>
-        </div>
+              </div>
+           </div>
         </div>
 
-        <div class="di">
+        <div class="end">
         	<div class="container">
-            	<div class="beizhu span-24 last">联系方式丨反馈丨帮助丨网站导航丨条款和条件丨隐私声明丨© 2011 无锡杰夫电声有限公司丨苏ICP备08016514号</div>
+            	<div class="span-24 last beizhu">联系方式丨反馈丨帮助丨网站导航丨条款和条件丨隐私声明丨© 2011 无锡杰夫电声有限公司丨苏ICP备08016514号</div>
             </div>
         </div>
 
