@@ -116,11 +116,11 @@ margin: 0px auto;
 .banner-bg{height:233px;}
 .center-product-bg{width:100% auto;background-color: #FFF;height:1063px;}
 .line-bt{height:5px; width:670px;background-color:#F0F0F0;}
-.tv{height:161px; width:120px;}
+.tv{height:161px; width:120px; text-align:center;}
 .speaker{padding-left:20px;}
 .more-product{padding-left:600px;}
 .online{height:130px;width:211px;background-color:#F7F7F7;}
-.right-bt{color:#808080;}
+#right-bt{color:#808080;font-size:14px;font-weight:bold;}
 .size-14{font-size:14px;}
 .online-img{padding-top:6px;}
 .go{width:210px;height:101px;background-color:#F7F7F7;}

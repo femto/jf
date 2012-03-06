@@ -27,46 +27,8 @@
                         <% end %>
                     </div>
            </div>
-        
-                <!--右边框框 1 开始-->    
-           <div class="span-6  last">
-                <div class="online"><img src="img/tubiao1.png" width="47" height="34"><span class="size-14 t-bold right-bt">Online反馈</span>    
-                    <hr class="none"/>
-                    <div class="online-img"><center><a  href="#"><img src="img/ontu.png" width="194" height="77"></a></center></div>
-                </div>
-            </div>
-        <!--右边框框 1 结束-->  
-        
-        <!--右边框框 2 开始-->    
-        	<div class="span-6  last">
-              <div class="second">
-                <div class="go"><img src="img/tubiao2.png" width="47" height="34"><span class="size-14 t-bold right-bt">搜索</span>       
-                	<hr class="none"/>    
-                 	<div class="online-img">
-                      <center>
-                        <span>产品型号：</span>
-                        <input type="text" class="ssk" id="name" name="dummy1" >
-                 	  </center>
-                 	  <span style="padding-left:170px;"><a  href="#"><img src="img/go.png" width="32" height="17"></a></span>
-                 	</div>
-                </div>
-               </div>
-            </div>         
-        <!--右边框框 2 结束-->  
-        
-        <!--右边框框 4 开始-->    
-        	<div class="span-6  last">
-              <div class="second">
-                <div class="buy"><img src="img/tubiao3.png" width="47" height="34"><span class="size-14 t-bold right-bt">如何购买</span>                   
-                	 <hr class="none"/>
-                     <div class="buy-img">
-                       <center>
-                        <a  href="#"><img src="img/buy.png" width="196" height="88"></a>
-                       </center>
-                     </div>
-                </div>
-              </div>
-            </div>     
-        <!--右边框框 4 结束-->  
+
+           <%= render "shared/feedback_and_search" %>
+           <%= render "shared/buy" %>
         </div>
         </div>
