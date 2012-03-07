@@ -83,13 +83,13 @@
             		<span class="blue-caption">杰夫中国</span>
                     <hr class="map-line"/>
                         <p>地址：中国江苏省无锡市锡山区八士经济开发区 邮编：214192</p>
-                 		<img src="img/china-map.png" width="718" height="229">
+                 		<img src="/assets/china-map.png" width="718" height="229">
                  	<hr class="space"/>
 <!--海外地图   start   here-->
   					<span class="blue-caption">杰夫海外</span>
 					<hr class="map-line"/>
     					<p>地址：韩国庆尚北道龟尾市工团洞196番地</p>
-						<img src="img/hanguo-map.png" width="718" height="229">
+						<img src="/assets/hanguo-map.png" width="718" height="229">
 					<hr class="space"/>
             			<div class="more-link">
                         	<a href="contactus.html">点击查阅</a>
@@ -100,25 +100,6 @@
             <!--框框右侧   start   here-->
             <!--右边框框 5 开始-->
             	<div class="span-5 last right-box-padding">
-                    <div class="span-6 last right-box-padding-bottom">
-                        <div class="box5">
-                         	 <div class="box5-caption">登录</div>
-                             <hr class="none"/>
-                             <div class="box-padding-top">
-                                <center>
-                                  <%= semantic_form_for @user,:url=>session_path(@user) do |f| %>
-                                         <span>用户名：</span>
-                                         <%= f.input "email",:input_html=>{:class=>"search-width"} %>
-                                         <span class="password-right">密</span>码：
-                                         <%= f.input "password",:input_html=>{:class=>"search-width"} %>
-                                         <input type="submit" class="search" value="注册">
-                                         <input type="submit" class="search" value="忘记密码">
-                                         <input type="submit" class="search" value="登录">
-                                  <% end %>
-                                </center>
-                             </div>
-                    	</div>
-            		</div>
         	<!--右边框框 5 结束-->
 
             <%= render "shared/feedback_and_search" %>
