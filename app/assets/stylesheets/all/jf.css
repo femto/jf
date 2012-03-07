@@ -344,6 +344,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', end
 .answer-padding-left{padding-left:12px;color:#73A12F;}
 .green-color-caption{color:#73A12F;}
 .green-caption{font-size:16px;color:#73A12F;font-weight:bold;}
+.green-caption a{font-size:16px;color:#73A12F;font-weight:bold;}
 .middle-green-caption{font-size:14px;color:#73A12F;font-weight:bold;}
 .middle-blue-caption{font-size:14px;color:#00206A;font-weight:bold;}
 .small-green-caption{color:#73A12F;font-weight:bold;}

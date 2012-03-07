@@ -11,14 +11,14 @@ ActiveAdmin.register ArticleCategory do
     end
     default_actions
   end
-  #form do |f|
-  #  f.inputs "Detail" do
-  #    f.input :parent
-  #    f.input :en_name
-  #    f.input :zh_cn_name
-  #    f.input :position
-  #    f.input :image
-  #  end
-  #  f.buttons
-  #end
+  form do |f|
+    f.inputs "Detail" do
+      f.input :parent
+      f.input :en_name
+      f.input :zh_cn_name
+      f.input :position
+      f.input :image
+    end
+    f.buttons
+  end
 end
