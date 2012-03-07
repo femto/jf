@@ -29,7 +29,7 @@
                             <span class="small-blue-caption">基本资料:</span>
                             <hr class="space"/>
                             <hr/>
-
+                            <p class="content-align">
                                     <span>姓名：</span>
                                     <%=f.text_field :name %><br>
                                     <span>单位名称：</span>
@@ -42,35 +42,12 @@
                                     <%=f.text_field :fax %><br>
                                     <span>E-mail：</span>
                                     <%=f.text_field :email %><br>
-
-
-                            <hr class="space"/>
-                            <p class="small-blue-caption">反馈内容:</p>
-                            <hr/>
-                                <p>
-                                    <%=  f.input :feedback_type,:collection=>%w(品质 服务 其他), :include_blank=>false,:as=>:radio%>
-                                </p>
-                            <hr class="space"/>
+                            </p>
                             <span class="blue-color-caption">*我们将在2个工作日之内给您答复。为确保您能收到我们的回复，请务必正确及有效的填写上述内容。</span>
                         </div>
                     </div>
 
                 	<div class="span-10 prepend-3">
-                    	<span class="small-blue-caption">产品信息:</span>
-                        <hr class="space"/>
-                        <hr/>
-
-                                <span>杰夫型号：</span>
-                                <%=f.text_field :jiefu_xinghao %><br>
-                                <span>杰夫生产批号：</span>
-                                <%=f.text_field :jiefu_pihao %><br>
-                                <span>贵公司型号：</span>
-                                <%=f.text_field :company_xinghao %><br>
-                                <span>贵公司订单号：</span>
-                                <%=f.text_field :company_orderno %><br>
-
-                        <hr class="space"/>
-                      <button type="submit">very long text<br>in submit button</button>
 
                     	<span class="small-blue-caption">具体描述:</span>
                     	<hr class="space"/>
@@ -78,9 +55,9 @@
                  		<%=f.text_area :description,rows:1, cols:20 %>
 
                         <div class="span-2 prepend-5">
-                        	<%=image_submit_tag "submit.png", width:"55",height:"24"%><img src="img/submit2.png" width="55" height="12">
+                        	<%=image_submit_tag "submit.png", width:"55",height:"24"%><img src="/assets/submit2.png" width="55" height="12">
                         </div>
-                      <button type="reset"><%=image_tag "reset.png", alt:"Clear"%></button>]
+                      <button type="reset"><%=image_tag "reset.png", alt:"Clear"%></button>
                       <input type="reset" value="reset" style=
                        "background : url(/assets/reset.png) no-repeat; width:95px; height:35px;">
 
