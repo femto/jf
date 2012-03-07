@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ActiveAdmin.register Product do
   menu :priority => 2
    #form do |f|

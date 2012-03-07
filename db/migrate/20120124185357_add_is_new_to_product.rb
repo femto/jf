@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddIsNewToProduct < ActiveRecord::Migration
   def change
     add_column :products, :is_new, :boolean

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #if ActiveAdmin::VERSION == "0.3.4" && Rails.version == "3.2.0"
 #  class ActiveSupport::FileUpdateChecker
 #    def paths

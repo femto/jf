@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
     class Record2
        include ActiveSupport::Callbacks
        define_callbacks :save

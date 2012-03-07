@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -283,9 +283,6 @@ ArticleCategory.create!(:en_name=>"regular performance test", :zh_cn_name=>"regu
 ArticleCategory.create!(:en_name=>"reliance test", :zh_cn_name=>"reliance test cn",:parent=>ac7)
 ArticleCategory.create!(:en_name=>"harmful test", :zh_cn_name=>"harmful test cn",:parent=>ac7)
 ArticleCategory.create!(:en_name=>"subjective hearing test", :zh_cn_name=>"subjective hearing test cn",:parent=>ac7)
-
-article = Article.create!(:en_name=>"local department", :zh_cn_name=>"local department",:en_body=>"here", :zh_cn_body => "here", :category=>ac6)
-article = Article.create!(:en_name=>"overseas department", :zh_cn_name=>"overseas department",:en_body=>"here", :zh_cn_body => "here", :category=>ac6)
 
 #footer unnamed  article category here
 

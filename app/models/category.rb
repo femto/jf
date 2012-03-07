@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Category < ActiveRecord::Base
   default_scope order(:position)
   validates_presence_of :en_name

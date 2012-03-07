@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 garlic do
   repo 'truncate_html', :path => '.'
 

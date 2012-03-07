@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ProductsController < InheritedResources::Base
   def index
     @categories = ProductCategory.where(:parent_id=>nil)

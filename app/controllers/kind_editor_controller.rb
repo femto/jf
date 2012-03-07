@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class KindEditorController < ApplicationController
   def upload
     p params

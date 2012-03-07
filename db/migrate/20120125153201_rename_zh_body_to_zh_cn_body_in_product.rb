@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class RenameZhBodyToZhCnBodyInProduct < ActiveRecord::Migration
   change_table :products do |t|
 

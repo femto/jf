@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ProductCategoriesController < CategoriesController
   def show
     show! do

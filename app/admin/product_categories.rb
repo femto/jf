@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ActiveAdmin.register ProductCategory do
   menu :priority => 1
 

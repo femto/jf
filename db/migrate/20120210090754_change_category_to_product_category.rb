@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ChangeCategoryToProductCategory < ActiveRecord::Migration
 
   def up

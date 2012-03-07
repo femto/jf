@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Jf::Application.routes.draw do
 
 

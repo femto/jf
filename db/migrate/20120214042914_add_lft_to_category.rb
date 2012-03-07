@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddLftToCategory < ActiveRecord::Migration
   def change
     add_column :categories, :lft, :integer

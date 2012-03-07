@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ArticleCategoriesController < CategoriesController
   def show
     show! do
