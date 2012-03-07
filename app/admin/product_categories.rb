@@ -12,7 +12,7 @@ ActiveAdmin.register ProductCategory do
     default_actions
   end
   form do |f|
-    f.inputs "Detal" do
+    f.inputs "Detail" do
       f.input :parent
       f.input :en_name
       f.input :zh_cn_name
