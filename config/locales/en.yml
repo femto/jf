@@ -11,7 +11,7 @@ en:
       event: "Event"
       about_us: "About Us"
       home: "Home"
-      sign_up: "Sign Up"
+      sign_up: "Suppliers To Join"
       sign_in: "Sign In"
       sign_out: "Sign Out"
   formtastic:
