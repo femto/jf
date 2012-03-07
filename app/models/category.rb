@@ -16,4 +16,8 @@ class Category < ActiveRecord::Base
   def name
     send(I18n.locale.to_s + "_name")
   end
+
+  def default_image
+      image? ? image : "category_none.jpg"
+  end
 end

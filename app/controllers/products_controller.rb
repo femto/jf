@@ -1,6 +1,8 @@
 class ProductsController < InheritedResources::Base
   def index
     @categories = ProductCategory.where(:parent_id=>nil)
+
+    @test_category = ArticleCategory.where(:en_name=>"test service").first
     #p @categories.map{|x|x.zh_cn_name}
   end
   def download

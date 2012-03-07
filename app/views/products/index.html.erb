@@ -39,21 +39,25 @@
 
                 <!--产品目录结束-->
 
-               <!--杰夫实验开始-->
-               <hr class="space"/>
-               <p class="blue-caption">测试服务</p>
-               <hr class="line-bt"/>
-               <div class="span-16">
-                		<ul>
-                                <li><a href="#">与南京大学声学研究所联合研发之国家专利产品</a></li>
-                                <li><a href="#">符合GB、IEC、EIA、DIN、JIS、IHF等多种标准规范</a></li>
-                                <li><a href="#">可进行最大噪声功率试验、长期最大功率试验、短期最大功率试验、额定最大正弦功率试验、最优功率标称试验，并可由用户自定义通断时间进</a></li>
-                                <li><a href="#">提供各种频段的白噪声信号、粉红噪声信号、模拟节目信号，各种频率的正弦波锯齿波、各种频率和占空比的方波、三角波，以及符合行业标准的信号源</a></li>
-                                </ul>
-                         <p  class="more-product"><a href="#">more>></a></p>
+                         <!--杰夫实验开始-->
+                    	 <hr class="space"/>
+                         <p class="size-16 b "><%= @test_category.name %></p>
+                         <hr class="line-bt"/>
+                         <div class="span-17">
+                          <div class="span-17 speaker">
+                              <% @test_category.children.each do |category| %>
+                                  <div class="span-4">
+                                      <div class="tv colborder">
+                                              <%=link_to (image_tag category.default_image, width:"134", height:"135"), category %>
+                                              <p class="c"><%=link_to category.name,category%></p>
+                                      </div>
+                                  </div>
+                              <%end%>
 
-               </div>
-               <!--杰夫实验结束-->
+                              <hr class="xian"/>
+                          </div>
+                         </div>
+                         <!--杰夫实验结束-->
             </div>
 
         <%=  render "shared/feedback_and_search" %>

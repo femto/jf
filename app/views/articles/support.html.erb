@@ -52,14 +52,13 @@
                     	<span class="small-blue-caption">具体描述:</span>
                     	<hr class="space"/>
                   		<hr/>
-                 		<%=f.text_area :description,rows:1, cols:20 %>
+                 		<%=f.text_area :description,rows:1, cols:20,:style=>"width:400px;height:200px;" %>
 
                         <div class="span-2 prepend-5">
                         	<%=image_submit_tag "submit.png", width:"55",height:"24"%><img src="/assets/submit2.png" width="55" height="12">
                         </div>
-                      <button type="reset"><%=image_tag "reset.png", alt:"Clear"%></button>
-                      <input type="reset" value="reset" style=
-                       "background : url(/assets/reset.png) no-repeat; width:95px; height:35px;">
+
+
 
                 	</div>
                     <% end%>

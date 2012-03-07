@@ -277,6 +277,16 @@ ac6 = ArticleCategory.create!(:en_name=>"jiefu introduction", :zh_cn_name=>"jief
 article = Article.create!(:en_name=>"local department", :zh_cn_name=>"local department",:en_body=>"here", :zh_cn_body => "here", :category=>ac6)
 article = Article.create!(:en_name=>"overseas department", :zh_cn_name=>"overseas department",:en_body=>"here", :zh_cn_body => "here", :category=>ac6)
 
+
+ac7 = ArticleCategory.create!(:en_name=>"test service", :zh_cn_name=>"test service cn")
+ArticleCategory.create!(:en_name=>"regular performance test", :zh_cn_name=>"regular performance test cn",:parent=>ac7)
+ArticleCategory.create!(:en_name=>"reliance test", :zh_cn_name=>"reliance test cn",:parent=>ac7)
+ArticleCategory.create!(:en_name=>"harmful test", :zh_cn_name=>"harmful test cn",:parent=>ac7)
+ArticleCategory.create!(:en_name=>"subjective hearing test", :zh_cn_name=>"subjective hearing test cn",:parent=>ac7)
+
+article = Article.create!(:en_name=>"local department", :zh_cn_name=>"local department",:en_body=>"here", :zh_cn_body => "here", :category=>ac6)
+article = Article.create!(:en_name=>"overseas department", :zh_cn_name=>"overseas department",:en_body=>"here", :zh_cn_body => "here", :category=>ac6)
+
 #footer unnamed  article category here
 
 #faq

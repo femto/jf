@@ -19,7 +19,7 @@ class Article < ActiveRecord::Base
   end
 
   def default_image
-    image? ? image : "product_none.jpg"
+    image? ? image : "article_none.jpg"
   end
 
 end
