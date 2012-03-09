@@ -28,7 +28,7 @@ module TruncateHtmlHelper
     omission = options[:omission] || args[1] || '&hellip;'
     
     begin
-      parser = REXML::Parsers::PullParser.new(input)
+      parser = REXML::Parsers::PullParser.new(input.force_encoding("ASCII-8BIT"))
       encoder = HTMLEntities.new(TruncateHtmlHelper.flavor)
       tags, output, chars_remaining = [], '', length
     
