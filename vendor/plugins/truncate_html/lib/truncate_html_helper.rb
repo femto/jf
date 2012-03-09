@@ -49,7 +49,7 @@ module TruncateHtmlHelper
       end
     
       tags.reverse.each {|tag| output << "</#{tag}>" }
-      output
+      output.force_encoding("utf-8")
   
     rescue REXML::ParseException => e
       fixed_up = Nokogiri::HTML.fragment(input).to_html
