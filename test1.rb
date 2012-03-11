@@ -1,26 +1,8 @@
-# -*- encoding : utf-8 -*-
-    class Record2
-       include ActiveSupport::Callbacks
-       define_callbacks :save
-  
-       def save
-         run_callbacks :save do
-           puts "- save"
-         end
-       end
-     end
-  
-     class PersonRecord2 < Record2
-       set_callback :save, :before, :saving_message
-       def saving_message
-         puts "saving..."
-       end
-  
-       set_callback :save, :after do |object|
-         puts "#{object} #{object == self} saved"
-       end
-     end
-  
-     person = PersonRecord2.new
-     person.save
-  
+# encoding: UTF-8
+utf8 = "abc"
+sjis = "def".encode("Shift_JIS")
+
+print "Given all ASCII data:  " if [utf8, sjis].all?(&:ascii_only?)
+print "#{utf8.encoding.name.encoding} + #{sjis.encoding} = "
+
+puts result.encoding

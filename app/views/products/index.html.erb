@@ -45,11 +45,11 @@
                          <hr class="line-bt"/>
                          <div class="span-17">
                           <div class="span-17 speaker">
-                              <% @test_category.children.each do |category| %>
+                              <% Article.where(:category_id => @test_category).each do |article| %>
                                   <div class="span-4">
                                       <div class="tv colborder">
-                                              <%=link_to (image_tag category.default_image, width:"134", height:"135"), category %>
-                                              <p class="c"><%=link_to category.name,category%></p>
+                                              <%=link_to (image_tag article.default_image, width:"134", height:"135"), article %>
+                                              <p class="c"><%=link_to article.name,article%></p>
                                       </div>
                                   </div>
                               <%end%>

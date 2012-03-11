@@ -279,10 +279,10 @@ article = Article.create!(:en_name=>"overseas department", :zh_cn_name=>"oversea
 
 
 ac7 = ArticleCategory.create!(:en_name=>"test service", :zh_cn_name=>"test service cn")
-ArticleCategory.create!(:en_name=>"regular performance test", :zh_cn_name=>"regular performance test cn",:parent=>ac7)
-ArticleCategory.create!(:en_name=>"reliance test", :zh_cn_name=>"reliance test cn",:parent=>ac7)
-ArticleCategory.create!(:en_name=>"harmful test", :zh_cn_name=>"harmful test cn",:parent=>ac7)
-ArticleCategory.create!(:en_name=>"subjective hearing test", :zh_cn_name=>"subjective hearing test cn",:parent=>ac7)
+Article.create!(:en_name=>"regular performance test", :zh_cn_name=>"regular performance test cn",:category=>ac7)
+Article.create!(:en_name=>"reliance test", :zh_cn_name=>"reliance test cn",:category=>ac7)
+Article.create!(:en_name=>"harmful test", :zh_cn_name=>"harmful test cn",:category=>ac7)
+Article.create!(:en_name=>"subjective hearing test", :zh_cn_name=>"subjective hearing test cn",:category=>ac7)
 
 #footer unnamed  article category here
 
