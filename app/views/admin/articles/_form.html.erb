@@ -1,14 +1,16 @@
 <script type="text/javascript" src="/javascripts/kindeditor-min.js"></script>
-<%= semantic_form_for [:admin, @faq] do |f| %>
+<%= semantic_form_for [:admin, @article] do |f| %>
 
      <%=f.inputs "Detail" do %>
 
 
+        <%=f.input :category%>
         <%=f.input :en_name%>
         <%=f.input :en_body%>
         <%=f.input :zh_cn_name%>
         <%=f.input :zh_cn_body %>
         <%=f.input :position %>
+        <%=f.input :image %>
 
      <%end%>
 
@@ -18,11 +20,11 @@
   <% end %>
 <script>
 KindEditor.ready(function(K) {
-	K.create('#faq_en_body', {
+	K.create('#article_en_body', {
         uploadJson : '/kind_editor/upload',
 		allowFileManager : true
 	});
-    K.create('#faq_zh_cn_body', {
+    K.create('#article_zh_cn_body', {
         uploadJson : '/kind_editor/upload',
 		allowFileManager : true
 	}
