@@ -287,6 +287,34 @@ Article.create!(:en_name=>"subjective hearing test", :zh_cn_name=>"subjective he
 #footer unnamed  article category here
 
 #faq
+Faq.delete_all
+fc7 = FaqCategory.create!(:en_name=>"faq category 1", :zh_cn_name=>"faq category 1")
+Faq.create!(:en_name=>"faq11", :zh_cn_name=>"faq11",:category=>fc7)
+Faq.create!(:en_name=>"faq12", :zh_cn_name=>"faq12",:category=>fc7)
+Faq.create!(:en_name=>"faq13", :zh_cn_name=>"faq13",:category=>fc7)
+Faq.create!(:en_name=>"faq14", :zh_cn_name=>"faq14",:category=>fc7)
+Faq.create!(:en_name=>"faq15", :zh_cn_name=>"faq15",:category=>fc7)
+Faq.create!(:en_name=>"faq16", :zh_cn_name=>"faq16",:category=>fc7)
+Faq.create!(:en_name=>"faq17", :zh_cn_name=>"faq17",:category=>fc7)
+
+fc8 = FaqCategory.create!(:en_name=>"faq category 2", :zh_cn_name=>"faq category 2")
+Faq.create!(:en_name=>"faq21", :zh_cn_name=>"faq",:category=>fc8)
+Faq.create!(:en_name=>"faq22", :zh_cn_name=>"faq",:category=>fc8)
+Faq.create!(:en_name=>"faq23", :zh_cn_name=>"faq",:category=>fc8)
+Faq.create!(:en_name=>"faq24", :zh_cn_name=>"faq",:category=>fc8)
+Faq.create!(:en_name=>"faq25", :zh_cn_name=>"faq",:category=>fc8)
+Faq.create!(:en_name=>"faq26", :zh_cn_name=>"faq",:category=>fc8)
+Faq.create!(:en_name=>"faq27", :zh_cn_name=>"faq",:category=>fc8)
+
+fc9 = FaqCategory.create!(:en_name=>"faq category 3", :zh_cn_name=>"faq category 3")
+Faq.create!(:en_name=>"faq31", :zh_cn_name=>"faq",:category=>fc9)
+Faq.create!(:en_name=>"faq32", :zh_cn_name=>"faq",:category=>fc9)
+Faq.create!(:en_name=>"faq33", :zh_cn_name=>"faq",:category=>fc9)
+Faq.create!(:en_name=>"faq34", :zh_cn_name=>"faq",:category=>fc9)
+Faq.create!(:en_name=>"faq35", :zh_cn_name=>"faq",:category=>fc9)
+Faq.create!(:en_name=>"faq36", :zh_cn_name=>"faq",:category=>fc9)
+Faq.create!(:en_name=>"faq37", :zh_cn_name=>"faq",:category=>fc9)
+
 
 Faq.create!(:en_name=>"faq", :zh_cn_name=>"faq zh",:en_body=>"faq body", :zh_cn_body => "faq body zh")
 Faq.create!(:en_name=>"faq", :zh_cn_name=>"faq zh",:en_body=>"faq body", :zh_cn_body => "faq body zh")

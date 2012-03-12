@@ -1,4 +1,4 @@
-# -*- encoding : utf-8 -*-
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120228065607) do
+ActiveRecord::Schema.define(:version => 20120312092452) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(:version => 20120228065607) do
     t.integer  "author_id"
     t.string   "author_type"
     t.text     "body"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "namespace"
   end
 
@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(:version => 20120228065607) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                                            :null => false
-    t.datetime "updated_at",                                            :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
@@ -62,8 +62,8 @@ ActiveRecord::Schema.define(:version => 20120228065607) do
     t.string   "en_name"
     t.string   "zh_cn_name"
     t.integer  "parent_id"
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "position",   :default => 300
     t.string   "type"
     t.string   "image"
@@ -77,9 +77,10 @@ ActiveRecord::Schema.define(:version => 20120228065607) do
     t.string   "zh_cn_name"
     t.text     "en_body"
     t.text     "zh_cn_body"
-    t.integer  "position",   :default => 300
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
+    t.integer  "position",    :default => 300
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.integer  "category_id"
   end
 
   create_table "feedbacks", :force => true do |t|
@@ -105,8 +106,8 @@ ActiveRecord::Schema.define(:version => 20120228065607) do
     t.string   "zh_cn_name"
     t.text     "zh_cn_body"
     t.text     "en_whitepaper"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.boolean  "is_new"
     t.integer  "category_id"
     t.text     "zh_cn_whitepaper"
@@ -126,8 +127,8 @@ ActiveRecord::Schema.define(:version => 20120228065607) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                                            :null => false
-    t.datetime "updated_at",                                            :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

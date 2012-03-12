@@ -52,7 +52,7 @@
                     	<span class="small-blue-caption">具体描述:</span>
                     	<hr class="space"/>
                   		<hr/>
-                 		<%=f.text_area :description,rows:1, cols:20,:style=>"width:400px;height:200px;" %>
+                 		<%=f.text_area :description,rows:1, cols:20,:style=>"width:350px;height:100px;" %>
 
                         <div class="span-2 prepend-5">
                         	<%=image_submit_tag "submit.png", width:"55",height:"24"%><img src="/assets/submit2.png" width="55" height="12">
@@ -63,24 +63,49 @@
                 	</div>
                     <% end%>
                 </div>
-             <!--问答  start   here-->
+
+                <!--问答  start   here-->
+                <script>
+                      $(document).ready(function () {
+                          $("#tabs").tabs();
+                      });
+                </script>
+
                 <hr class="space"/>
                 <div>
                 	<span class="blue-caption">常见问答/向专家提问</span><%=image_tag "wenda.png", width:"42", height:"27"%>
                 </div>
 				<hr class="space"/>
                 <hr/>
+              <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet"
+                        type="text/css"/>
+              <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+              <div id="tabs">
+                      <ul>
+                        <% @faq_categories.each do |category| %>
+                          <li><a href="#fragment-<%= category.id %>"><span><%= category.name  %></span></a></li>
 
-                <div class="span-24">
-                    <% @faqs.each do |faq| %>
-                    <span class="small-blue-caption">Q：<%=faq.name%></span>
-                        <p class="answer-padding-left">
-                        	<span class="small-green-caption">A：</span><%=  faq.body.html_safe %>
-                        </p>
-                    <% end %>
+                        <% end %>
+                      </ul>
+                      <% @faq_categories.each do |category| %>
+                      <div id="fragment-<%=category.id%>">
+                          <% faqs = Faq.where(:category_id => category.id); faqs.each do |faq| %>
+                          <span class="small-blue-caption"><%= faq.name %></span>
 
-    				<p class="nav-ye"> <%= paginate @faqs %></p>
-                </div>
+                          <p class="answer-padding-left">
+                              <span class="small-green-caption"></span>
+                              <%=  faq.body.to_s.html_safe %>
+                          </p>
+                          <% end %>
+
+                          
+
+
+                      </div>
+                      <% end %>
+                      
+                  </div>
+              <!--问答  end   here-->
 
             </div>
     </div>
