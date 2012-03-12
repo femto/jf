@@ -17,20 +17,7 @@
   <div class="span-6 last">
     <div class="second">
       <div class="go">
-        <%=image_tag "tubiao2.png", :width=>"47",:height=>"34"%>
-        <span class="box1-caption">搜索</span>
-        <hr class="none"/>
-        <div class="box-padding-top">
-          <center>
-            <%= form_tag "/products/search", :method=>:get do %>
-            <span>产品型号：</span>
-            <%=text_field_tag "q", "", :class=>"search-width",:name=>"q"%>
-          </center>
-                                    <span style="padding-left:170px;">
-                                        <%=image_submit_tag "go.png", :width=>"32",:height=>"17"%>
-                                    </span>
-            <% end %>
-        </div>
+         <%=link_to (image_tag "search-p.png"), support_articles_path %>
       </div>
     </div>
   </div>
