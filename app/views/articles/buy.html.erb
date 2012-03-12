@@ -65,35 +65,40 @@
                         </div>
                     </div>
 <!--contact   end   here-->
-<!--文字框   start   here-->
-           			<hr class="space"/>
-            		<div class="knowmore">
-                    	<hr class="space"/>
-                        <% @jiefu_articles.each_with_index do |article, index| %>
-                        <div class="span-7 last contact-padding-left <%='colborder' unless index == @jiefu_articles.size - 1%>">
-                        	<span class="middle-green-caption"><%=  article.name %></span>
-                            <p><%=raw truncate_html article.body, :length=>60 %></p>
-                        	<p class="more-link"><%= link_to "了解更多信息", article %></p>
-                        </div>
-                        <% end %>
-                    </div>
-<!--文字框   end   here-->
 <!--中国地图   start   here-->
             		<hr class="space"/>
             		<span class="blue-caption">杰夫中国</span>
+                    <hr class="space"/>
                     <hr class="map-line"/>
-                        <p>地址：中国江苏省无锡市锡山区八士经济开发区 邮编：214192</p>
+                        <div>
+                          <p>
+                            地址：中国江苏省无锡市锡山区八士经济开发区<br>
+                            邮编：214192<br>
+                            电话：+86 (0)510 83781398<br>
+                            传真：+86 (0)510 83782499<br>
+                            联系人:陈兰兰<br>
+                          </p>
+                        </div>
+                            <p>地址：中国江苏省无锡市锡山区八士经济开发区 邮编：214192</p>
+
                  		<img src="/assets/china-map.png" width="718" height="229">
                  	<hr class="space"/>
 <!--海外地图   start   here-->
   					<span class="blue-caption">杰夫海外</span>
+                    <hr class="space"/>
 					<hr class="map-line"/>
+                     <div>
+                       <p>
+                         地址：韩国庆尚北道龟尾市工团洞196番地<br>
+                         邮编：730030<br>
+                         电话：+82 (0)54 461 0629<br>
+                         传真：+82 (0)54 461 0630<br>
+                         联系人:朴香烈
+                       </p>
+                     </div>
     					<p>地址：韩国庆尚北道龟尾市工团洞196番地</p>
 						<img src="/assets/hanguo-map.png" width="718" height="229">
-					<hr class="space"/>
-            			<div class="more-link">
-                        	<a href="contactus.html">点击查阅</a>
-                        </div>
+					    <hr class="space"/>
             			<hr class="space"/>
             	</div>
 
