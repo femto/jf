@@ -1,5 +1,36 @@
-<% if @article_category.parent_id.nil? %>
-    <%#= render "show_top" %>
-<% else %>
-    <%#= render "show_leaf" %>
-<% end %>
+<!--center start   here-->
+	<div class="top-backgound">
+           <div class="container">
+<!--产品目录开始-->
+           <div class="middle-blue-caption right-nav-top"><%= I18n.t("layouts.application.support") %></div>
+           <div class="span-5 last right-nav-top">
+             <% @support_categories.each do |object| %>
+                                     <div class="three-caption"><%=link_to object.name, object %></div>
+                                     <hr class="nav-list-line"/>
+             <% end %>
+            </div>
+
+ <!--内容开始-->
+        	<div class="span-13 last speaker">
+                	<p class="middle-green-caption">技术研讨活动</p>
+ 					<div class="span-12">
+                        <% @articles.each do |article| %>
+                            <p><%= link_to article.name, article %></p>
+                        <% end %>
+                	</div>
+                	<hr class="space"/>
+                	<hr class="line-last"/>
+                	<hr class="space"/>
+                	<div class="left">
+                    	<p class="nav-ye"><%= paginate @articles %></p>
+                    </div>
+                	<hr class="space"/>
+                	<hr class="space"/>
+          	</div>
+<!--center end   here-->
+
+        	<%=  render "shared/feedback_and_search" %>
+
+        	<%= render "shared/faq" %>
+        	</div>
+    </div>

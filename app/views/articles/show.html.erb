@@ -2,14 +2,29 @@
 <div class="top-backgound">
   <div class="container">
     <!--产品目录开始-->
-    <div class="middle-blue-caption right-nav-top"><%= @category.name %></div>
+    <div class="middle-blue-caption right-nav-top">
+      <% if @support_categories.include?(@category) %>
+          <%= I18n.t("layouts.application.support") %>
+      <% else %>
+          <%= @category.name %>
+      <% end %>
+      
+    </div>
     <div class="span-5 last right-nav-top">
 
       <hr class="nav-list-line"/>
-      <% Article.where(:category_id => @category).each do |article| %>
-          <div class="three-caption"><%=link_to article.name, article %></div>
-          <hr class="nav-list-line"/>
+      <% if @support_categories.include?(@category) %>
+          <% @support_categories.each do |object| %>
+                        <div class="three-caption"><%=link_to object.name, object %></div>
+                        <hr class="nav-list-line"/>
+                    <% end %>
+      <% else %>
+          <% Article.where(:category_id => @category).each do |article| %>
+              <div class="three-caption"><%=link_to article.name, article %></div>
+              <hr class="nav-list-line"/>
+          <% end %>
       <% end %>
+      
     </div>
 
     <!--内容开始-->

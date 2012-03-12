@@ -30,6 +30,7 @@ class ArticlesController < InheritedResources::Base
   def show
     show! do
       @category = @article.category
+      @support_categories = ArticleCategory.where(:en_name => ["company event","technical event","jiefu announcement"])
     end
   end
 end
