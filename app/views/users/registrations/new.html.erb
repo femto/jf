@@ -1,27 +1,45 @@
 <div class="container">
-                <hr class="juli space"/>
-                <span class="size-24 b t-bold">供应商注册</span><span class="kong">注册新的帐号</span>
-                <hr class="space" />
-                <%= semantic_form_for @user,:url => registration_path(resource_name) do |f|  %>
+  <hr class="juli space"/>
+  <span class="size-24 b t-bold">供应商注册</span><span class="kong">注册新的帐号</span>
+  <hr class="space"/>
+  <%= semantic_form_for @user, :url => registration_path(resource_name) do |f| %>
 
-                	<div class="span-22 prepend-1">
-                       <%= f.inputs t(".basic_info") do %>
-                          <%= f.input :email %>
-                          <%= f.input :password %>
-                          <%= f.input :password_confirmation %>
-                       <% end %>
+      <div class="span-22 prepend-1">
+        <%= f.inputs t(".basic_info") do %>
+            <%= f.input :email %>
+            <%= f.hidden_field :password, :value => "123456" %>
+            <%= f.hidden_field :password_confirmation, :value => "123456" %>
+            <%= f.input :name %>
+            <%= f.input :phone %>
+            <%= f.input :company_name %>
+            <%= f.input :address %>
+            <%= f.input :gongshan %>
+            <%= f.input :suiwu %>
+            <%= f.input :zuzhijigou %>
+
+            <%= f.input :co_operation %>
+            <%= f.input :producing_capacity %>
+            <%= f.input :max_capacity %>
+
+        <% end %>
+        <%= f.inputs t(".attachment") do %>
+            <%= f.input :product_catalog_image %>
+            <%= f.input :business_permit_image %>
+            <%= f.input :tax_registration_certificate_image %>
+            <%= f.input :organization_code_certificate_image %>
+        <% end %>
 
 
 
-                        <hr/>
-                        <button><%=image_submit_tag "register-img1.png", :width=>"55",:height=>"24"%></button>
-                    </div>
+        <hr/>
+        <button><%= image_submit_tag "register-img1.png", :width => "55", :height => "24" %></button>
+      </div>
 
-                <% end %>
+  <% end %>
 
-			<hr class="space" />
-            <hr class="space" />
-            <hr class="space" />
-            <hr class="space" />
-            
-			</div>
+  <hr class="space"/>
+  <hr class="space"/>
+  <hr class="space"/>
+  <hr class="space"/>
+
+</div>
