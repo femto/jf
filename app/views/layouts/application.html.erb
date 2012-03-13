@@ -21,7 +21,7 @@
     	<div class="header">
         <!--logo  start   here-->
           <div class="container">
-            <div class="span-3 logo"><a href="index.html" ><%=image_tag "logo.png"  %></a></div>
+            <div class="span-3 logo"><%= link_to (image_tag "logo.png"), "/" %></div>
             <div class="prepend-12 span-5 last select-l"><%= form_tag "/", :class => 'locale' do %>
 <%= select_tag 'set_locale',
 options_for_select(LANGUAGES, I18n.locale.to_s),
