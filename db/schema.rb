@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120312131949) do
+ActiveRecord::Schema.define(:version => 20120313075653) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -120,6 +120,14 @@ ActiveRecord::Schema.define(:version => 20120312131949) do
     t.boolean  "featured"
     t.string   "image"
     t.integer  "position"
+    t.float    "length"
+    t.float    "width"
+    t.float    "height"
+    t.string   "rated_power"
+    t.string   "rated_impedance"
+    t.string   "fo"
+    t.string   "response_rate"
+    t.string   "frequency_response_range"
   end
 
   create_table "users", :force => true do |t|

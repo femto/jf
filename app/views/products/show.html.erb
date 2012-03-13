@@ -20,11 +20,10 @@
     	   <!--产品开始-->
         		<div class="span-13 speaker last">
                     <p class=" size-14 g t-bold"><%= @product.name%></p>
+
                         <p class="span-12"><%= @product.body.html_safe  %></p>
                     <div>
-                        <% if user_signed_in? %>
-                    	  <%= link_to "download", download_product_path(@product) if @product.whitepaper?  %>
-                        <% end %>
+
                     </div>
            </div>
 

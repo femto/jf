@@ -24,22 +24,44 @@
                 <div class="span-5 last">
                 	<%=link_to image_tag((product.image? ?  product.image : "tese-1.png"),:width=>"150",:height=>"143"), product%>
                 </div>
-                <div class="span-7 last"> 
-                	<p>
-                    	<span class="t-bold">产品型号：</span><%= link_to product.name, product %>
-                    </p>
-                    <p>
-                    	<span class="t-bold">产品简介：</span><%=raw truncate_html product.body, :length=>60 %>
-					</p>
-					<div class="span-4 all last">
-                    	<%= link_to t(".know_more"), product %>
-                    </div>
-                    <div class="span-3 all last">
-                      <% if user_signed_in? %>
-                    	<%= link_to "download", download_product_path(product) if product.whitepaper?  %>
-                      <% end %>
-                    </div>
-                </div>
+                      <table>
+                                                        	<tr>
+                                                            	<td colspan="2" class="t-bold"><%= link_to product.name, product %></td>
+                                                            </tr>
+                                                            <tr>
+                                                            	<td class="span-2 last t-bold">系列类型：</td>
+                                                                <td><%= product.category.name %> </td>
+                                                            </tr>
+                                                            <tr>
+                                                            	<td class="span-2 last t-bold">外形尺寸：</td>
+                                                                <td><%= product.length %>×<%= product.width %>×<%= product.height %></td>
+                                                            </tr>
+                                                            <tr>
+                                                            	<td class="span-2 last t-bold">额定功率：</td>
+                                                                <td><%= product.rated_power %></td>
+                                                            </tr>
+                                                            <tr>
+                                                            	<td class="span-2 last t-bold">额定阻抗：</td>
+                                                                <td><%= product.rated_impedance%> </td>
+                                                            </tr>
+                                                            <tr>
+                                                            	<td class="span-2 last t-bold">FO：</td>
+                                                                <td><%= product.fo%></td>
+                                                            </tr>
+                                                            <tr>
+                                                            	<td class="span-2 last t-bold">灵敏度：</td>
+                                                                <td><%= product.response_rate%></td>
+                                                            </tr>
+                                                            <tr>
+                                                            	<td class="span-2 last t-bold">频响范围：</td>
+                                                                <td><%= product.frequency_response_range%></td>
+                                                            </tr>
+                                                        </table>
+                                    					  <div class="span-10 all last">
+                                                        	<%= link_to "了解更多",product %>
+                                                        </div>
+                                                        <div class="span-3 all last"><a href="#">反馈信息</a>
+                                                        </div>
                 <hr class="space"/>
                 <% end %>
 
