@@ -4,6 +4,7 @@ class ArticlesController < InheritedResources::Base
     @feedback = Feedback.new
     @faq_categories = FaqCategory.all
     #@faqs = Faq.page(params[:page] || 1).per(5)
+    @search = Product.search
   end
 
   def buy

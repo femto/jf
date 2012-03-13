@@ -1,0 +1,49 @@
+<!--center  start   here-->          
+    <div class="search-gradient-background"><!--渐变背景-->
+			<div class="container">
+            
+        		<hr class="space caption-padding-top"/>
+            	<span class="big-caption">技术支持</span>
+            	<hr class="space"/>
+              
+              <!--search-box  start   here-->
+                  <%= form_for @search, :url => search_products_path, :html => {:method => :get} do |f| %>
+                      <%= f.label :category_id_eq %>
+                      <%= f.collection_select :category_id_eq,ProductCategory.where(:parent_id => nil),:id,:name  %>
+                      <%= f.label :name_contains %>
+                      <%= f.text_field :en_name_contains %>
+                      <br/>
+                      <%= f.label :length_greater_than,'长'  %>
+                      <%= f.text_field :length_greater_than %> - <%= f.text_field :length_less_than %><br/>
+                      <%= f.label :width_greater_than, '宽'%>
+                      <%= f.text_field :width_greater_than %> - <%= f.text_field :width_less_than %><br/>
+                      <%= f.label :height_greater_than, '高'%>
+                      <%= f.text_field :height_greater_than %> - <%= f.text_field :height_less_than %><br/>
+                      <!-- etc... -->
+                      <%= f.submit %>
+                  <% end %>
+                  <!--search-box  start   here-->
+              
+            	<hr class="space"/>
+                <hr class="space"/>
+				<div class=>搜索结果</div>
+                <hr class="space"/>
+                <hr class="line-shen"/>
+                    <%@products.each do |product| %>
+                    <div class="span-7 last">
+                    	<span class="caption-bold">产品型号：</span><%= link_to product.name,product %>
+                    </div>
+                    <hr class="space"/>
+                    <% end %>
+              
+                    
+                    <hr/>
+                    <div class="r">
+                		<p class="nav-ye">
+                    		<%= paginate @products %>
+                    	</p>
+                	</div>
+
+            </div>  
+    </div>     
+<!--center  end   here--> 

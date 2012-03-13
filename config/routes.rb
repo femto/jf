@@ -38,6 +38,9 @@ Jf::Application.routes.draw do
       member do
         get "download",:as=>:download
       end
+      collection do
+        match "search", :as=>:search
+      end
     end
 
     ActiveAdmin.routes(self)

@@ -1,112 +1,117 @@
 <!--center  start   here-->
-    <div class="gradient-background"><!--渐变背景-->
-			<div class="container">
+<div class="gradient-background"><!--渐变背景-->
+  <div class="container">
 
-        		<hr class="space caption-padding-top"/>
-            	<span class="big-caption">技术支持</span>
-            	<hr class="space"/>
-			<!--search-box  start   here-->
-              <%= form_tag "/products/search", :method=>:get do |f|%>
-                <div class="span-24 last search-box">
-                    <div class="span-18 box-padding-left">
-                       <%= text_field_tag "q", "", :class=>"search-box-size"%>
-                       <input type="submit" class="search-button" value="搜索">
-                    </div>
-                </div>
-              <% end %>
-			<!--search-box  start   here-->
+    <hr class="space caption-padding-top"/>
+    <span class="big-caption">技术支持</span>
+    <hr class="space"/>
+    <!--search-box  start   here-->
+    <%= form_for @search, :url => search_products_path, :html => {:method => :get} do |f| %>
+        <%= f.label :category_id_eq %>
+        <%= f.collection_select :category_id_eq,ProductCategory.where(:parent_id => nil),:id,:name  %>
+        <%= f.label :name_contains %>
+        <%= f.text_field :en_name_contains %>
+        <br/>
+        <%= f.label :length_greater_than,'长'  %>
+        <%= f.text_field :length_greater_than %> - <%= f.text_field :length_less_than %><br/>
+        <%= f.label :width_greater_than, '宽'%>
+        <%= f.text_field :width_greater_than %> - <%= f.text_field :width_less_than %><br/>
+        <%= f.label :height_greater_than, '高'%>
+        <%= f.text_field :height_greater_than %> - <%= f.text_field :height_less_than %><br/>
+        <!-- etc... -->
+        <%= f.submit %>
+    <% end %>
+    <!--search-box  start   here-->
 
-			<!--Online   start   here-->
-                <hr class="space"/>
-                <div>
-                	<span class="blue-caption">Online反馈</span><%=image_tag "jichu.png", width:"42", height:"27"%>
-                </div>
-                <hr class="space"/>
-                <div class="span-24 online-box">
-                  <%= semantic_form_for @feedback,:html=>{:onreset=>"return confirm('Really reset all form fields?')"} do |f| %>
-                	<div class="online-padding-left">
-                        <div class="span-10">
-                            <span class="small-blue-caption">基本资料:</span>
-                            <hr class="space"/>
-                            <hr/>
-                            <p class="content-align">
-                                    <span>姓名：</span>
-                                    <%=f.text_field :name %><br>
-                                    <span>单位名称：</span>
-                                    <%=f.text_field :comany %><br>
-                                    <span>部门：</span>
-                                    <%=f.text_field :department %><br>
-                                    <span>电话：</span>
-                                    <%=f.text_field :phone %><br>
-                                    <span>传真：</span>
-                                    <%=f.text_field :fax %><br>
-                                    <span>E-mail：</span>
-                                    <%=f.text_field :email %><br>
-                            </p>
-                            <span class="blue-color-caption">*我们将在2个工作日之内给您答复。为确保您能收到我们的回复，请务必正确及有效的填写上述内容。</span>
-                        </div>
-                    </div>
-
-                	<div class="span-10 prepend-3">
-
-                    	<span class="small-blue-caption">具体描述:</span>
-                    	<hr class="space"/>
-                  		<hr/>
-                 		<%=f.text_area :description,rows:1, cols:20,:style=>"width:350px;height:100px;" %>
-
-                        <div class="span-2 prepend-5">
-                        	<%=image_submit_tag "submit.png", width:"55",height:"24"%><img src="/assets/submit2.png" width="55" height="12">
-                        </div>
-
-
-
-                	</div>
-                    <% end%>
-                </div>
-
-                <!--问答  start   here-->
-                <script>
-                      $(document).ready(function () {
-                          $("#tabs").tabs();
-                      });
-                </script>
-
-                <hr class="space"/>
-                <div>
-                	<span class="blue-caption">常见问答/向专家提问</span><%=image_tag "wenda.png", width:"42", height:"27"%>
-                </div>
-				<hr class="space"/>
-                <hr/>
-              <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet"
-                        type="text/css"/>
-              <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-              <div id="tabs">
-                      <ul>
-                        <% @faq_categories.each do |category| %>
-                          <li><a href="#fragment-<%= category.id %>"><span><%= category.name  %></span></a></li>
-
-                        <% end %>
-                      </ul>
-                      <% @faq_categories.each do |category| %>
-                      <div id="fragment-<%=category.id%>">
-                          <% faqs = Faq.where(:category_id => category.id); faqs.each do |faq| %>
-                          <span class="small-blue-caption"><%= faq.name %></span>
-
-                          <p class="answer-padding-left">
-                              <span class="small-green-caption"></span>
-                              <%=  faq.body.to_s.html_safe %>
-                          </p>
-                          <% end %>
-
-                          
-
-
-                      </div>
-                      <% end %>
-                      
-                  </div>
-              <!--问答  end   here-->
-
-            </div>
+    <!--Online   start   here-->
+    <hr class="space"/>
+    <div>
+      <span class="blue-caption">Online反馈</span><%= image_tag "jichu.png", width:"42", height:"27" %>
     </div>
+    <hr class="space"/>
+    <div class="span-24 online-box">
+      <%= semantic_form_for @feedback, :html => {:onreset => "return confirm('Really reset all form fields?')"} do |f| %>
+          <div class="online-padding-left">
+            <div class="span-10">
+              <span class="small-blue-caption">基本资料:</span>
+              <hr class="space"/>
+              <hr/>
+              <p class="content-align">
+                <span>姓名：</span>
+                <%= f.text_field :name %><br>
+                <span>单位名称：</span>
+                <%= f.text_field :comany %><br>
+                <span>部门：</span>
+                <%= f.text_field :department %><br>
+                <span>电话：</span>
+                <%= f.text_field :phone %><br>
+                <span>传真：</span>
+                <%= f.text_field :fax %><br>
+                <span>E-mail：</span>
+                <%= f.text_field :email %><br>
+              </p>
+              <span class="blue-color-caption">*我们将在2个工作日之内给您答复。为确保您能收到我们的回复，请务必正确及有效的填写上述内容。</span>
+            </div>
+          </div>
+
+          <div class="span-10 prepend-3">
+
+            <span class="small-blue-caption">具体描述:</span>
+            <hr class="space"/>
+            <hr/>
+            <%= f.text_area :description, rows: 1, cols: 20, :style => "width:350px;height:100px;" %>
+
+            <div class="span-2 prepend-5">
+              <%= image_submit_tag "submit.png", width:"55", height:"24" %>
+              <img src="/assets/submit2.png" width="55" height="12">
+            </div>
+
+
+          </div>
+      <% end %>
+    </div>
+
+    <!--问答  start   here-->
+    <script>
+        $(document).ready(function () {
+            $("#tabs").tabs();
+        });
+    </script>
+
+    <hr class="space"/>
+    <div>
+      <span class="blue-caption">常见问答/向专家提问</span><%= image_tag "wenda.png", width:"42", height:"27" %>
+    </div>
+    <hr class="space"/>
+    <hr/>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet"
+          type="text/css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <div id="tabs">
+      <ul>
+        <% @faq_categories.each do |category| %>
+            <li><a href="#fragment-<%= category.id %>"><span><%= category.name %></span></a></li>
+
+        <% end %>
+      </ul>
+      <% @faq_categories.each do |category| %>
+          <div id="fragment-<%= category.id %>">
+            <% faqs = Faq.where(:category_id => category.id); faqs.each do |faq| %>
+                <span class="small-blue-caption"><%= faq.name %></span>
+
+                <p class="answer-padding-left">
+                  <span class="small-green-caption"></span>
+                  <%= faq.body.to_s.html_safe %>
+                </p>
+            <% end %>
+
+
+          </div>
+      <% end %>
+
+    </div>
+    <!--问答  end   here-->
+
+  </div>
+</div>
 <!--center  end   here-->
