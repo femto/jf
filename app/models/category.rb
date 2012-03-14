@@ -21,4 +21,8 @@ class Category < ActiveRecord::Base
   def default_image
       image? ? image : "category_none.jpg"
   end
+
+  def to_param
+      "#{id}-#{en_name.parameterize}"
+    end
 end

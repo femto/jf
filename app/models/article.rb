@@ -23,4 +23,8 @@ class Article < ActiveRecord::Base
     image? ? image : "article_none.jpg"
   end
 
+  def to_param
+    "#{id}-#{en_name.parameterize}"
+  end
+
 end
