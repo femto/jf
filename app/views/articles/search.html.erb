@@ -1,0 +1,32 @@
+<!--center  start   here-->
+    <div class="search-gradient-background"><!--渐变背景-->
+			<div class="container">
+
+        		<hr class="space caption-padding-top"/>
+            	<span class="big-caption">文章搜索</span>
+            	<hr class="space"/>
+                <!--search-box  start   here-->
+                <%= form_for @search, :url => search_articles_path, :html => {:method => :get} do |f| %>
+                    <%= f.text_field :"#{I18n.locale}_name_or_#{I18n.locale}_body_contains" %>
+                    <%= f.submit %>
+                 <% end %>
+				<!--search-box  start   here-->
+            	<hr class="space"/>
+                <hr class="space"/>
+				<div class=>搜索结果</div>
+                <hr class="space"/>
+                <hr class="line-shen"/>
+                	<div class="span-22">
+                        <% @articles.each do |article| %>
+                        <p><%= link_to article.name, article %></p>
+                        <% end %>
+                    </div>
+                    <div class="span-22 r">
+                		<p class="nav-ye">
+                    		<%= paginate @articles %>
+                    	</p>
+                	</div>
+
+            </div>
+    </div>
+<!--center  end   here-->

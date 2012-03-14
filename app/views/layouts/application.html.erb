@@ -37,9 +37,9 @@ options_for_select(LANGUAGES, I18n.locale.to_s),
 
   </div><div class="span-4 last select-l">
             <div class="appleNav">
-            <form>
-              <input type="text"/>
-            </form>
+              <%= form_for Article.search, :url => search_articles_path, :html => {:method => :get} do |f| %>
+                <%= f.text_field :"#{I18n.locale}_name_or_#{I18n.locale}_body_contains" %><br />
+              <% end %>
             </div>
             </div>
             </div>

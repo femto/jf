@@ -10,8 +10,6 @@
                   <%= form_for @search, :url => search_products_path, :html => {:method => :get} do |f| %>
                       <%= f.label :category_id_eq %>
                       <%= f.collection_select :category_id_eq,ProductCategory.where(:parent_id => nil),:id,:name  %>
-                      <%= f.label :name_contains %>
-                      <%= f.text_field :en_name_contains %>
                       <br/>
                       <%= f.label :length_greater_than,'长'  %>
                       <%= f.text_field :length_greater_than %> - <%= f.text_field :length_less_than %><br/>

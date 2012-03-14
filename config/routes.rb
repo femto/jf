@@ -31,6 +31,7 @@ Jf::Application.routes.draw do
         get "buy",:as=>:buy
         get "event",:as=>:event
         get "about_us",:as=>:about_us
+        match "search", :as=>:search
       end
     end
 

@@ -34,4 +34,9 @@ class ArticlesController < InheritedResources::Base
       @support_categories = ArticleCategory.where(:en_name => ["company event","technical event","jiefu announcement"])
     end
   end
+
+  def search
+    @search = Article.search(params[:search])
+    @articles = @search.page(params[:page] || 1).per(10)
+  end
 end
