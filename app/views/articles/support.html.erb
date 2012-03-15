@@ -6,20 +6,27 @@
     <span class="big-caption">技术支持</span>
     <hr class="space"/>
     <!--search-box  start   here-->
-    <%= form_for @search, :url => search_products_path, :html => {:method => :get} do |f| %>
-        <%= f.label :category_id_eq %>
-        <%= f.collection_select :category_id_eq,ProductCategory.where(:parent_id => nil),:id,:name  %>
+    <div class="span-24 last search-box">
+      <div class="span-24 box-padding-left">
+        <div class="span-24">
+            <%= form_for @search, :url => search_products_path, :html => {:method => :get} do |f| %>
+                <%= f.label :category_id_eq %>
+                <%= f.collection_select :category_id_eq,ProductCategory.where(:parent_id => nil),:id,:name  %>
 
-        <br/>
-        <%= f.label :length_greater_than,'长'  %>
-        <%= f.text_field :length_greater_than %> - <%= f.text_field :length_less_than %><br/>
-        <%= f.label :width_greater_than, '宽'%>
-        <%= f.text_field :width_greater_than %> - <%= f.text_field :width_less_than %><br/>
-        <%= f.label :height_greater_than, '高'%>
-        <%= f.text_field :height_greater_than %> - <%= f.text_field :height_less_than %><br/>
-        <!-- etc... -->
-        <%= f.submit %>
-    <% end %>
+                <br/>
+                <%= f.label :length_greater_than,'长'  %>
+                <%= f.text_field :length_greater_than %> - <%= f.text_field :length_less_than %><br/>
+                <%= f.label :width_greater_than, '宽'%>
+                <%= f.text_field :width_greater_than %> - <%= f.text_field :width_less_than %><br/>
+                <%= f.label :height_greater_than, '高'%>
+                <%= f.text_field :height_greater_than %> - <%= f.text_field :height_less_than %><br/>
+                <!-- etc... -->
+                <hr class="space"/>
+                <%= f.submit %>
+            <% end %>
+        </div>
+      </div>
+    </div>
     <!--search-box  start   here-->
 
     <!--Online   start   here-->

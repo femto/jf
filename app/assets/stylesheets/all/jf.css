@@ -163,7 +163,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', end
 border-radius: 5px;
 	background-color:#EFF2F5;
 	width:950px;
-	height:48px;
+	height:200px;
 	padding-top:10px;
 	border:1px solid #ddd;
 	border-color:#CCCCCC;
@@ -312,7 +312,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', end
 
 /*增加的CSS*/
 .nav-padding{padding-left:80px; padding-top:5px;}
-.gradient-background{width:100% auto; height:1012px;
+.gradient-background{width:100% auto; height:1312px;
 background: -moz-linear-gradient(top,  rgba(243,243,243,1) 0%, rgba(244,244,244,0) 8%, rgba(255,255,255,0) 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(243,243,243,1)), color-stop(8%,rgba(244,244,244,0)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
 background: -webkit-linear-gradient(top,  rgba(243,243,243,1) 0%,rgba(244,244,244,0) 8%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
