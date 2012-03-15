@@ -19,11 +19,12 @@
            </div>
     		<!--产品开始-->
         		<div class="span-13 speaker last">
-                <p class="size-14 g t-bold"><%= @product_category.name %></p>
+                <p class="middle-green-caption"><%= @product_category.name %></p>
                 <% @products.each do |product| %>
                 <div class="span-5 last">
                 	<%=link_to image_tag((product.image? ?  product.image : "tese-1.png"),:width=>"150",:height=>"143"), product%>
                 </div>
+                <div class="span-8 last">
                       <table>
                                                         	<tr>
                                                             	<td colspan="2" class="t-bold"><%= link_to product.name, product %></td>
@@ -57,6 +58,7 @@
                                                                 <td><%= product.frequency_response_range%></td>
                                                             </tr>
                                                         </table>
+                  </div>
                                     					  <div class="span-10 all last">
                                                         	<%= link_to "了解更多",product %>
                                                         </div>
