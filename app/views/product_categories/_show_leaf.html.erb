@@ -20,7 +20,7 @@
     		<!--产品开始-->
         		<div class="span-13 speaker last">
                 <p class="middle-green-caption"><%= @product_category.name %></p>
-                <% @products.each do |product| %>                 ;
+                <% @products.each do |product| %>
                 <div class="span-4">
                 	<%=link_to image_tag((product.image? ?  product.image : "tese-1.png"),:width=>"150",:height=>"143"), product%>
                 </div>
