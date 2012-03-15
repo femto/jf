@@ -1,7 +1,7 @@
 <!--产品  start   here-->
            <div class="jianbian">
            <div class="container">
-           <p class="mulu b t-bold size-16">产品目录</p>
+           <p class="mulu b t-bold size-14">产品目录</p>
            </div>
            </div> 
         
@@ -19,8 +19,8 @@
            </div>
     		<!--产品开始-->
         		<div class="span-13 speaker last">
-                <p class="green-caption"><%= @product_category.name %></p>
-                <% @products.each do |product| %>
+                <p class="middle-green-caption"><%= @product_category.name %></p>
+                <% @products.each do |product| %>                 ;
                 <div class="span-4">
                 	<%=link_to image_tag((product.image? ?  product.image : "tese-1.png"),:width=>"150",:height=>"143"), product%>
                 </div>
