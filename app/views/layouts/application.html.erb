@@ -86,10 +86,11 @@ options_for_select(LANGUAGES, I18n.locale.to_s),
                 </p>
                 </div>
 
-                <div class="span-8 last"><p class="footer-t">如何购买</p>
-                <p class="footer-c"><a href="#">购买地址与信息</a><br/>
-                    <a href="#">代理商信息</a><br/>
-                    <a href="#">在线服务</a></p>
+                <div class="span-8 last"><p class="footer-t"><%= t(".buy")%></p></p>
+                <p class="footer-c">
+                    <%= link_to t(".buy_locally"), buy_articles_path(:anchor=>"buy_locally")%><br/>
+                    <%= link_to t(".buy_overseas"), buy_articles_path(:anchor=>"buy_overseas")%><br/>
+                </p>
                 </div>
 
               </div>
