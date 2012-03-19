@@ -1,24 +1,28 @@
-<!--右边框框 1 开始-->
-  <div class="span-6 last">
-    <div class="box1">
-      <%=image_tag "tubiao1.png", :width=>"47",:height=>"34"%>
-      <span class="box1-caption">Online反馈</span>
-      <hr class="none"/>
-      <div class="box-padding-top">
-        <center>
-          <%= link_to (image_tag "ontu.png",:width=>"194",:height=>"77"), support_articles_path%>
-        </center>
-      </div>
-    </div>
-  </div>
-  <!--右边框框 1 结束-->
 
-  <!--右边框框 2 开始-->
-  <div class="span-6 last">
-    <div class="second">
-      <div class="go">
-         <%=link_to (image_tag "search-p.png"), support_articles_path %>
-      </div>
+    <!--右边框框 1 开始-->
+    <div class="span-6 last">
+        <div class="box1">
+          <%=image_tag "tubiao1.png", :width=>"47",:height=>"34"%>
+          <span class="box1-caption"><%= I18n.t("layouts.application.online_feedback")%></span>
+          <hr class="none"/>
+          <div class="box-padding-top">
+            <center>
+              <%= link_to (image_tag "ontu.png",:width=>"194",:height=>"77"), support_articles_path%>
+            </center>
+          </div>
+        </div>
+    </div>
+    <!--右边框框 1 结束-->
+
+<!--右边框框 4 开始-->
+<div class="span-6 last">
+  <div class="second">
+    <div class="go">
+      <%= image_tag "tubiao2.png",:width=>"47",:height=>"34"%><span class="box1-caption"><%= t(".search")%></span>
+      <hr class="none"/>
+      <div class="online-img"><center><%=link_to image_tag("#{I18n.locale}_search.gif",:width=>"210",:height=>"57"),support_articles_path %>
+      </center></div>
     </div>
   </div>
-  <!--右边框框 2 结束-->
+</div>
+<!--右边框框 4 结束-->

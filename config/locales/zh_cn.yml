@@ -24,6 +24,9 @@ zh_cn:
       sign_up: "供应商加盟"
       sign_in: "登陆"
       sign_out: "注销"
+  shared:
+    feedback_and_search:
+      search: "搜索"
   activerecord:
       attributes:
         user:

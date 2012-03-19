@@ -25,6 +25,9 @@ en:
       sign_up: "Suppliers To Join"
       sign_in: "Sign In"
       sign_out: "Sign Out"
+  shared:
+      feedback_and_search:
+         search: "Search"
   formtastic:
       titles:
         post_details: "Post details"
