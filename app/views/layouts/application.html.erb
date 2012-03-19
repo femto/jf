@@ -75,14 +75,15 @@ options_for_select(LANGUAGES, I18n.locale.to_s),
                 </p>
                 </div>
 
-                <div class="span-8"><p class="footer-t">关于我们</p>
-                <p class="footer-c"><a href="#">杰夫简介</a><br/>
-                    <a href="#">营运信息</a><br/>
-                    <a href="#">成长历程</a><br/>
-                    <a href="#">总裁寄语</a><br/>
-                    <a href="#">人才战略</a><br/>
-                    <a href="#">工作机会</a>
-                    </p>
+                <div class="span-8"><p class="footer-t"><%= t(".about_us")%></p></p>
+                <p class="footer-c">
+                    <%= link_to t(".company_profile"), article_path(1)%><br/>
+                    <%= link_to t(".operational_information"), article_path(2)%><br/>
+                    <%= link_to t(".growup_path"), article_path(3)%><br/>
+                    <%= link_to t(".director_words"), article_path(4)%><br/>
+                    <%= link_to t(".talent_strategy"), article_path(5)%><br/>
+                    <%= link_to t(".working_opportunities"), article_path(6)%>
+                </p>
                 </div>
 
                 <div class="span-8 last"><p class="footer-t">如何购买</p>
