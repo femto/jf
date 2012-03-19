@@ -31,6 +31,8 @@ zh_cn:
   products:
     index:
       product_catalog: "产品目录"
+  product_categories:
+      show_top:
   activerecord:
       attributes:
         user:
