@@ -21,12 +21,16 @@ zh_cn:
       working_opportunities: "工作机会"
       buy_locally: "本地购买"
       buy_overseas: "海外购买"
+      specialty_products: "特色产品"
       sign_up: "供应商加盟"
       sign_in: "登陆"
       sign_out: "注销"
   shared:
     feedback_and_search:
       search: "搜索"
+  products:
+    index:
+      product_catalog: "产品目录"
   activerecord:
       attributes:
         user:

@@ -22,12 +22,16 @@ en:
       working_opportunities: "Working Opportunities"
       buy_locally: "Buy Locally"
       buy_overseas: "Buy Overseas"
+      specialty_products: "Specialty Products"
       sign_up: "Suppliers To Join"
       sign_in: "Sign In"
       sign_out: "Sign Out"
   shared:
       feedback_and_search:
          search: "Search"
+  products:
+      index:
+           product_catalog: "Product Catalog"
   formtastic:
       titles:
         post_details: "Post details"

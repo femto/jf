@@ -17,7 +17,7 @@
         <!--产品目录开始-->
         <hr class="space"/>
         <div class="span-18">
-        	<p class="blue-caption">产品目录</p>
+        	<p class="blue-caption"><%= t(".product_catalog")%></p>
         	<hr class="line-bt"/>
                <% @categories.each do |category| %>
                 <div class="pro-link"><%= link_to category.name, category %></div>
