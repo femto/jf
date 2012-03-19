@@ -68,11 +68,11 @@ options_for_select(LANGUAGES, I18n.locale.to_s),
           <div class="foot-bg">
         	  <div class="container">
 
-            	<div class="span-8"><p class="footer-t">技术支持</p>
-                <p class="footer-c"><a href="#">查找产品支持信息</a><br/>
-                    <a href="#">技术白皮书下载</a><br/>
-                    <a href="#">Online反馈</a><br/>
-                    <a href="#">常见问答/向专家提问</a></p>
+            	<div class="span-8"><p class="footer-t"><%= t(".support")%></p>
+                <p class="footer-c"><%= link_to t(".search_product_info"), support_articles_path%><br/>
+                    <%= link_to t(".online_feedback"), support_articles_path(:anchor=>"feedback")%><br/>
+                    <%= link_to t(".faq"), support_articles_path(:anchor=>"faq")%>
+                </p>
                 </div>
 
                 <div class="span-8"><p class="footer-t">关于我们</p>
