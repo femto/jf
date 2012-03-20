@@ -2,6 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 zh_cn:
+  special_products: "特色产品"
   layouts:
     application:
       home: "首页"
@@ -49,8 +50,8 @@ zh_cn:
   product_categories:
     show:
       special_products: "xxx"
-    show_top:
-      special_products: "xxx"
+      show_top:
+        special_products: "xxx"
   activerecord:
     attributes:
       user:

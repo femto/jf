@@ -2,7 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  special_products: "Special Products"
   layouts:
     application:
       products: "Products"
@@ -50,7 +50,7 @@ en:
   product_categories:
     show:
       specialty_products: "Specialty Products"
-    show_top:
+    _show_top:
       special_products: "Special Products"
   formtastic:
       titles:
