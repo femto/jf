@@ -92,7 +92,7 @@
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet"
           type="text/css"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-    <div id="tabs">
+    <div id="tabs" class="span-24">
       <ul>
         <% @faq_categories.each do |category| %>
             <li><a href="#fragment-<%= category.id %>"><span><%= category.name %></span></a></li>
@@ -102,12 +102,12 @@
       <% @faq_categories.each do |category| %>
           <div id="fragment-<%= category.id %>">
             <% faqs = Faq.where(:category_id => category.id); faqs.each do |faq| %>
-                <span class="small-blue-caption"><%= faq.name %></span>
+                <div class="small-blue-caption span-24 last"><%= faq.name %></div>
 
-                <p class="answer-padding-left">
-                  <span class="small-green-caption"></span>
+                <div class="answer-padding-left span-24">
+
                   <%= faq.body.to_s.html_safe %>
-                </p>
+                </div>
             <% end %>
 
 
