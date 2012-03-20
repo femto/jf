@@ -48,7 +48,9 @@ zh_cn:
       fax: "传真"
   product_categories:
     show:
-      specialty_products: "特色产品"
+      special_products: "xxx"
+    show_top:
+      special_products: "xxx"
   activerecord:
     attributes:
       user:
