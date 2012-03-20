@@ -39,8 +39,8 @@
                 	<p class="jianbian-bt-quan"></p>
                 </div>
                 <% @products.where(:featured=>true).each do |product| %>
-                    <div class="span-18">
-                    <div class="span-4 ">
+
+                    <div class="span-4">
                         <%=image_tag product.image,  :width=>"150",:height=>"143" if product.image?%>
                     </div>
                     <div class="span-8 last">
@@ -78,7 +78,7 @@
                                       </tr>
                                   </table>
                     </div>
-                    </div>
+
                       <div class="span-12">
                         <div class="span-9 all last">
                           <%= link_to "了解更多",product %>

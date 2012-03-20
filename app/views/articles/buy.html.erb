@@ -19,7 +19,7 @@
                                         <hr class="space"/>
                                     </div>
                                 <p class="contact-padding-left">
-                                	<span class="blue-color-caption"><a href="mailto:admin@jiefu.com">点击联系我们》</a></span><br>获得邮件帮助
+                                	<span class="blue-color-caption"><a href="mailto:admin@jiefu.com"><%=  t(".contact_us_online") %></a></span><br>获得邮件帮助
                                 </p>
                                 <hr class="space"/>
                                 <hr class="space"/>
@@ -72,14 +72,10 @@
                     <hr class="map-line"/>
                         <div>
                           <p>
-                            地址：中国江苏省无锡市锡山区八士经济开发区<br>
-                            邮编：214192<br>
-                            电话：+86 (0)510 83781398<br>
-                            传真：+86 (0)510 83782499<br>
-                            联系人:陈兰兰<br>
+                            <%= t(".contact_info").html_safe %>
                           </p>
                         </div>
-                            <p>地址：中国江苏省无锡市锡山区八士经济开发区 邮编：214192</p>
+                            <p><%= t(".address") %></p>
 
                  		<img src="/assets/china-map.png" width="718" height="229">
                  	<hr class="space"/>

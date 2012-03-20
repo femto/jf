@@ -3,6 +3,9 @@
 
 en:
   special_products: "Special Products"
+  know_more: "Know More"
+  feedback: "Feedback"
+
   layouts:
     application:
       products: "Products"
@@ -42,6 +45,7 @@ en:
     support:
       basic_information: "Basic Information"
       detailed_description: "Detailed Description"
+      length: "length"
       name: "Name"
       company_name: "Company Name"
       department: "Department"

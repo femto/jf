@@ -3,6 +3,8 @@
 
 zh_cn:
   special_products: "特色产品"
+  know_more: "了解更多"
+  feedback: "反馈信息"
   layouts:
     application:
       home: "首页"
@@ -37,11 +39,18 @@ zh_cn:
       buy_locally: "本地购买"
       buy_overseas: "海外购买"
       contact_us_online: "在线联系我们"
+      contact_info: "地址：中国江苏省无锡市锡山区八士经济开发区<br>
+                                                 邮编：214192<br>
+                                                 电话：+86 (0)510 83781398<br>
+                                                 传真：+86 (0)510 83782499<br>
+                                                 联系人:陈兰兰<br>"
+      address: "地址：中国江苏省无锡市锡山区八士经济开发区 邮编：214192"
       jiefu_china: "杰夫中国"
       jiefu_overseas: "杰夫海外"
     support:
       basic_information: "基本资料"
       detailed_description: "具体描述"
+      search: "搜索"
       name: "姓名"
       company_name: "单位名称"
       department: "部门"
@@ -55,9 +64,10 @@ zh_cn:
   activerecord:
     attributes:
       user:
-      email: "电子邮件"
-      password: "登录密码"
-      password_confirmation: "确认密码"
+        email: "电子邮件"
+        name: "名字"
+        password: "登录密码"
+        password_confirmation: "确认密码"
   formtastic:
       titles:
         post_details: "Post details"

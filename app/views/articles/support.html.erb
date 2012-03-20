@@ -10,19 +10,19 @@
       <div class="span-24 box-padding-left">
         <div class="span-24">
             <%= form_for @search, :url => search_products_path, :html => {:method => :get} do |f| %>
-                <%= f.label :category_id_eq %>
+                <%= f.label :category_id_eq, t(".category_id_eq") %>
                 <%= f.collection_select :category_id_eq,ProductCategory.where(:parent_id => nil),:id,:name  %>
 
                 <br/>
-                <%= f.label :length_greater_than,'长'  %>
-                <%= f.text_field :length_greater_than %> - <%= f.text_field :length_less_than %><br/>
+                <%= f.label :length_greater_than, t(".length")  %>
+                <%= f.text_field :length_greater_than, :size=>"10" %> - <%= f.text_field :length_less_than %><br/>
                 <%= f.label :width_greater_than, '宽'%>
                 <%= f.text_field :width_greater_than %> - <%= f.text_field :width_less_than %><br/>
                 <%= f.label :height_greater_than, '高'%>
                 <%= f.text_field :height_greater_than %> - <%= f.text_field :height_less_than %><br/>
                 <!-- etc... -->
                 <hr class="space"/>
-                <%= f.submit %>
+                <%= f.submit t(".search"), :class=>"blue-button" %>
             <% end %>
         </div>
       </div>
@@ -68,7 +68,7 @@
             <%= f.text_area :description, rows: 1, cols: 20, :style => "width:350px;height:100px;" %>
 
             <div class="span-2 prepend-5">
-              <%= image_submit_tag "submit.png", width:"55", height:"24" %>
+              <%= f.submit %>
             </div>
 
 

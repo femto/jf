@@ -2,7 +2,7 @@
 	<div class="top-backgound">
            <div class="container">
 <!--产品目录开始-->
-           <div class="middle-blue-caption right-nav-top"><%= I18n.t("layouts.application.support") %></div>
+           <div class="middle-blue-caption right-nav-top"><%= I18n.t("layouts.application.event") %></div>
            <div class="span-5 last right-nav-top">
              <% @support_categories.each do |object| %>
                                      <div class="three-caption"><%=link_to object.name, object %></div>
@@ -12,7 +12,7 @@
 
  <!--内容开始-->
         	<div class="span-13 last speaker">
-                	<p class="middle-green-caption">技术研讨活动</p>
+                	<p class="middle-green-caption"><%= @article_category.name %></p>
  					<div class="span-12">
                         <% @articles.each do |article| %>
                             <p><%= link_to article.name, article %></p>
