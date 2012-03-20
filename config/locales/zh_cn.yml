@@ -21,7 +21,6 @@ zh_cn:
       working_opportunities: "工作机会"
       buy_locally: "本地购买"
       buy_overseas: "海外购买"
-      specialty_products: "特色产品"
       sign_up: "供应商加盟"
       sign_in: "登陆"
       sign_out: "注销"
@@ -31,14 +30,19 @@ zh_cn:
   products:
     index:
       product_catalog: "产品目录"
+  articles:
+    buy:
+      buy_locally: "本地购买"
+      buy_overseas: "海外购买"
   product_categories:
-      show_top:
+    show:
+      specialty_products: "特色产品"
   activerecord:
-      attributes:
-        user:
-          email: "电子邮件"
-          password: "登录密码"
-          password_confirmation: "确认密码"
+    attributes:
+      user:
+      email: "电子邮件"
+      password: "登录密码"
+      password_confirmation: "确认密码"
   formtastic:
       titles:
         post_details: "Post details"
