@@ -34,6 +34,9 @@ zh_cn:
     buy:
       buy_locally: "本地购买"
       buy_overseas: "海外购买"
+      contact_us_online: "在线联系我们"
+      jiefu_china: "杰夫中国"
+      jiefu_overseas: "杰夫海外"
     support:
       basic_information: "基本资料"
       detailed_description: "具体描述"

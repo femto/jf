@@ -35,6 +35,9 @@ en:
     buy:
       buy_locally: "Buy Locally"
       buy_overseas: "Buy Overseas"
+      contact_us_online: "Contact Us Online"
+      jiefu_china: "JIEFU China"
+      jiefu_overseas: "JIEFU Overseas"
     support:
       basic_information: "Basic Information"
       detailed_description: "Detailed Description"
