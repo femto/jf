@@ -19,6 +19,7 @@
            </div>
     		<!--产品开始-->
         		<div class="span-13 speaker last">
+                <span class="prepend-8"><%= sort_link @search, :rated_power %></span>
                 <p class="middle-green-caption"><%= @product_category.name %></p>
                 <% @products.each do |product| %>
                 <div class="span-4">
