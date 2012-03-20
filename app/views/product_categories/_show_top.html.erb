@@ -39,10 +39,11 @@
                 	<p class="jianbian-bt-quan"></p>
                 </div>
                 <% @products.where(:featured=>true).each do |product| %>
-                    <div class="span-5 last">
+                    <div class="span-18">
+                    <div class="span-4 ">
                         <%=image_tag product.image,  :width=>"150",:height=>"143" if product.image?%>
                     </div>
-                    <div class="span-13 last"> 
+                    <div class="span-8 last">
                               	<table>
                                   	<tr>
                                       	<td colspan="2" class="t-bold"><%= link_to product.name, product %></td>
@@ -76,14 +77,16 @@
                                           <td><%= product.frequency_response_range%></td>
                                       </tr>
                                   </table>
-              					  <div class="span-10 all last">
-                                  	<%= link_to "了解更多",product %>
-                                  </div>
-                                  <div class="span-3 all last"><a href="#">反馈信息</a>
-                                  </div>
-                              </div>
-                              <hr class="space"/>
-
+                    </div>
+                    </div>
+                      <div class="span-12">
+                        <div class="span-9 all last">
+                          <%= link_to "了解更多",product %>
+                        </div>
+                        <div class="span-3 all last">
+                          <a href="#">反馈信息</a>
+                        </div>
+                      </div>
                     <hr class="space"/>
                 <% end %>
 
