@@ -23,58 +23,7 @@
                 <div class="middle-green-caption top_bottom"><%= @product_category.name %></div>
                 <div class="prepend-9"><%= sort_link @search, :rated_power %></div>
 
-                <% @products.each do |product| %>
-
-                <div class="span-4">
-                	<%=link_to image_tag((product.image? ?  product.image : "tese-1.png"),:width=>"150",:height=>"143"), product%>
-                </div>
-                <div class="span-8 last">
-                  <div>
-                      <table>
-                                                        	<tr>
-                                                            	<td colspan="2" class="t-bold"><%= link_to product.name, product %></td>
-                                                            </tr>
-                                                            <tr>
-                                                            	<td class="span-3 last t-bold">系列类型：</td>
-                                                                <td><%= product.category.name %> </td>
-                                                            </tr>
-                                                            <tr>
-                                                            	<td class="span-3 last t-bold">尺寸（宽×长×高）：</td>
-                                                                <td><%= product.length %>×<%= product.width %>×<%= product.height %></td>
-                                                            </tr>
-                                                            <tr>
-                                                            	<td class="span-3 last t-bold">阻抗（Ω）：</td>
-                                                                <td><%= product.rated_power %></td>
-                                                            </tr>
-                                                            <tr>
-                                                            	<td class="span-3 last t-bold">FO（Hz）：</td>
-                                                                <td><%= product.rated_impedance%> </td>
-                                                            </tr>
-                                                            <tr>
-                                                            	<td class="span-3 last t-bold">额定功率（W）：</td>
-                                                                <td><%= product.fo%></td>
-                                                            </tr>
-                                                            <tr>
-                                                            	<td class="span-3 last t-bold">灵敏度（dB）：</td>
-                                                                <td><%= product.response_rate%></td>
-                                                            </tr>
-                                                            <tr>
-                                                            	<td class="span-3 last t-bold">频响范围：</td>
-                                                                <td><%= product.frequency_response_range%></td>
-                                                            </tr>
-                                                        </table>
-                  </div>
-                  </div>
-                      <div class="span-12">
-                          <div class="span-9 all last">
-                            <%= link_to t("know_more"),product %>
-                          </div>
-                          <div class="span-3 all last">
-                            <a href="#"><%= t("feedback") %></a>
-                          </div>
-                      </div>
-                  <hr class="space"/>
-                <% end %>
+                <%= render @products%>
 
                 <hr/>
                 <div class="r">
