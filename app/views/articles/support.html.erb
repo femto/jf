@@ -3,7 +3,7 @@
   <div class="container">
 
     <hr class="space caption-padding-top"/>
-    <span class="big-caption">技术支持</span>
+    <span class="big-caption"><%= I18n.t("layouts.application.support")%></span>
     <hr class="space"/>
     <!--search-box  start   here-->
     <div class="span-24 last search-box">
@@ -32,26 +32,26 @@
     <!--Online   start   here-->
     <hr class="space"/>
     <div>
-      <a name="feedback"><span class="blue-caption">Online反馈</span></a><%= image_tag "jichu.png", width:"42", height:"27" %>
+      <a name="feedback"><span class="blue-caption"><%= I18n.t("layouts.application.online_feedback")%></span></a><%= image_tag "jichu.png", width:"42", height:"27" %>
     </div>
     <hr class="space"/>
     <div class="span-24 online-box">
       <%= semantic_form_for @feedback, :html => {:onreset => "return confirm('Really reset all form fields?')"} do |f| %>
           <div class="online-padding-left">
             <div class="span-10">
-              <span class="small-blue-caption">基本资料:</span>
+              <span class="small-blue-caption"><%= t(".basic_information")%>:</span>
               <hr class="space"/>
               <hr/>
               <p class="content-align">
-                <span>姓名：</span>
+                <span><%= t(".name")%>：</span>
                 <%= f.text_field :name %><br>
-                <span>单位名称：</span>
+                <span><%= t(".company_name")%>：</span>
                 <%= f.text_field :comany %><br>
-                <span>部门：</span>
+                <span><%= t(".department")%>：</span>
                 <%= f.text_field :department %><br>
-                <span>电话：</span>
+                <span><%= t(".phone")%>：</span>
                 <%= f.text_field :phone %><br>
-                <span>传真：</span>
+                <span><%= t(".fax")%>：</span>
                 <%= f.text_field :fax %><br>
                 <span>E-mail：</span>
                 <%= f.text_field :email %><br>
@@ -62,7 +62,7 @@
 
           <div class="span-10 prepend-3">
 
-            <span class="small-blue-caption">具体描述:</span>
+            <span class="small-blue-caption"><%= t(".detailed_description")%>:</span>
             <hr class="space"/>
             <hr/>
             <%= f.text_area :description, rows: 1, cols: 20, :style => "width:350px;height:100px;" %>
@@ -85,7 +85,7 @@
 
     <hr class="space"/>
     <div>
-      <a name="faq"><span class="blue-caption">常见问答/向专家提问</span></a><%= image_tag "wenda.png", width:"42", height:"27" %>
+      <a name="faq"><span class="blue-caption"><%= I18n.t("layouts.application.faq")%></span></a><%= image_tag "wenda.png", width:"42", height:"27" %>
     </div>
     <hr class="space"/>
     <hr/>

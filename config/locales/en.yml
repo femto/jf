@@ -35,6 +35,14 @@ en:
     buy:
       buy_locally: "Buy Locally"
       buy_overseas: "Buy Overseas"
+    support:
+      basic_information: "Basic Information"
+      detailed_description: "Detailed Description"
+      name: "Name"
+      company_name: "Company Name"
+      department: "Department"
+      phone: "Phone"
+      fax: "Fax"
   product_categories:
     show:
       specialty_products: "Specialty Products"

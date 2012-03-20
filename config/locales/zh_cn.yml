@@ -34,6 +34,14 @@ zh_cn:
     buy:
       buy_locally: "本地购买"
       buy_overseas: "海外购买"
+    support:
+      basic_information: "基本资料"
+      detailed_description: "具体描述"
+      name: "姓名"
+      company_name: "单位名称"
+      department: "部门"
+      phone: "电话"
+      fax: "传真"
   product_categories:
     show:
       specialty_products: "特色产品"
