@@ -1,6 +1,6 @@
 <div class="container">
   <hr class="juli space"/>
-  <span class="size-24 b t-bold">供应商注册</span><span class="kong">注册新的帐号</span>
+  <span class="size-24 b t-bold"><%= t(".supplier_registered")%></span>
   <hr class="space"/>
   <%= semantic_form_for @user, :url => registration_path(resource_name) do |f| %>
 
@@ -16,7 +16,6 @@
             <%= f.input :gongshan %>
             <%= f.input :suiwu %>
             <%= f.input :zuzhijigou %>
-
             <%= f.input :co_operation %>
             <%= f.input :producing_capacity %>
             <%= f.input :max_capacity %>
@@ -32,7 +31,8 @@
 
 
         <hr/>
-        <%= f.submit t(".search")%>
+
+        <%= f.submit t(".registered"), :class=>"green_button" %>
       </div>
 
   <% end %>

@@ -6,7 +6,6 @@ en:
   know_more: "Know More"
   more: "More"
   feedback: "Feedback"
-
   layouts:
     application:
       products: "Products"
@@ -91,6 +90,34 @@ en:
       specialty_products: "Specialty Products"
     _show_top:
       special_products: "Special Products"
+  activerecord:
+    attributes:
+      user:
+        email: "Email："
+        name: "Name："
+        password: "登录密码"
+        password_confirmation: "确认密码"
+
+        phone: "Phone："
+        company_name: "Company Name："
+        address: "Address："
+        gongshan: "Registration Number："
+        suiwu: "Tax Registration Number："
+        zuzhijigou: "Organization Code Certificate："
+        co_operation: "The existing cooperative customers："
+        producing_capacity: "Existing capacity："
+        max_capacity: "Maximum capacity："
+        product_catalog_image: "Product Catalog"
+        business_permit_image: "Business Permit"
+        tax_registration_certificate_image: "Tax Registration Certificate"
+        organization_code_certificate_image: "Organization Code Certificate"
+  users:
+    registrations:
+      new:
+        supplier_registered: "Supplier Registered"
+        basic_info: "Basic information"
+        attachment: "Attachment"
+        registered: "Registered"
   formtastic:
       titles:
         post_details: "Post details"

@@ -93,10 +93,30 @@ zh_cn:
   activerecord:
     attributes:
       user:
-        email: "电子邮件"
-        name: "名字"
+        email: "电子邮件："
+        name: "联系姓名："
         password: "登录密码"
         password_confirmation: "确认密码"
+        phone: "联系电话："
+        company_name: "企业名称："
+        address: "联系地址："
+        gongshan: "工商登记号："
+        suiwu: "税务登记号："
+        zuzhijigou: "组织机构代码证："
+        co_operation: "现有合作客户："
+        producing_capacity: "现有产能："
+        max_capacity: "最大产能："
+        product_catalog_image: "产品目录"
+        business_permit_image: "营业执照副本扫描件"
+        tax_registration_certificate_image: "税务登记证扫描件"
+        organization_code_certificate_image: "组织机构代码证扫描件"
+  users:
+    registrations:
+      new:
+        supplier_registered: "供应商注册"
+        basic_info: "基本信息"
+        attachment: "附件"
+        registered: "注册"
   formtastic:
       titles:
         post_details: "Post details"
