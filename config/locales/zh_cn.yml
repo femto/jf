@@ -6,6 +6,7 @@ zh_cn:
   know_more: "了解更多"
   more: "更多"
   feedback: "反馈信息"
+  cancel: "取消"
   layouts:
     application:
       home: "首页"

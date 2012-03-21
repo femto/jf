@@ -6,6 +6,7 @@ en:
   know_more: "Know More"
   more: "More"
   feedback: "Feedback"
+  cancel: "Cancel"
   layouts:
     application:
       products: "Products"

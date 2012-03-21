@@ -42,9 +42,24 @@
                         <div class="span-9 all last">
                           <%= link_to t("know_more"), product %>
                         </div>
+                        <script>
+                            $(function() {
+                                $( "#online_feedback" ).dialog({
+                                			autoOpen: false,
+                                            modal:true,
+                                            buttons:{'<%=t("cancel")%>': function() {
+                                            					$( this ).dialog( "close" );
+                                            				}}
+                                });
+                               $(".feedback_link").click(function() {
+                                            $( "#online_feedback" ).dialog("open");
+                               			});
+                            })
+                        </script>
                         <div class="span-3 all last">
-                          <a href="#"><%= t("feedback")%></a>
+                          <a href="#" class="feedback_link"><%= t("feedback")%></a>
                         </div>
                       </div>
+                      
                     <hr class="space"/>
 </div>
