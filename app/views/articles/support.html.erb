@@ -14,15 +14,15 @@
                 <%= f.collection_select :category_id_eq,ProductCategory.where(:parent_id => nil),:id,:name  %>
 
                 <br/>
-                <%= f.label :length_greater_than, t(".length")  %>
-                <%= f.text_field :length_greater_than, :size=>"10" %> - <%= f.text_field :length_less_than %><br/>
-                <%= f.label :width_greater_than, '宽'%>
-                <%= f.text_field :width_greater_than %> - <%= f.text_field :width_less_than %><br/>
-                <%= f.label :height_greater_than, '高'%>
-                <%= f.text_field :height_greater_than %> - <%= f.text_field :height_less_than %><br/>
+                <%= f.label :length_greater_than, t(".width")  %>
+                <%= f.text_field :length_greater_than, :size=>"10" %> - <%= f.text_field :length_less_than, :size=>"10"%><br/>
+                <%= f.label :width_greater_than, t(".length") %>
+                <%= f.text_field :width_greater_than, :size=>"10" %> - <%= f.text_field :width_less_than, :size=>"10"%><br/>
+                <%= f.label :height_greater_than, t(".height") %>
+                <%= f.text_field :height_greater_than, :size=>"10" %> - <%= f.text_field :height_less_than, :size=>"10"%><br/>
                 <!-- etc... -->
                 <hr class="space"/>
-                <%= f.submit t(".search"), :class=>"blue-button" %>
+                <%= f.submit t(".search"), :class=>"green_button" %>
             <% end %>
         </div>
       </div>
@@ -56,7 +56,7 @@
                 <span>E-mail：</span>
                 <%= f.text_field :email %><br>
               </p>
-              <span class="blue-color-caption">*我们将在2个工作日之内给您答复。为确保您能收到我们的回复，请务必正确及有效的填写上述内容。</span>
+              <span class="blue-color-caption"><%= t(".comment")%></span>
             </div>
           </div>
 
@@ -67,8 +67,8 @@
             <hr/>
             <%= f.text_area :description, rows: 1, cols: 20, :style => "width:350px;height:100px;" %>
 
-            <div class="span-2 prepend-5">
-              <%= f.submit %>
+            <div class="span-2 prepend-7">
+              <%= f.submit t(".commit"), :class=>"green_button" %>
             </div>
 
 

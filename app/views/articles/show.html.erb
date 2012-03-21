@@ -4,7 +4,7 @@
     <!--产品目录开始-->
     <div class="middle-blue-caption right-nav-top">
       <% if @support_categories.include?(@category) %>
-          <%= I18n.t("layouts.application.support") %>
+          <%= I18n.t("layouts.application.event") %>
       <% else %>
           <%= @category.name %>
       <% end %>
@@ -36,7 +36,7 @@
       </div>
 
       <hr class="line-last"/>
-      <div class="look">无论您来自何方,我们都将竭诚为您提供优秀的产品和满意的服务。</div>
+      <div class="look"><%= t(".slogan")%></div>
       <hr class="line-last"/>
       <hr class="space"/>
       <hr class="space"/>

@@ -35,22 +35,52 @@ en:
   products:
     index:
       product_catalog: "Product Catalog"
+    product:
+      type_of_system: "Type Of System："
+      size: "Size："
+      rated_power: "Rated Power:"
+      rated_impedance: "Rated Impedance:"
+      sensitivity: "Sensitivity："
+      frequency_response_range: "Frequency Response Range："
   articles:
     buy:
       buy_locally: "Buy Locally"
+      buy_locally_comment: "Applicable company signing the purchase agreement"
+      customer_support: "Customer support information"
+      customer_support_information: "Access to e-mail help"
       buy_overseas: "Buy Overseas"
+      buy_overseas_comment: "Signed the purchase agreement overseas company"
       contact_us_online: "Contact Us Online"
+      contact_us_online_comment: "Access to e-mail help"
+      contact_info_locally: " Address: in wuxi, jiangsu province, China xishan district eight and economic development zone<br>
+                    Zip code: 214192<br>
+                    Telephone: + 86 (0) 510 83781398<br>
+                    Fax: + 86 (0) 510 83782499<br>
+                     Contact: ChenLanLan<br>"
       jiefu_china: "JIEFU China"
       jiefu_overseas: "JIEFU Overseas"
+      contact_info_overseas: "Address: north Korea is still way turtle end city workers group hole yurakucho 196<br>
+                             Zip code: 730030<br>
+                             Telephone: + 82 (0) 54 461 0629<br>
+                             Fax: + 82 (0) 54 461 0630<br>
+                             Contact: PiaoXiangLie<br>"
+    show:
+      slogan: "No matter where you are from you, we will be dedicated to provide you with excellent products and satisfactory service."
     support:
       basic_information: "Basic Information"
       detailed_description: "Detailed Description"
+      category_id_eq: "Type of system"
       length: "length"
+      width: "Width"
+      height: "Height"
+      search: "Search"
       name: "Name"
       company_name: "Company Name"
       department: "Department"
       phone: "Phone"
       fax: "Fax"
+      comment: "* We will reply to you within two business days. To ensure you receive our reply above, be sure to fill in the correct and effective."
+      commit: "Commit"
   product_categories:
     show:
       specialty_products: "Specialty Products"
@@ -81,3 +111,11 @@ en:
         reset: "Reset form"
         cancel: "Cancel and go back"
         dummie: "Launch!"
+  home:
+      index:
+        newest: "Newest"
+        technical_event: "Technical Event"
+        technical_event_content: "To help customers achieve business success, real success."
+        company_event: "Company Event"
+        company_event_content: "To help customers achieve business success, real success."
+

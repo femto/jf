@@ -19,7 +19,7 @@
                                         <hr class="space"/>
                                     </div>
                                 <p class="contact-padding-left">
-                                	<span class="blue-color-caption"><a href="mailto:admin@jiefu.com"><%=  t(".contact_us_online") %></a></span><br>获得邮件帮助
+                                	<span class="blue-color-caption"><a href="mailto:admin@jiefu.com"><%=  t(".contact_us_online") %></a></span><br><%= t(".contact_us_online_comment")%>
                                 </p>
                                 <hr class="space"/>
                                 <hr class="space"/>
@@ -39,9 +39,9 @@
                                     </div>
                                 <p class="contact-padding-left">
                                 	<span class="blue-color-caption"><%= link_to t(".buy_locally"), buy_articles_path(:anchor=>"buy_locally")%></span><br>
-                                    适用于签署直接购买协议的公司<br><br>
-                                    <span class="blue-color-caption">客户支持信息</span><br>
-                                    获得邮件帮助<br>
+                                    <%= t(".buy_locally_comment")%><br><br>
+                                    <span class="blue-color-caption"><%= t(".customer_support")%></span><br>
+                                    <%= t(".customer_support_information")%><br>
                                 </p>
                             </div>
                         </div>
@@ -57,9 +57,9 @@
                                     </div>
                                 <p class="contact-padding-left">
                                 	<span class="blue-color-caption"><%= link_to t(".buy_overseas"), buy_articles_path(:anchor=>"buy_overseas")%></span><br>
-                                    适用于签署海外购买协议的公司<br><br>
-                                    <span class="blue-color-caption">客户支持信息</span><br>
-                                    获得邮件帮助<br>
+                                    <%= t(".buy_overseas_comment")%><br><br>
+                                    <span class="blue-color-caption"><%= t(".customer_support")%></span><br>
+                                  <%= t(".customer_support_information")%><br>
                                 </p>
                             </div>
                         </div>
@@ -72,11 +72,9 @@
                     <hr class="map-line"/>
                         <div>
                           <p>
-                            <%= t(".contact_info").html_safe %>
+                            <%= t(".contact_info_locally").html_safe %>
                           </p>
                         </div>
-                            <p><%= t(".address") %></p>
-
                  		<img src="/assets/china-map.png" width="718" height="229">
                  	<hr class="space"/>
 <!--海外地图   start   here-->
@@ -85,14 +83,9 @@
 					<hr class="map-line"/>
                      <div>
                        <p>
-                         地址：韩国庆尚北道龟尾市工团洞196番地<br>
-                         邮编：730030<br>
-                         电话：+82 (0)54 461 0629<br>
-                         传真：+82 (0)54 461 0630<br>
-                         联系人:朴香烈
+                         <%= t(".contact_info_overseas").html_safe %>
                        </p>
                      </div>
-    					<p>地址：韩国庆尚北道龟尾市工团洞196番地</p>
 						<img src="/assets/hanguo-map.png" width="718" height="229">
 					    <hr class="space"/>
             			<hr class="space"/>
