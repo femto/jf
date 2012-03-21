@@ -46,14 +46,18 @@
                             $(function() {
                                 $( "#online_feedback" ).dialog({
                                 			autoOpen: false,
+                                            width: 1000,
                                             modal:true,
                                             buttons:{'<%=t("cancel")%>': function() {
                                             					$( this ).dialog( "close" );
                                             				}}
                                 });
                                $(".feedback_link").click(function() {
+                                            //$( "#online_feedback" ).dialog({position:[0,0]});
                                             $( "#online_feedback" ).dialog("open");
                                			});
+
+
                             })
                         </script>
                         <div class="span-3 all last">

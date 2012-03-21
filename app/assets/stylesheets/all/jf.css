@@ -81,11 +81,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f7', end
 		 color:#646464;clear:left}
 .more-s{font-size:9px;}
 .footer{height:177px;width:100% auto;
-background: gray url(/assets/jf_000514.jpg) repeat-x;
+background: gray url(jf_000514.jpg) repeat-x;
 width: auto !important;
 margin: 0px auto;
 }
-.foot-bg{background-image:url(/assets/tou.png);width:100%;height:108px;}
+.foot-bg{background-image:url(tou.png);width:100%;height:108px;}
 .footer-t{color:#162945;padding-left:15px;padding-top:15px;}
 .footer-c{padding-left:15px;color:#DCDCDC;line-height:20px;}
 .footer-c a{color:#DCDCDC;}
@@ -100,8 +100,8 @@ margin: 0px auto;
     border-radius:10px;
 
     /* We use the CSS3 multiple backgrounds for the input field: The magnifier image and the gradient background */    
-    background-image: url("../img/magnifier.png"), -webkit-gradient(linear, left bottom, left top, color-stop(0, #758FAC), color-stop(0.5, #6380A1), color-stop(0.51, #7A93AF), color-stop(1, #91A5BD));
-    background-image: url("../img/magnifier.png"), -moz-linear-gradient(center bottom, #758FAC 0%, #6380A1 50%, #7A93AF 51%, #91A5BD 100%);
+    background-image: url("magnifier.png"), -webkit-gradient(linear, left bottom, left top, color-stop(0, #758FAC), color-stop(0.5, #6380A1), color-stop(0.51, #7A93AF), color-stop(1, #91A5BD));
+    background-image: url("magnifier.png"), -moz-linear-gradient(center bottom, #758FAC 0%, #6380A1 50%, #7A93AF 51%, #91A5BD 100%);
     background-repeat: no-repeat;
     
     background-color:#6E6E6E; /* Fallback */
