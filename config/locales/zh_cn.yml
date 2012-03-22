@@ -43,7 +43,7 @@ zh_cn:
       product_catalog: "产品目录"
     product:
       type_of_system: "系列类型："
-      size: "外观尺寸："
+      size: "外观尺寸（长×宽×高）："
       rated_power: "额定功率:"
       rated_impedance: "阻抗:"
       sensitivity: "灵敏度："
