@@ -4,6 +4,8 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require ./all/jf
  *= require ./all/screen
+ *= require ./all/jquery.ui.dialog
+ *= require ./all/jquery.ui.theme
  *= require ./all/nivo-slider
  *= require ./all/themes/default/default
 */

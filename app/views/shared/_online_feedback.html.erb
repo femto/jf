@@ -1,0 +1,48 @@
+<!--Online   start   here-->
+<div id="online_feedback">
+    <hr class="space"/>
+    <div>
+      <a name="feedback"><span class="blue-caption"><%= I18n.t("layouts.application.online_feedback")%></span></a><%= image_tag "jichu.png", width:"42", height:"27" %>
+    </div>
+    <hr class="space"/>
+    <div class="span-24 online-box">
+      <%= semantic_form_for Feedback.new, :html => {:onreset => "return confirm('Really reset all form fields?')"} do |f| %>
+          <div class="online-padding-left">
+            <div class="span-10">
+              <span class="small-blue-caption"><%= t("articles.support.basic_information")%>:</span>
+              <hr class="space"/>
+              <hr/>
+              <p class="content-align">
+                <span><%= t("articles.support.name")%>：</span>
+                <%= f.text_field :name %><br>
+                <span><%= t("articles.support.company_name")%>：</span>
+                <%= f.text_field :comany %><br>
+                <span><%= t("articles.support.department")%>：</span>
+                <%= f.text_field :department %><br>
+                <span><%= t("articles.support.phone")%>：</span>
+                <%= f.text_field :phone %><br>
+                <span><%= t("articles.support.fax")%>：</span>
+                <%= f.text_field :fax %><br>
+                <span>E-mail：</span>
+                <%= f.text_field :email %><br>
+              </p>
+              <span class="blue-color-caption"><%= t("articles.support.comment")%></span>
+            </div>
+          </div>
+
+          <div class="span-10 prepend-3">
+
+            <span class="small-blue-caption"><%= t("articles.support.detailed_description")%>:</span>
+            <hr class="space"/>
+            <hr/>
+            <%= f.text_area :description, rows: 1, cols: 20, :style => "width:350px;height:100px;" %>
+
+            <div class="span-2 prepend-7">
+              <%= f.submit t("articles.support.commit"), :class=>"green_button" %>
+            </div>
+
+
+          </div>
+      <% end %>
+    </div>
+</div>
