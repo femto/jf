@@ -7,6 +7,7 @@ zh_cn:
   more: "更多"
   feedback: "反馈信息"
   rated_power: "阻抗"
+  cancel: "取消"
   layouts:
     application:
       home: "首页"
