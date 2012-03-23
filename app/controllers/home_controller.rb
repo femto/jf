@@ -1,5 +1,6 @@
 # -*- encoding : utf-8 -*-
 class HomeController < ApplicationController
+
   def index
     if params[:set_locale]
       redirect_to :locale => params[:set_locale]
