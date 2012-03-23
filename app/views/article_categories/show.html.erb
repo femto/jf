@@ -15,7 +15,7 @@
                 	<p class="middle-green-caption"><%= @article_category.name %></p>
  					<div class="span-12">
                         <% @articles.each do |article| %>
-                            <p><%= link_to article.name, article %></p>
+                            <p><%= link_to article.safe_name, article %></p>
                         <% end %>
                 	</div>
                 	<hr class="space"/>

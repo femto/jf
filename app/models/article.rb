@@ -1,6 +1,8 @@
 # -*- encoding : utf-8 -*-
 class Article < ActiveRecord::Base
 
+  include TruncateHtmlHelper
+
   default_scope order(:position)
 
   validates_presence_of :en_name
@@ -13,6 +15,10 @@ class Article < ActiveRecord::Base
 
   def name
     send(I18n.locale.to_s + "_name")
+  end
+
+  def safe_name
+    (truncate_html name, :length=>30).html_safe
   end
 
   def body

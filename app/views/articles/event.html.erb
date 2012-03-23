@@ -25,7 +25,7 @@
     </div>
     <div class="span-17 content-top">
       <% Article.where(:category_id=>category).order("created_at desc").limit(5).each do |article| %>
-      <p><%= link_to article.name, article %></p>
+      <p><%= link_to article.safe_name, article %></p>
       <% end %>
 
       
