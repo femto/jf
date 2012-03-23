@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_i18n_locale_from_params
 
+  expose(:other_product_categories) { ArticleCategory.where(:en_name => ["Electro-acoustic tester","Power amplifier"]).all  }
+
   protected
   def set_i18n_locale_from_params
     if params[:locale]

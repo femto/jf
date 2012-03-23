@@ -4,9 +4,16 @@
 <!--产品目录开始-->
            <div class="middle-blue-caption right-nav-top"><%= I18n.t("layouts.application.event") %></div>
            <div class="span-5 last right-nav-top">
-             <% @support_categories.each do |object| %>
+             <% if other_product_categories.include?(@article_category) %>
+                 <% other_product_categories.each do |object| %>
                                      <div class="three-caption"><%=link_to object.name, object %></div>
                                      <hr class="nav-list-line"/>
+                 <% end %>
+             <% else %>
+                 <% @support_categories.each do |object| %>
+                                                      <div class="three-caption"><%=link_to object.name, object %></div>
+                                                      <hr class="nav-list-line"/>
+                                  <% end %>
              <% end %>
             </div>
 

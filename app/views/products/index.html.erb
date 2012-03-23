@@ -37,6 +37,24 @@
                 </div>
               <% end %>
 
+
+                          <div class="pro-link"><a><%= t("home.index.other_products") %></a></div>
+
+                  		<div class="span-17 speaker">
+
+                              <% other_product_categories.each_with_index do |sub_category, index| %>
+                                  <div class="span-4 <%= index == other_product_categories.size-1 ? 'last': ''%>">
+                                  <div class="tv <%= index == other_product_categories.size-1 ? 'last': 'colborder' %>">
+                                  <%= image_tag sub_category.image_url , width:"134", height:"135" if sub_category.image? %>
+                                  <p class="lit"><%= link_to sub_category.name, sub_category%></p>
+                                  </div>
+                                  </div>
+                              <% end %>
+
+                              <hr class="span-<%= 4 * other_product_categories.size %>"/>
+                          </div>
+
+
                 <!--产品目录结束-->
 
                          <!--杰夫实验开始-->

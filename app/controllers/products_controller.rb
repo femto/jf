@@ -1,5 +1,6 @@
 # -*- encoding : utf-8 -*-
 class ProductsController < InheritedResources::Base
+  expose(:other_product_categories) { ArticleCategory.where(:en_name => ["Electro-acoustic tester","Power amplifier"]).all  }
   def index
     @categories = ProductCategory.where(:parent_id=>nil)
 
