@@ -2,7 +2,7 @@
 	<div class="top-backgound">
            <div class="container">
 <!--产品目录开始-->
-           <div class="middle-blue-caption right-nav-top"><%= I18n.t("layouts.application.event") %></div>
+           <div class="middle-blue-caption right-nav-top"><%= t(other_product_categories.include?(@article_category)? "home.index.other_products" :"layouts.application.event") %></div>
            <div class="span-5 last right-nav-top">
              <% if other_product_categories.include?(@article_category) %>
                  <% other_product_categories.each do |object| %>
