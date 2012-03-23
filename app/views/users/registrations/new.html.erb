@@ -1,3 +1,13 @@
+<style>
+   form fieldset ol {
+        list-style: none;
+   }
+   form fieldset ol li{
+         width: 500px;
+       list-style: none;
+       text-align: right;
+   }
+</style>
 <div class="container">
   <hr class="juli space"/>
   <span class="size-24 b t-bold"><%= t(".supplier_registered")%></span>
@@ -19,15 +29,15 @@
             <%= f.input :co_operation %>
             <%= f.input :producing_capacity %>
             <%= f.input :max_capacity %>
-
         <% end %>
         <%= f.inputs t(".attachment") do %>
+              <div class="span-17 prepend-2">
             <%= f.input :product_catalog_image %>
             <%= f.input :business_permit_image %>
             <%= f.input :tax_registration_certificate_image %>
             <%= f.input :organization_code_certificate_image %>
         <% end %>
-
+        </div>
 
 
         <hr/>
