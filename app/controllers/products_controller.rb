@@ -15,6 +15,7 @@ class ProductsController < InheritedResources::Base
     @search = Product.search(params[:search])
 
 
+
     @products = @search.relation.where(:category_id => @category_ids).page(params[:page] || 1).per(10)
   end
 
