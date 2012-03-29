@@ -316,13 +316,6 @@ Faq.create!(:en_name=>"faq36", :zh_cn_name=>"faq",:category=>fc9)
 Faq.create!(:en_name=>"faq37", :zh_cn_name=>"faq",:category=>fc9)
 
 
-Faq.create!(:en_name=>"faq", :zh_cn_name=>"faq zh",:en_body=>"faq body", :zh_cn_body => "faq body zh")
-Faq.create!(:en_name=>"faq", :zh_cn_name=>"faq zh",:en_body=>"faq body", :zh_cn_body => "faq body zh")
-Faq.create!(:en_name=>"faq", :zh_cn_name=>"faq zh",:en_body=>"faq body", :zh_cn_body => "faq body zh")
-Faq.create!(:en_name=>"faq", :zh_cn_name=>"faq zh",:en_body=>"faq body", :zh_cn_body => "faq body zh")
-Faq.create!(:en_name=>"faq", :zh_cn_name=>"faq zh",:en_body=>"faq body", :zh_cn_body => "faq body zh")
-Faq.create!(:en_name=>"faq", :zh_cn_name=>"faq zh",:en_body=>"faq body", :zh_cn_body => "faq body zh")
-Faq.create!(:en_name=>"faq", :zh_cn_name=>"faq zh",:en_body=>"faq body", :zh_cn_body => "faq body zh")
 
 
 
