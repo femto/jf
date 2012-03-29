@@ -48,6 +48,12 @@ GEM
       sass (>= 3.1)
     builder (3.0.0)
     cancan (1.6.7)
+    capistrano (2.9.0)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
     carrierwave (0.5.8)
       activesupport (~> 3.0)
     coffee-rails (3.2.1)
@@ -86,6 +92,7 @@ GEM
       rails (~> 3.0)
     gem_plugin (0.2.3)
     has_scope (0.5.1)
+    highline (1.6.11)
     hike (1.2.1)
     htmlentities (4.3.1)
     i18n (0.6.0)
@@ -116,7 +123,11 @@ GEM
     multi_json (1.0.4)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
+    net-sftp (2.0.5)
+      net-ssh (>= 2.0.9)
     net-ssh (2.3.0)
+    net-ssh-gateway (1.1.0)
+      net-ssh (>= 1.99.1)
     nifty-generators (0.4.6)
     nokogiri (1.5.0-x86-mingw32)
     orm_adapter (0.0.6)
@@ -185,6 +196,7 @@ DEPENDENCIES
   acts_as_restful_list
   awesome_nested_set
   cancan
+  capistrano
   carrierwave
   coffee-rails (~> 3.2.1)
   decent_exposure
