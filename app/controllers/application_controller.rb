@@ -4,8 +4,6 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_i18n_locale_from_params
 
-  expose(:other_product_categories) { ArticleCategory.where(:en_name => ["Electro-acoustic tester","Power amplifier"]).all  }
-
   protected
   def set_i18n_locale_from_params
     if params[:locale]
@@ -23,5 +21,11 @@ class ApplicationController < ActionController::Base
   def default_url_options
     {:locale => I18n.locale}
   end
+
+  def other_product_categories
+    other_products = ArticleCategory.where(:en_name => "Other Products").first_or_create
+    ArticleCategory.where(:parent_id => other_products.id).all
+  end
+  helper_method :other_product_categories
 end
 

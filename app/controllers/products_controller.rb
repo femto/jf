@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class ProductsController < InheritedResources::Base
-  expose(:other_product_categories) { ArticleCategory.where(:en_name => ["Electro-acoustic tester","Power amplifier"]).all  }
+
   def index
     @categories = ProductCategory.where(:parent_id=>nil)
 
@@ -22,4 +22,6 @@ class ProductsController < InheritedResources::Base
     @product = Product.find(params[:id])
     send_data @product.whitepaper.read,:filename => File.basename(@product.whitepaper.url), #:disposition => "inline"
   end
+
+  helper_method :other_product_categories
 end

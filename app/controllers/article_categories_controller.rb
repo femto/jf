@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class ArticleCategoriesController < CategoriesController
-  expose(:other_product_categories) { ArticleCategory.where(:en_name => ["Electro-acoustic tester","Power amplifier"]).all  }
+
   def show
     show! do
       @category_ids = ArticleCategory.where(:lft => @article_category.lft..@article_category.rgt)
@@ -9,5 +9,6 @@ class ArticleCategoriesController < CategoriesController
       @support_categories = ArticleCategory.where(:en_name => ["company event","technical event","jiefu announcement"])
     end
   end
+  helper_method :other_product_categories
 
 end
