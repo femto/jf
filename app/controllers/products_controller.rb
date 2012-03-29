@@ -20,7 +20,7 @@ class ProductsController < InheritedResources::Base
 
   def download
     @product = Product.find(params[:id])
-    send_data @product.whitepaper.read,:filename => File.basename(@product.whitepaper.url), #:disposition => "inline"
+    send_data @product.whitepaper.read,:filename => File.basename(@product.whitepaper.url) #:disposition => "inline"
   end
 
   helper_method :other_product_categories
