@@ -35,6 +35,8 @@
             <span class="small-blue-caption"><%= t("articles.support.detailed_description")%>:</span>
             <hr class="space"/>
             <hr/>
+            <span><%= t("articles.support.name")%>：</span>
+            <%= f.text_field :name %><br>
             <%= f.text_area :description, rows: 1, cols: 20, :style => "width:350px;height:100px;" %>
 
             <div class="span-2 prepend-7">
