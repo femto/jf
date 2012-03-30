@@ -81,6 +81,7 @@ zh_cn:
       width: "宽"
       height: "高"
       search: "搜索"
+      product_name: "产品型号"
       name: "姓名"
       company_name: "单位名称"
       department: "部门"

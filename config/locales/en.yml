@@ -81,6 +81,7 @@ en:
       width: "Width"
       height: "Height"
       search: "Search"
+      product_name: "Product"
       name: "Name"
       company_name: "Company Name"
       department: "Department"
