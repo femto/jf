@@ -38,6 +38,8 @@ zh_cn:
   shared:
     feedback_and_search:
       search: "搜索"
+    online_feedback:
+      product_type: "产品型号"
   products:
     index:
       product_catalog: "产品目录"

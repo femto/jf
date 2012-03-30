@@ -38,6 +38,8 @@ en:
   shared:
     feedback_and_search:
       search: "Search"
+    online_feedback:
+      product_type: "Product Type"
   products:
     index:
       product_catalog: "Product Catalog"
