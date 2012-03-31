@@ -49,6 +49,7 @@ gem 'acts_as_restful_list'
 group :production do
   if File.exists?("/dev/null")
     gem "thin"
+    gem "unicorn"
   else
     gem "mongrel", "~> 1.2.0.pre2"
   end
