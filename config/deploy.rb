@@ -11,6 +11,7 @@ load "config/recipes/check"
 server "58.215.190.172", :web, :app, :db, primary: true
 
 set :user, "deployer"
+set :password, "deployer_password"
 set :application, "jf"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
