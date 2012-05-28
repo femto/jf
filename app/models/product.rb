@@ -39,5 +39,9 @@ class Product < ActiveRecord::Base
       "#{id}-#{en_name.parameterize}"
   end
 
+  def show_know_more?
+    ["TV speakers", "Sound speaker"].include?(category.en_name)
+  end
+
 
 end

@@ -40,7 +40,7 @@
 
                       <div class="span-12">
                         <div class="span-9 all last">
-                          <%= link_to t("know_more"), product %>
+                          <%= link_to t("know_more"), product if product.show_know_more?  %>
                         </div>
                         <script>
                             $(function() {
