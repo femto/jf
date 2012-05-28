@@ -17,13 +17,15 @@ banner/images/banner2.png: banner/images/banner2-b05364051a4217686a8411e25e04f4b
 banner/images/banner3.jpg: banner/images/banner3-1b5fc19b92a29c905e4bd9378c0f24b6.jpg
 banner/images/banner3.png: banner/images/banner3-becb7fe3e449e39aa07139eeebf2808b.png
 banner/images/banner4.jpg: banner/images/banner4-148e4db808abc3b9d25bb9fea9e7b6f9.jpg
-banner/images/banner4.png: banner/images/banner4-0fcf57698c80dcaee584784a2e73b069.png
+banner/images/banner4.png: banner/images/banner4-f82c8fca857615b193835db4862897ae.png
 banner/images/en_banner.png: banner/images/en_banner-49e0bdaa47a77f7173d0c5c66869718d.png
+banner/images/en_banner4.png: banner/images/en_banner4-f82c8fca857615b193835db4862897ae.png
 banner/images/nemo.jpg: banner/images/nemo-5dccf57ae33bbb16120e17390c3e6cdb.jpg
 banner/images/toystory.jpg: banner/images/toystory-2e7608e3d2bf3b60b06cd7ac0342424e.jpg
 banner/images/up.jpg: banner/images/up-d95a3310a79dab8b27c131c2bca554f6.jpg
 banner/images/walle.jpg: banner/images/walle-9e5182b9b561a5cfc95dea69835ae1ed.jpg
 banner/images/zh_cn_banner.png: banner/images/zh_cn_banner-f105e4c4648202758ecb13364ef48f2b.png
+banner/images/zh_cn_banner4.png: banner/images/zh_cn_banner4-f82c8fca857615b193835db4862897ae.png
 bullets.png: bullets-54f88df4746f9d2d537d8d70689c00f3.png
 buy.png: buy-502b57589373b51b8aee189a8dbbba89.png
 buy1.png: buy1-afa5aa924a16fe85cc6136299dc22af3.png
@@ -92,6 +94,7 @@ zh_cn_banner-product.png: zh_cn_banner-product-98b1b90a23ec3d26d641c2d8a0a049a1.
 zh_cn_banner.png: zh_cn_banner-f105e4c4648202758ecb13364ef48f2b.png
 zh_cn_search.gif: zh_cn_search-f0b793a4cf4bcee8d04bf301176412e6.gif
 active_admin.js: active_admin-59b4f6455d4dad317b84ec2155bf74af.js
+active_admin.js.bak: active_admin.js-59b4f6455d4dad317b84ec2155bf74af.bak
 application.js: application-11239224b25bc7969689dbd6999c8bfe.js
 active_admin.css: active_admin-bf11f98b636c45f44f11e2941ddd2458.css
 all/src/grid.png: all/src/grid-110aed0743c4500f27aff14e1c329a4b.png
